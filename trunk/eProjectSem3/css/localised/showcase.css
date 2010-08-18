@@ -1,0 +1,242 @@
+/* @override 
+	http://www.realmacsoftware.com/rw_common/themes/realmacsoftware2010/css/localised/showcase.css
+	http://realmacsoftware.com/rw_common/themes/realmacsoftware2010/css/localised/showcase.css
+*/
+
+/* @group Showcase */
+
+/* featured site */
+.showcase-site-featured {
+	margin: 18px 0 20px;
+}
+
+.showcase-site-featured blockquote {
+	margin-bottom: 20px;
+}
+
+.showcase-site-featured img {
+	float: left;
+	margin-right: 20px;
+}
+
+.showcase-site-featured h2 {
+	clear: none;
+}
+
+.showcase-site-featured .buttons img {
+	padding: 0;
+	border: 0;
+	margin: 0 15px 0 0;
+}
+
+blockquote.showcase-featured-quote {
+	font-size: 1em;
+}
+
+.showcase-header {
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: 10px;
+	position: relative;
+	clear: left;
+}
+
+.showcase-header h2 {
+	margin-bottom: 5px;
+}
+
+.showcase-header a {
+	position: absolute;
+	right: 0;
+	top: 11px;
+}
+
+p.buttons {
+	margin-top: 10px;
+}
+
+p.buttons a {
+	float: left;
+	margin-right: 10px;
+}
+
+/* Submit your site button */
+p.submit-button {
+	padding: 0;
+	margin: 0 auto 20px;
+	width: 206px;
+}
+
+p.submit-button a:link.submit-site,
+p.submit-button a:visited.submit-site {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	background-image: url(../../images/button_submit_site_to_show.png);
+	background-position: top left;
+	width: 206px;
+	height: 22px;
+}
+
+p.submit-button a:hover.submit-site {
+	background-position: top center;
+}
+
+p.submit-button a:active.submit-site {
+	background-position: top right;
+}
+
+/* I had to add #content when site was revised */
+#content a.read_interview {
+	background: url(../../images/button_read_the_interview.png) no-repeat left;
+	width: 125px;
+}
+
+#content a.read_interview:hover {
+	background-position: -125px;
+}
+
+#content a.read_interview:active {
+	background-position: right;
+}
+
+#content a.more_interviews {
+	background: url(../../images/button_more_interviews.png) no-repeat left;
+	width: 113px;
+}
+
+#content a.more_interviews:hover {
+	background-position: -113px;
+}
+
+#content a.more_interviews:active {
+	background-position: right;
+}
+
+/* site listing */
+.showcase-sites-wrap {
+	text-align: center;
+	clear: both;
+	margin: 40px 0 0;
+}
+
+.showcase-site img {
+	border: 1px solid #ebebeb;
+	padding: 1px;
+}
+
+.showcase-site {
+	margin-bottom: 30px;
+}
+
+.showcase-sites-wrap .left {
+	float: left;
+	padding: 0 0 10px;
+	margin: 0;
+}
+
+.showcase-sites-wrap .middle {
+	float: left;
+	margin: 0 0px 0 94px;
+}
+
+.showcase-sites-wrap .right {
+	float: right;
+	margin: 0;
+}
+
+/* pagination links */
+.showcase-pagination {
+	border-top: 1px solid #ebebeb;
+	padding-top: 10px;
+	text-align: right;
+	clear: both;
+}
+
+.showcase-pagination ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.showcase-pagination ul li {
+	display: inline;
+	margin-left: 5px;
+}
+
+.showcase-pagination .current {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* @group Interviews */
+
+.showcase {
+	background: url(../../images/thumb_380_shadow_bg.png) no-repeat 60px top;
+	text-align: right;
+}
+
+.column.showcase a.title {
+	text-align: center;
+}
+
+div.column.showcase img {
+	margin: 5px 7px 15px 0;
+}
+
+.interview-main-image {
+	margin-bottom: 20px;
+}
+
+.interview-main-image .caption {
+	background-color: #020f1c;
+	color: #fff;
+	display: block;
+	padding: 3px 5px;
+	margin-top: -5px;
+	font-size: 0.9em;
+}
+
+img.inline-image1 {
+	float: right;
+	margin-left: 15px;
+}
+
+img.inline-image2 {
+	margin-bottom: 20px;
+}
+
+/* @end */
+
+/* @end */
+
+/* Swap the header buttons to the "submit your site" button */
+#container p#dl-buy-button {
+	right: 43px;
+	width: 192px;
+	height: 44px;
+	background-image: url(../../images/button_header_submit_your_site.png);
+}
+
+#container p#dl-buy-button a:link,
+#container p#dl-buy-button a:visited {
+	background: none;
+	display: block;
+	float: none;
+	height: 44px;
+	text-indent: -999em;
+	width: 192px;
+}
+
+#container p#dl-buy-button a:link,
+#container p#dl-buy-button a:visited {
+	background-position: left top;
+}
+
+#container p#dl-buy-button a:hover {
+	background-image: url(../../images/button_header_submit_your_site.png);
+	background-position: left center;
+}
+
+#container p#dl-buy-button a:active {
+	background-position: left bottom;
+}

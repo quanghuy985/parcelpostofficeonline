@@ -1,0 +1,673 @@
+/* RapidWeaver Pages Site Specific Styles*/
+
+/* @group RapidWeaver */
+
+/* @group Theme Packs */
+
+.main-theme-previews {
+	height: 360px;
+	margin-left: -22px;
+}
+.main-theme-previews p {
+	float: left;
+	width: 252px;
+	margin: 0 0 0 22px;
+	text-align: center;
+	font-size: 1.2em;
+	color: #020f1c;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	position: relative;
+}
+
+.main-theme-previews .button {
+	position: absolute;
+	margin-top: 10px;
+}
+
+.main-theme-previews .button.more-info {
+	left: 39px;
+}
+
+.main-theme-previews .button.buy-now {
+	left: 130px;
+}
+
+/* @end */
+
+/* @group Quicktours */
+
+.movie-frame-720 {
+	width: 720px;
+	margin: 0 auto;
+}
+
+.movie-frame-370 {
+	width: 380px;
+	height: 247px;
+	padding: 5px 0;
+	background-color: #f7f7f7;
+	border: 1px solid #ebebeb;
+}
+
+/* @end */
+
+/* @group Hosting */
+
+table.hosting {
+	width: 100%;
+	border-top: 1px solid #f3f3f3;
+	border-right: 1px solid #f3f3f3;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+table.hosting th {
+	border-bottom: 1px solid #f3f3f3;
+	border-left:1px solid #f3f3f3;
+}
+
+table.hosting td {
+	text-align: center;
+	border-bottom:1px solid #f3f3f3;
+	border-left:1px solid #f3f3f3;
+}
+
+table.hosting caption {
+	display: none;
+}
+
+table.hosting tr.odd {
+	background-color: #f8f8f8;
+}
+
+table.hosting thead th {
+	text-align: center;
+	padding: 3px;
+}
+
+table.hosting th.included {
+	text-align: center;
+}
+
+table.hosting tbody td,
+table.hosting tbody th {
+	padding: 0 0;
+	border-bottom: 1px solid #f3f3f3;
+	margin: 0;
+	font-weight: normal;
+	height: 30px;
+}
+
+table.hosting tbody th {
+	padding-left: 5px;
+	width: 120px;
+}
+
+table.hosting tbody img {
+	margin-top: .5em;
+}
+
+table.hosting tfoot {
+	text-align: center;
+}
+
+table.hosting tfoot th {
+	padding: 5px 0;
+}
+
+/* center the order now button in the footer of the table */
+table.hosting tfoot th .button.order {
+	margin: 3px auto;
+}
+
+table.hosting tfoot th img {
+	margin-top: 5px;
+}
+
+/* @end */
+
+/* main overview & resellers page more info links for each section on RW pages */
+.overview {
+	margin-top: -10px;
+}
+
+.overview h2 {
+	font-size: 1.5em;
+	display: inline;
+}
+
+.overview h2 a:link.title,
+.overview h2 a:visited.title {
+	font-size: 1em;
+	display: inline;
+}
+
+.overview img {
+	float: left;
+	margin-right: 15px;
+}
+
+.resellers img {
+	margin-top: -17px;
+}
+
+.overview p{
+	margin: 4px 0 0 79px;
+	height: 110px;
+}
+
+.overview p.last {
+	height: auto;
+}
+
+/* list of feature highlights withh 44px wide icons */
+ul.feature-highlight {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.feature-highlight li {
+	padding-left: 50px;
+	padding: 0px 0 0px 55px;
+	height: 45px;
+	margin-bottom: 15px;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+ul.feature-highlight h4 {
+	margin: 0;
+	padding-top: 5px;
+	color: #000d19;
+}
+
+ul.feature-highlight li.interface {
+	background-image: url(../../images/icon_44_interface.png);
+}
+
+ul.feature-highlight li.quicklook {
+	background-image: url(../../images/icon_44_quicklook.png);
+}
+
+ul.feature-highlight li.timemachine {
+	background-image: url(../../images/icon_44_timemachine.png);
+}
+
+ul.feature-highlight li.themes {
+	background-image: url(../../images/icon_44_theme_variations.png);
+}
+
+ul.feature-highlight li.iPhone {
+	background-image: url(../../images/icon_44_iphone.png);
+}
+
+ul.feature-highlight li.love {
+	background-image: url(../../images/icon_44_love.png);
+}
+
+/* @group Screenshot Box */
+
+.screenshot-box {
+	width: 342px;
+	height: 135px;
+	padding: 10px 10px 0;
+	background-image: url(../../images/rw_screenshot_box.png);
+	margin-bottom: 20px;
+}
+
+.screenshot-box h3 {
+	color: #e6e6e6;
+	margin: 0 10px 0 0;
+	font-family: "VAG Rounded Std", "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.screenshot-box p {
+	color: #585e64;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+.screenshot-box img {
+	margin: 10px 11px 0 ;
+	padding-bottom: 10px;
+	background: url(../../images/screenshot_reflection.png) repeat-x 0 bottom;
+}
+
+/* @end */
+
+.ls-screenshots {
+	clear: both;
+	margin-bottom: 20px;
+	height: 157px;
+}
+
+.ls-screenshots span {
+	display: block;
+	float: left;
+	margin-right: 34px;
+	background: url(../../images/ls_screenshot_bg.png) no-repeat;
+	padding: 6px 7px 7px 6px;
+	width: 231px;
+	height: 144px;
+}
+
+.ls-screenshots span a,
+.ls-screenshots span img {
+	display: block;
+	float: left;
+}
+
+.ls-screenshots span.two {
+	margin: 0;
+}
+
+.ls-screenshots span.three {
+	margin: 0;
+	float: right;
+}
+
+span.pullout-right {
+	float: right;
+	margin: 5px -30px 10px 0;
+}
+
+span.pullout-left {
+	float: left;
+	margin: 5px 0px 20px -30px;
+}
+
+p.centre {
+	text-align: center;	
+}
+
+/* @end */
+
+#quicktours {
+	margin-top: 12px;
+}
+
+/* Download and Buy chunky buttons in header */
+#container p#dl-buy-button {
+	display: block;
+}
+
+/* @override http://www.realmacsoftware.com/rw_common/themes/realmacsoftware2010/css/localised/rapidweaver.css */
+
+/* RapidWeaver Pages Site Specific Styles*/
+
+/* @group RapidWeaver */
+
+/* @group Theme Packs */
+
+.main-theme-previews {
+	height: 360px;
+	margin-left: -22px;
+}
+.main-theme-previews p {
+	float: left;
+	width: 252px;
+	margin: 0 0 0 22px;
+	text-align: center;
+	font-size: 1.2em;
+	color: #020f1c;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	position: relative;
+}
+
+.main-theme-previews .button {
+	position: absolute;
+	margin-top: 10px;
+}
+
+.main-theme-previews .button.more-info {
+	left: 39px;
+}
+
+.main-theme-previews .button.buy-now {
+	left: 130px;
+}
+
+/* @end */
+
+/* @group Quicktours */
+
+.movie-frame-720 {
+	width: 720px;
+	margin: 0 auto;
+}
+
+.movie-frame-370 {
+	width: 380px;
+	height: 247px;
+	padding: 5px 0;
+	background-color: #f7f7f7;
+	border: 1px solid #ebebeb;
+}
+
+/* @end */
+
+/* @group Hosting */
+
+table.hosting {
+	width: 100%;
+	border-top: 1px solid #f3f3f3;
+	border-right: 1px solid #f3f3f3;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+table.hosting th {
+	border-bottom: 1px solid #f3f3f3;
+	border-left:1px solid #f3f3f3;
+}
+
+table.hosting td {
+	text-align: center;
+	border-bottom:1px solid #f3f3f3;
+	border-left:1px solid #f3f3f3;
+}
+
+table.hosting caption {
+	display: none;
+}
+
+table.hosting tr.odd {
+	background-color: #f8f8f8;
+}
+
+table.hosting thead th {
+	text-align: center;
+	padding: 3px;
+}
+
+table.hosting th.included {
+	text-align: center;
+}
+
+table.hosting tbody td,
+table.hosting tbody th {
+	padding: 0 0;
+	border-bottom: 1px solid #f3f3f3;
+	margin: 0;
+	font-weight: normal;
+	height: 30px;
+}
+
+table.hosting tbody th {
+	padding-left: 5px;
+	width: 120px;
+}
+
+table.hosting tbody img {
+	margin-top: .5em;
+}
+
+table.hosting tfoot {
+	text-align: center;
+}
+
+table.hosting tfoot th {
+	padding: 5px 0;
+}
+
+/* center the order now button in the footer of the table */
+table.hosting tfoot th .button.order {
+	margin: 3px auto;
+}
+
+table.hosting tfoot th img {
+	margin-top: 5px;
+}
+
+/* @end */
+
+/* main overview & resellers page more info links for each section on RW pages */
+.overview {
+	margin-top: -10px;
+}
+
+.overview h2 {
+	font-size: 1.5em;
+	display: inline;
+}
+
+.overview h2 a:link.title,
+.overview h2 a:visited.title {
+	font-size: 1em;
+	display: inline;
+}
+
+.overview img {
+	float: left;
+	margin-right: 15px;
+}
+
+.resellers img {
+	margin-top: -17px;
+}
+
+.overview p{
+	margin: 4px 0 0 79px;
+	height: 110px;
+}
+
+.overview p.last {
+	height: auto;
+}
+
+/* list of feature highlights withh 44px wide icons */
+ul.feature-highlight {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.feature-highlight li {
+	padding-left: 50px;
+	padding: 0px 0 0px 55px;
+	height: 45px;
+	margin-bottom: 15px;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+ul.feature-highlight h4 {
+	margin: 0;
+	padding-top: 5px;
+	color: #000d19;
+}
+
+ul.feature-highlight li.interface {
+	background-image: url(../../images/icon_44_interface.png);
+}
+
+ul.feature-highlight li.quicklook {
+	background-image: url(../../images/icon_44_quicklook.png);
+}
+
+ul.feature-highlight li.timemachine {
+	background-image: url(../../images/icon_44_timemachine.png);
+}
+
+ul.feature-highlight li.themes {
+	background-image: url(../../images/icon_44_theme_variations.png);
+}
+
+ul.feature-highlight li.iPhone {
+	background-image: url(../../images/icon_44_iphone.png);
+}
+
+ul.feature-highlight li.love {
+	background-image: url(../../images/icon_44_love.png);
+}
+
+/* @group Screenshot Box */
+
+.screenshot-box {
+	width: 342px;
+	height: 135px;
+	padding: 10px 10px 0;
+	background-image: url(../../images/rw_screenshot_box.png);
+	margin-bottom: 20px;
+}
+
+.screenshot-box h3 {
+	color: #e6e6e6;
+	margin: 0 10px 0 0;
+	font-family: "VAG Rounded Std", "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.screenshot-box p {
+	color: #585e64;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+.screenshot-box img {
+	margin: 10px 11px 0 ;
+	padding-bottom: 10px;
+	background: url(../../images/screenshot_reflection.png) repeat-x 0 bottom;
+}
+
+/* @end */
+
+.ls-screenshots {
+	clear: both;
+	margin-bottom: 20px;
+	height: 157px;
+}
+
+.ls-screenshots span {
+	display: block;
+	float: left;
+	margin-right: 34px;
+	background: url(../../images/ls_screenshot_bg.png) no-repeat;
+	padding: 6px 7px 7px 6px;
+	width: 231px;
+	height: 144px;
+}
+
+.ls-screenshots span a,
+.ls-screenshots span img {
+	display: block;
+	float: left;
+}
+
+.ls-screenshots span.two {
+	margin: 0;
+}
+
+.ls-screenshots span.three {
+	margin: 0;
+	float: right;
+}
+
+span.pullout-right {
+	float: right;
+	margin: 5px -30px 10px 0;
+}
+
+span.pullout-left {
+	float: left;
+	margin: 5px 0px 20px -30px;
+}
+
+p.centre {
+	text-align: center;	
+}
+
+/* @end */
+
+#quicktours {
+	margin-top: 12px;
+}
+
+/* Download and Buy chunky buttons in header */
+#container p#dl-buy-button {
+	display: block;
+}
+
+/* @group Reviews */
+
+form#newsletter label {
+	width: 130px;
+}
+
+form#newsletter input,
+form#newsletter textarea {
+	width: 280px;
+}
+
+/* Nik Starts */
+
+.first {
+	border-top: 0;	
+}
+
+.comment {
+	background: url(../../images/icon_user.png) no-repeat 10px 25px;
+	min-height: 100px;
+	padding: 5px 5px 5px 80px;
+}
+
+#pagination li.review-pages span {
+	width: 43px;
+}
+
+.review-info {
+	width: 290px;
+}
+
+fieldset.wrapper div label.title {
+	width: 130px;
+	display: block;
+}
+
+fieldset.wrapper div {
+	margin-top: 10px;
+}
+
+p.review-comment {
+	padding-left: 25px;
+	margin-bottom: 5px;
+}
+
+.even {
+	background-color: #f2f2f2;
+}
+
+.reviews {
+	margin-left: 230px;
+}
+
+.press-reviews {
+	background: url(../../images/button-press-reviews.png) no-repeat;
+	width: 125px;
+	height: 21px;
+}
+
+.user-reviews {
+	background: url(../../images/button-user-reviews.png) no-repeat;
+	width: 125px;
+	height: 21px;
+}
+
+p.name {
+	margin-left: 25px;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+p.reviewer {
+	font-weight: bold;
+}
+
+.even p, .odd p {
+	margin-top: 5px;
+}
+
+/* Nik Ends */
+/* @end */
