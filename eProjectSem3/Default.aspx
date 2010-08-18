@@ -31,12 +31,17 @@
            
               $("#LinkButton1").click(function(){
                    $("#loading").show();
-                   $("#content").load("ParcelPostOfficeFunction.aspx");
+                   $("#content").load("Magazine.aspx");
                    return false;
                });
                $("#LinkButton2").click(function() {
                    $("#loading").show();
                    $("#content").load("ParcelPostOfficeServiceDetail.aspx");
+                   return false;
+               });
+               $("#LinkButton3").click(function() {
+                   $("#loading").show();
+                   $("#content").load("MagazineCart.aspx");
                    return false;
                });
             });
@@ -56,6 +61,8 @@
 
     <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
     <asp:LinkButton ID="LinkButton2" runat="server"> Parcel Post Service</asp:LinkButton>
+  
+    <asp:LinkButton ID="LinkButton3" runat="server">Shopping cart</asp:LinkButton>
   
 </div>
 <div id="container" >

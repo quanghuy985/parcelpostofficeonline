@@ -15,11 +15,17 @@ public partial class ParcelPostOfficeFunction : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-       lbUser.Text = "";
+        if (Session["User"] == null)
+        {
+            lbUser.Text = "Guess";
+        }
+        else
+        {
+            lbUser.Text = Session["User"].ToString();
+        }
         bindGridDDLCity();
         int id = Convert.ToInt32(Request.QueryString["id"].ToString());
-        
+       
         ParcelPostBO parcel = new ParcelPostBO();
         DataTable dt2 = new DataTable();
         dt2 = parcel.getPriceServiceDetailID(id);
@@ -61,6 +67,7 @@ public partial class ParcelPostOfficeFunction : System.Web.UI.Page
             chuoi[i] = dtt.Rows[i].ItemArray[0].ToString();
         }
         return chuoi;
+        
     }
     [System.Web.Services.WebMethod]
     public static String CalculateLocation(string fromCity, string toCity)
@@ -134,11 +141,12 @@ public partial class ParcelPostOfficeFunction : System.Web.UI.Page
         return result;
     }
     [System.Web.Services.WebMethod]
-    public static String InsertOderDetail(string serviceDetailID, string parcelPostID, string parcelFromAddress, string parcelFromDistrict, string parcelFromCity, string parcelToAddress, string parcelToDistrict, string parcelToCity, string parcelWeight, string parcelAdditionalFee, string totalAmount)
+    public static String InsertOderDetail(string serviceDetailID, string parcelPostID, string parcelFromAddress, string parcelFromDistrict, string parcelFromCity, string parcelToAddress, string parcelToDistrict, string parcelToCity, string parcelWeight, string parcelAdditionalFee, string totalAmount, string custUserName)
     {
-        string output = null;
-        return output;
-
+        
+        ParcelPostBO parcel = new ParcelPostBO();
+        int orderID = parcel.InsertOrderDetail(custUserName, Convert.ToInt32(serviceDetailID), Convert.ToInt32(parcelPostID), parcelFromAddress, parcelFromDistrict, parcelFromCity, parcelToAddress, parcelToDistrict, parcelToCity, Convert.ToDecimal(parcelWeight), Convert.ToDecimal(parcelAdditionalFee), Convert.ToDecimal(totalAmount));
+        return orderID.ToString();
     }
 
 }
