@@ -1,9 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage.master" CodeFile="MagazineCart.aspx.cs" Inherits="MagazineCartaspx" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MagazineCart.aspx.cs" Inherits="MagazineCart" %>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
-         <asp:Repeater ID="rpt_mg_cart" runat="server" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="loader">
+    <div id="cartContent">
+    <asp:Repeater ID="rpt_mg_cart" runat="server" >
         <HeaderTemplate>
             <table id="tb" border="1" cellpadding="2" width="100%" align="center">
                 <tr >
@@ -98,5 +105,10 @@
         <br />
         <asp:Label ID="lblError" runat="server" Text="Label"></asp:Label>
         <br />
-
-</asp:Content>
+    
+    </div>
+    
+    </div>
+    </form>
+</body>
+</html>

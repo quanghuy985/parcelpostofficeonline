@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class MagazineCartaspx : System.Web.UI.Page
+public partial class MagazineCart : System.Web.UI.Page
 {
     ArrayList cart;
     int month;
@@ -23,7 +23,7 @@ public partial class MagazineCartaspx : System.Web.UI.Page
         DropDownList1.DataSource = dta;
         DropDownList1.DataTextField = "serviceDetailName";
         DropDownList1.DataValueField = "serviceDetailID";
-        DropDownList1.DataBind();  
+        DropDownList1.DataBind();
         if (!IsPostBack)
         {
             bindGrid();
@@ -59,7 +59,7 @@ public partial class MagazineCartaspx : System.Web.UI.Page
         if (cart == null || cart.Count == 0)
         {
 
-          //  Label1.Text = "Bạn chưa đặt vé nào";
+            //  Label1.Text = "Bạn chưa đặt vé nào";
             return;
         }
         else
@@ -69,22 +69,22 @@ public partial class MagazineCartaspx : System.Web.UI.Page
         for (int i = 0; i < n; i++)
         {
             bk[i] = (MagazineEN)cart[i];
-           // sum += bk[i].tranfees;
+            // sum += bk[i].tranfees;
         }
         rpt_mg_cart.DataSource = bk;
         rpt_mg_cart.DataBind();
-                
-      //  lblSum.Text = sum.ToString() + " .VND";
+
+        //  lblSum.Text = sum.ToString() + " .VND";
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-       // Response.Redirect("checkOutMagazine.aspx");
+        // Response.Redirect("checkOutMagazine.aspx");
         Panel1.Visible = true;
         btncheckout.Enabled = false;
     }
     protected void TextBox1_TextChanged(object sender, EventArgs e)
     {
-   
+
         try
         {
             month = Convert.ToInt32(((TextBox)sender).Text);
@@ -96,14 +96,14 @@ public partial class MagazineCartaspx : System.Web.UI.Page
             ((TextBox)sender).Focus();
             return;
         }
-    
+
     }
     public void updateCart(object sender, CommandEventArgs e)
     {
         int id = Convert.ToInt32(e.CommandArgument.ToString());
         cart = (ArrayList)Session["ShoppingCart"];
         int n = cart.Count;
-        MagazineEN bk=new MagazineEN();
+        MagazineEN bk = new MagazineEN();
         for (int i = 0; i < n; i++)
         {
             bk = (MagazineEN)cart[i];

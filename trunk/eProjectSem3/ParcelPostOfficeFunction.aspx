@@ -13,9 +13,6 @@
         $j(document).ready(function() {
 
 
-
-
-
             $j("#txtAddressForeign").change(function() {
                 $j("#checkOption").text("From In Viet Nam to Foreign");
                 $j("#checkOption").val("From In Viet Nam to Foreign");
@@ -178,6 +175,7 @@
                             }
                             $j("#pnTotalAmount").slideUp("slow");
                             document.getElementById("txtWeight").value = "";
+                            
                         },
                         error: function(errormessage) {
                             //Hiển thị lỗi nếu xảy ra
@@ -187,7 +185,7 @@
                 }
             });
             $j("#txtWeight").blur(function() {
-
+                
                 $j.ajax({
                     type: "POST",
                     url: "ParcelPostOfficeFunction.aspx/CalculateTotalAmount",
@@ -197,9 +195,9 @@
                     dataType: "json",
                     success: function(message) {
                         $j("#lbTotal").text(message.d);
-                        if ($j("#lbUser").val() == null) {
+                        if ($j("#lbUser").text() == "Guess") {
                             $j("#btSubmit").hide();
-                            $j("#lbOutput").text("You need login to use this function");
+                            $j("#lbOutput").text("You need login to use submit parcel");
                         }
 
                     }
@@ -216,31 +214,130 @@
                     }
                 });
                 $j("#pnTotalAmount").slideDown("slow");
+                $j("#lbErrorWeight").hide();
+
             });
+
+
+            $j("#txtAddress").blur(function() {
+                if (document.getElementById("txtAddress").value == "") {
+                    $j("#lbError").text("- You need insert your address");
+                    $j("#lbError").show();
+                    $j("#lbErrorAddress").show();
+                } else {
+                    $j("#lbErrorAddress").hide();
+                    $j("#lbError").hide();
+                }
+            });
+            $j("#txtAddressTo").blur(function() {
+                if (document.getElementById("txtAddressTo").value == "") {
+                    $j("#lbError").text("- You need insert destination address");
+                    $j("#lbError").show();
+                    $j("#lbErrorAddressTo").show();
+                } else {
+                    $j("#lbErrorAddressTo").hide();
+                    $j("#lbError").hide();
+                }
+            });
+            $j("#txtAddressForeign").blur(function() {
+                if (document.getElementById("txtAddressForeign").value == "") {
+                    $j("#lbError").text("- You need insert destination address");
+                    $j("#lbError").show();
+                    $j("#lbErrorAddressForeign").show();
+                } else {
+                    $j("#lbErrorAddressForeign").hide();
+                    $j("#lbError").hide();
+                }
+            });
+
         });
     </script>
 
     <script type="text/javascript">
         function clicker() {
-            $j.ajax({
-                type: "POST",
-                url: "ParcelPostOfficeFunction.aspx/InsertOderDetail",
-
-                data: "{type:'huyhcker','serviceDetailID':'" + $j("#lbServiceDetailID").text() + "','parcelPostID':'" + $j("#lbParcelPostID").text() + "','parcelFromAddress':'" + document.getElementById("txtAddress").value + "','parcelFromDistrict':'" + $j("#<%=ddlDistrict.ClientID%>").val() + "','parcelFromCity':'" + $j("#<%=ddlCity.ClientID%>").val() + "','parcelToAddress':'" + document.getElementById("txtAddressTo").value + "','parcelToDistrict':'" + $j("#<%=ddlDistrictTo.ClientID%>").val() + "','parcelToCity':'" + $j("#<%=ddlCityTo.ClientID%>").val() + "','parcelWeight':'" + document.getElementById("txtWeight").value + "','parcelAdditionalFee':'" + $j("#lbAddFee").text() + "','totalAmount':'" + $j("#lbTotal").text() + "'}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function(message) {
-                    $j("#lbOutput").text(message.d);
+            if ($j("#cbSendTo:checked").length >= 1) {
+                if (document.getElementById("txtAddress").value == "") {
+                    $j("#lbError").text("- You need insert your address");
+                    $j("#lbError").show();
+                    $j("#lbErrorAddress").show();
                 }
-            });
+                else if (document.getElementById("txtAddressForeign").value == "") {
+                    $j("#lbError").text("- You need insert destination address");
+                    $j("#lbError").show();
+                    $j("#lbErrorAddressForeign").show();
+                } else if ((isNaN(document.getElementById("txtWeight").value)) || (document.getElementById("txtAddress").value == "")) {
+                    $j("#lbErrorWeight").show();
 
-            return false;
+                }
+                else {
+                            $j.ajax({
+                                    type: "POST",
+                                    url: "ParcelPostOfficeFunction.aspx/InsertOderDetail",
 
+                                    data: "{type:'huyhcker','serviceDetailID':'" + $j("#lbServiceDetailID").text() + "','parcelPostID':'" + $j("#lbParcelPostID").text() + "','parcelFromAddress':'" + document.getElementById("txtAddress").value + "','parcelFromDistrict':'" + $j("#<%=ddlDistrict.ClientID%>").val() + "','parcelFromCity':'" + $j("#<%=ddlCity.ClientID%>").val() + "','parcelToAddress':'" + document.getElementById("txtAddressTo").value + "','parcelToDistrict':'" + $j("#<%=ddlDistrictTo.ClientID%>").val() + "','parcelToCity':'" + $j("#<%=ddlCityTo.ClientID%>").val() + "','parcelWeight':'" + document.getElementById("txtWeight").value + "','parcelAdditionalFee':'" + $j("#lbAddFee").text() + "','totalAmount':'" + $j("#lbTotal").text() + "','custUserName':'" + $j("#lbUser").text() + "'}",
+                                   contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    success: function(message) {
+                                    $j("#loading").show();
+                                    $j("#content").load("Message.aspx?OrderID=" + message.d);
+                                    $j("#lbOutput").text("Susscess");
+                                    }
+                                });
+
+                }
+            } else {
+                if (document.getElementById("txtAddress").value == "") {
+                    $j("#lbError").text("- You need insert your address");
+                    $j("#lbError").show();
+                    $j("#lbErrorAddress").show();
+                } else if (document.getElementById("txtAddressTo").value == "") {
+                    $j("#lbError").text("- You need insert destination address");
+                    $j("#lbError").show();
+                    $j("#lbErrorAddressTo").show();
+                } else if ((isNaN(document.getElementById("txtWeight").value)) || (document.getElementById("txtAddress").value == "")) {
+                    $j("#lbErrorWeight").show();
+
+                }
+                else {
+                    $j.ajax({
+                        type: "POST",
+                        url: "ParcelPostOfficeFunction.aspx/InsertOderDetail",
+
+                        data: "{type:'huyhcker','serviceDetailID':'" + $j("#lbServiceDetailID").text() + "','parcelPostID':'" + $j("#lbParcelPostID").text() + "','parcelFromAddress':'" + document.getElementById("txtAddress").value + "','parcelFromDistrict':'" + $j("#<%=ddlDistrict.ClientID%>").val() + "','parcelFromCity':'" + $j("#<%=ddlCity.ClientID%>").val() + "','parcelToAddress':'" + document.getElementById("txtAddressTo").value + "','parcelToDistrict':'" + $j("#<%=ddlDistrictTo.ClientID%>").val() + "','parcelToCity':'" + $j("#<%=ddlCityTo.ClientID%>").val() + "','parcelWeight':'" + document.getElementById("txtWeight").value + "','parcelAdditionalFee':'" + $j("#lbAddFee").text() + "','totalAmount':'" + $j("#lbTotal").text() + "','custUserName':'" + $j("#lbUser").text() + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function(message) {
+                            $j("#loading").show();
+                            $j("#content").load("Message.aspx?OrderID=" + message.d);
+                            $j("#lbOutput").text("Susscess");
+                        }
+                    });
+
+                    return false; ;
+                }
+            }
+         
         }
             
     </script>
 
     <style type="text/css">
+        #lbErrorWeight
+        {
+            display: none;
+        }
+        #lbErrorAddressTo
+        {
+            display: none;
+        }
+        #lbErrorAddress
+        {
+            display: none;
+        }
+        #lbErrorAddressForeign
+        {
+            display: none;
+        }
         #pnSendtoforeign
         {
             display: none;
@@ -307,6 +404,9 @@
                                 <td align="left">
                                     <asp:TextBox ID="txtAddress" Width="100%" runat="server"></asp:TextBox>
                                 </td>
+                                <td>
+                                    <asp:Label ID="lbErrorAddress" runat="server" ForeColor="#FF3300" Text="*"></asp:Label>
+                                </td>
                             </tr>
                             <tr>
                                 <td align="left">
@@ -338,6 +438,7 @@
                                     <asp:TextBox ID="txtAddressForeign" runat="server" Width="100%"></asp:TextBox>
                                 </td>
                                 <td>
+                                    <asp:Label ID="lbErrorAddressForeign" runat="server" ForeColor="#FF3300" Text="*"></asp:Label>
                                 </td>
                             </tr>
                         </table>
@@ -383,6 +484,7 @@
                                     <asp:TextBox ID="txtAddressTo" Width="100%" runat="server"></asp:TextBox>
                                 </td>
                                 <td>
+                                    <asp:Label ID="lbErrorAddressTo" runat="server" ForeColor="#FF3300" Text="*"></asp:Label>
                                 </td>
                             </tr>
                         </table>
@@ -428,7 +530,7 @@
                                     <asp:TextBox ID="txtWeight" runat="server" Width="100%"></asp:TextBox>
                                 </td>
                                 <td>
-                                    &nbsp;
+                                    <asp:Label ID="lbErrorWeight" runat="server" ForeColor="#FF3300" Text="Must be number"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
@@ -453,6 +555,36 @@
                                     &nbsp;
                                 </td>
                             </tr>
+                            <tr>
+                                <td align="left" style="width: 25%">
+                                    <asp:Label ID="lbParcel" runat="server" Text="Parcel Post ID :"></asp:Label>
+                                </td>
+                                <td align="left" style="width: 50%">
+                                    <asp:Label ID="lbParcelPostID" runat="server" Text="" Visible="true" ForeColor="#0066FF"></asp:Label>
+                                </td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="width: 25%">
+                                    <asp:Label ID="lbServiceDetail" runat="server" Text="Service ID :"></asp:Label>
+                                </td>
+                                <td align="left" style="width: 50%">
+                                    <asp:Label ID="lbServiceDetailID" runat="server" ForeColor="#0066FF"></asp:Label>
+                                </td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="width: 25%">
+                                    <asp:Label ID="lbUserName" runat="server" Text="Account Name:"></asp:Label>
+                                </td>
+                                <td align="left" style="width: 50%">
+                                    <asp:Label ID="lbUser" runat="server" ForeColor="#0066FF"></asp:Label>
+                                </td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
                         </table>
                     </asp:Panel>
                 </td>
@@ -474,9 +606,6 @@
                                     <asp:Label ID="lbTotal" runat="server" Text=""></asp:Label>
                                     <asp:Label ID="lbFeeDescription0" runat="server" Font-Size="Small" ForeColor="BlueViolet"
                                         Text="USD"></asp:Label>
-                                    <asp:Label ID="lbParcelPostID" runat="server" Text="" Visible="false"></asp:Label>
-                                    <asp:Label ID="lbServiceDetailID" runat="server" Text="" Visible="false"></asp:Label>
-                                    <asp:Label ID="lbUser" runat="server" Visible="False"></asp:Label>
                                 </td>
                                 <td>
                                     &nbsp;
@@ -487,7 +616,8 @@
                                     &nbsp;
                                 </td>
                                 <td style="width: 50%" align="left">
-                                    <asp:Button ID="btSubmit" runat="server" Text="Submit" Width="65px" />
+                                    <input type="button" id="btSubmit" runat="server" value="Submit" style="width: 65px"
+                                        onclick="clicker()" />
                                     <asp:Button ID="btBack" runat="server" Text="Back" Width="68px" />
                                 </td>
                                 <td>
@@ -498,7 +628,9 @@
                                     &nbsp;
                                 </td>
                                 <td style="width: 50%">
-                                    <asp:Label ID="lbOutput" runat="server" ForeColor="#0066FF"></asp:Label>
+                                 <asp:Label ID="lbError" runat="server" ForeColor="#FF3300"></asp:Label>
+                                  <p>  <asp:Label ID="lbOutput" runat="server" ForeColor="#0066FF"></asp:Label></p>
+                                   
                                 </td>
                                 <td>
                                     &nbsp;
