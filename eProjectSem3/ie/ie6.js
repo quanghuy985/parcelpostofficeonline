@@ -1,0 +1,1 @@
+var blankSrc = "../rw_common/themes/realmacsoftware2009/ie/blank.gif";

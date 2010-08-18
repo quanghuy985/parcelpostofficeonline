@@ -1,0 +1,382 @@
+body #container #main {
+	position: relative;
+	margin: -1px 0 0 -1px;
+}
+
+body #container #secondary {
+	margin: 0 0 0 -1px;
+}
+
+#container #main p.buttons {
+	height: 36px;
+	overflow: hidden;
+}
+
+/*Screenshots */
+ul.screenshots-peel {
+	height: 143px;
+}
+
+img {
+	behavior: url("pngbehavior.htc");
+}
+
+#content-container {
+	margin: -2px 5px 0;
+}
+
+.content-bottom {
+	margin-top: 20px;
+	bottom: -20px;
+}
+
+#footer form p.js {
+	background: none;
+}
+
+#footer #promo-bar div {
+	width: 245px;
+	height: 149px;
+	margin-top: -1px;
+	overflow: hidden;
+}
+
+#promo-bar div.ls-case-studies ul {
+	margin: 5px 0 0;
+	padding: 0;
+}
+
+#promo-bar div.ls-case-studies ul li {
+	height: 10px;
+}
+
+/* @group Navigation */
+
+/* @group Navigation a:link, a :visited */
+
+
+
+/* @end */
+
+#nav-container ul {
+	margin: 0 0 0 11px;
+	height: 46px;
+}
+
+#nav-container ul li {
+	display: inline;
+	padding: 0;
+	margin: 0;	
+}
+
+#nav-container ul li a:link,
+#nav-container ul li a:visited,
+#nav-container ul li a:hover,
+#nav-container ul li a:active {
+	margin: 2px 2px 0 0;
+}
+
+li.Company a:link,
+li.Company a:visited {
+	margin-right: 0;
+}
+
+#nav-container ul ul li,
+#nav-container ul ul li.first,
+#nav-container ul ul li.last {
+	background: none;
+}
+
+#nav-container ul li ul li.first,
+#nav-container ul li ul li.last {
+	display: none;
+}
+
+#nav-container ul li ul a:link,
+#nav-container ul li ul a:visited {
+	margin: 2px 10px 0;
+	padding: 0;
+}
+
+#nav-container ul li ul a#current,
+#nav-container ul li ul a:hover,
+#nav-container ul li ul a:visited:hover {
+	color: #020f1c;
+	margin: 2px 10px 0;
+	padding: 0;
+}
+
+/* @end */
+
+/* set 8bit PNG images */
+.screenshots {
+	background: url(screenshots_shadow_bg.png) no-repeat left top;
+}
+
+.blog-entry-date {
+	background: url(icon_blog_date_month.png) no-repeat;
+}
+
+
+
+.goodies,
+div.column.showcase {
+	background: url(thumb_380_shadow_bg.png) no-repeat;
+}
+
+/* @group Forms */
+
+input,
+textarea {
+	width: 365px;
+	margin: 0;
+	padding: 2px;
+}
+
+
+#search form legend {
+	left: -10px;
+}
+
+/* @end */
+
+/* @group Addons */
+
+ul#addons-menu {
+	background: url(addons_menu_bg.png) no-repeat;
+}
+
+#search {
+	background: url(addons_search_bg.png) no-repeat;
+}
+
+ul.ten { width: 263px; }
+ul.nine { width: 241px; }
+ul.eight { width: 219px; }
+ul.seven { width: 197px; }
+ul.six { width: 175px; }
+ul.five { width: 153px; }
+ul.four { width: 131px; }
+ul.three { width: 109px; }
+ul.two { width: 87px; }
+ul.one { width: 65px; }
+
+/* @end */
+
+span.linenum {
+	margin-top: -1px;
+	left: -52px;
+}
+
+table.hosting {
+	width: 99%;
+}
+
+.showcase-sites-wrap .left,
+.showcase-sites-wrap .middle {
+	padding-right: 30px;
+}
+
+div.column.showcase img {
+	margin: 5px 0 15px 5px;
+}
+
+span.pullout-right {
+	position: relative;
+	right: -6px !important;
+}
+
+form#ls-signup-box input {
+	width: 214px !important;
+	padding-top: 2px !important;
+}
+
+.left {
+	padding-right: 0;
+}
+
+img {
+	behavior: url("../../realmacsoftware2009/ie/pngbehavior.htc");
+}
+
+#content-container {
+	margin: 0 5px 0;
+	position: relative;
+}
+
+#container #main {
+	position: relative;
+	left: 0;
+	z-index: 100;
+	background: url(../images/home_main_bg.jpg) no-repeat -1px -1px;
+}
+
+.content-bottom {
+	bottom: 0px;
+}
+
+#footer form p.js {
+	background: none;
+}
+
+#footer #promo-bar div {
+	width: 245px;
+	height: 149px;
+	margin-top: -1px;
+	overflow: hidden;
+}
+
+#promo-bar div.ls-case-studies ul {
+	margin: 5px 0 0;
+	padding: 0;
+}
+
+#promo-bar div.ls-case-studies ul li {
+	height: 10px;
+}
+
+/* @group Navigation */
+
+/* @group Navigation a:link, a :visited */
+
+
+
+/* @end */
+
+#nav-container ul {
+	margin: 0 0 0 11px;
+	height: 47px;
+	overflow: hidden;
+}
+
+#nav-container ul li {
+	display: inline;
+	padding: 0;
+	margin: 0;	
+}
+
+#nav-container ul li a:link,
+#nav-container ul li a:visited,
+#nav-container ul li a:hover,
+#nav-container ul li a:active {
+	margin: 2px 2px 0 0;
+}
+
+li.Company a:link,
+li.Company a:visited {
+	margin-right: 0;
+}
+
+#nav-container ul ul li,
+#nav-container ul ul li.first,
+#nav-container ul ul li.last {
+	background: none;
+}
+
+#nav-container ul li ul li.first,
+#nav-container ul li ul li.last {
+	display: none;
+}
+
+#nav-container ul li ul a:link,
+#nav-container ul li ul a:visited {
+	margin: 2px 10px 0;
+	padding: 0;
+}
+
+#nav-container ul li ul a#current,
+#nav-container ul li ul a:hover,
+#nav-container ul li ul a:visited:hover {
+	color: #020f1c;
+	margin: 2px 10px 0;
+	padding: 0;
+}
+
+/* @end */
+
+/* set 8bit PNG images */
+.screenshots {
+	background: url(screenshots_shadow_bg.png) no-repeat left top;
+}
+
+.blog-entry-date {
+	background: url(icon_blog_date_month.png) no-repeat;
+}
+
+
+
+.goodies,
+div.column.showcase {
+	background: url(thumb_380_shadow_bg.png) no-repeat;
+}
+
+/* @group Forms */
+
+input,
+textarea {
+	width: 365px;
+	margin: 0;
+	padding: 2px;
+}
+
+
+#search form legend {
+	left: -10px;
+}
+
+/* @end */
+
+/* @group Addons */
+
+ul#addons-menu {
+	background: url(addons_menu_bg.png) no-repeat;
+}
+
+#search {
+	background: url(addons_search_bg.png) no-repeat;
+}
+
+ul.ten { width: 263px; }
+ul.nine { width: 241px; }
+ul.eight { width: 219px; }
+ul.seven { width: 197px; }
+ul.six { width: 175px; }
+ul.five { width: 153px; }
+ul.four { width: 131px; }
+ul.three { width: 109px; }
+ul.two { width: 87px; }
+ul.one { width: 65px; }
+
+/* @end */
+
+span.linenum {
+	margin-top: -1px;
+	left: -52px;
+}
+
+table.hosting {
+	width: 99%;
+}
+
+.showcase-sites-wrap .left,
+.showcase-sites-wrap .middle {
+	padding-right: 30px;
+}
+
+div.column.showcase img {
+	margin: 5px 0 15px 5px;
+}
+
+span.pullout-right {
+	position: relative;
+	right: -6px !important;
+}
+
+form#ls-signup-box input {
+	width: 214px !important;
+	padding-top: 2px !important;
+}
+
+.left {
+	padding-right: 0;
+}

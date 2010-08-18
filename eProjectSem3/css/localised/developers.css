@@ -1,0 +1,48 @@
+/* @group Developers */
+
+/* @group Pro Network */
+/* individual company wrappers */
+.pro-company {
+	margin: 20px 0;
+	padding: 0;
+	background: url(../../images/developer_icon_bg.png) no-repeat left 0;
+}
+
+.pro-company img {
+	float: left;
+	width: 64px;
+	height: 64px;
+	margin: 5px 15px 0 5px;
+}
+
+/* list for products */
+.pro-company ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.column .pro-company.last {
+	border-bottom: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+
+.column .pro-company.last img {
+	width: auto;
+	height: auto;
+	padding: 0;
+	background: none;
+	margin: 0;
+}
+
+.pro-company ul li {
+	display: inline;
+}
+
+/* @end */
+
+
+
+/* @end */

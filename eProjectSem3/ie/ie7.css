@@ -1,0 +1,102 @@
+
+/* Homepage */
+#container #secondary {
+	height: 163px;
+	overflow: visible;
+}
+
+/*Screenshots */
+ul.screenshots-peel {
+	height: 143px;
+}
+
+/* RapidWeaver */
+#footer #promo-bar div.download,
+body #footer #promo-bar div.add-ons {
+	margin-top: 0px;
+}
+
+/* LittleSnapper */
+.about-user-box {
+	background: url(case_study_box_bg.png) repeat left top;
+	border-color: #ccc;
+}
+
+
+.content-bottom {
+	bottom: -20px;
+}
+
+#nav-container ul ul a#current,
+#nav-container ul ul a:hover {
+	color: #020f1c;
+}
+
+#nav-container ul li.last {
+	right: -1px;
+}
+
+#footer p {
+	line-height: 1.3;
+	bottom: 10px;
+}
+
+#footer #promo-bar div {
+	width: 245px;
+	height: 149px;
+	margin-top: -1px;
+}
+
+#footer #promo-bar div.quicksnapper {
+	margin: 0px -3px 0 0;
+}
+
+#content .downloads {
+	word-spacing: -1px;
+}
+
+.store-icon {
+	padding: 2px 5px 5px 5px;
+	background-image: none;
+}
+
+#content .left p {
+	margin-left: 0;
+}
+
+#lb-outer #lb-image-container {
+	padding: 0 0 55px;
+}
+
+#lb-outer #lb-image-container h3 {
+	bottom: 0;
+}
+
+#lb-image-container table#lb-shadow {
+	display: none;
+}
+
+#footer form p.js {
+	background: none;
+}
+
+/* LIttleSnapper pullout image */
+.pullout-right {
+	position: relative;
+	right: -6px;
+	margin: 5px 0 10px 0;
+}
+
+.pullout-left {
+	position: relative;
+	margin-left: -40px;
+}
+
+form#ls-signup-box input {
+	width: 214px !important;
+	padding-top: 2px !important;
+}
+
+.left {
+	padding-right: 0;
+}
