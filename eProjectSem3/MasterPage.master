@@ -27,7 +27,48 @@
      ScrollTitle();
 </script>
 
-
+ <style type="text/css">
+            #lbErrorWeight
+            {
+                display: none;
+            }
+            #lbErrorAddressTo
+            {
+                display: none;
+            }
+            #lbErrorAddress
+            {
+                display: none;
+            }
+            #lbErrorAddressForeign
+            {
+                display: none;
+            }
+            #pnSendtoforeign
+            {
+                display: none;
+            }
+            #pnDetail
+            {
+                display: none;
+            }
+            #pnDetail0
+            {
+                display: none;
+            }
+            #pnTotalAmount
+            {
+                display: none;
+            }
+            .style1
+            {
+                width: 360px;
+            }
+            .style2
+            {
+                width: 483px;
+            }
+        </style>
 	</head>
 <body>
 

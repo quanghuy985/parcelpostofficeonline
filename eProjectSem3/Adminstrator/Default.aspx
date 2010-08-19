@@ -7,24 +7,74 @@
 		<title>Black Admin v2</title>
 		<style type="text/css">/*<![CDATA[*/
 			@import "css/login.css";
-		/*]]>*/</style>
+		/*]]>*/
+            .style2
+            {
+                width: 244px;
+            }
+            .style3
+            {
+                width: 328px;
+            }
+            .style4
+            {
+                width: 262px;
+            }
+        </style>
 	</head>
 <body>
 
 	<div id="container">
 		<h1>Admin Control Panel</h1>
 		<div id="box">
-			<form>
-			<p class="main">
-				<label>Username: </label>
-				<input name="username" value="username" /> 
-				<label>Password: </label>
-				<input type="password" name="password" value="asdf1234">	
-			</p>
-			<p class="space">
-				<span><input type="checkbox" />Remember me</span>
-				<input type="submit" value="Login" class="login" />
-			</p>
+			<form runat="server" >
+			
+            
+			<table style="width:100%;">
+                <tr>
+                    <td class="style4" align="right">
+                        Username :</td>
+                    <td class="style2">
+                        <asp:TextBox ID="txtUserName" runat="server" Width="238px"></asp:TextBox>
+                    </td>
+                    <td class="style3">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                            ErrorMessage="Wrong username !" ControlToValidate="txtUserName" ></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style4" align="right">
+                        Password :</td>
+                    <td class="style2">
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="238px"></asp:TextBox>
+                    </td>
+                    <td class="style3">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                            ErrorMessage="Wrong password !" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style4">
+                        &nbsp;</td>
+                    <td class="style2">
+                        <asp:Button ID="Button1" runat="server" Text="Login" Width="91px" 
+                            onclick="Button1_Click" />
+                    </td>
+                    <td class="style3">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style4">
+                        &nbsp;</td>
+                    <td class="style2">
+                        <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+                    </td>
+                    <td class="style3">
+                        &nbsp;</td>
+                </tr>
+            </table>
+			
+            
 			</form>
 		</div>
  

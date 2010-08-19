@@ -19,6 +19,14 @@ public partial class Adminstrator_FeedBackManage : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session.Count == 0)
+        {
+            Response.Redirect("Default.aspx");
+        }
+        else
+        {
+            lbUserName.Text = Session["User"].ToString();
+        }
         if (!IsPostBack)
         {
             bind();
@@ -57,7 +65,7 @@ public partial class Adminstrator_FeedBackManage : System.Web.UI.Page
             if (objFeed.DeleteFeedBackByCusName(acc) > 0)
             {
                 bind();
-                lbReturn.Text = "Lock Successfull";
+                lbReturn.Text = "Lock Successfull !";
             }
             else
             {
@@ -75,7 +83,7 @@ public partial class Adminstrator_FeedBackManage : System.Web.UI.Page
         if (objFeed.DeleteFeedBack(Convert.ToInt32(id)) > 0)
         {
             bind();
-            lbReturn.Text = "Lock Successfull";
+            lbReturn.Text = "Delete Successfull !";
         }
         else
         {
