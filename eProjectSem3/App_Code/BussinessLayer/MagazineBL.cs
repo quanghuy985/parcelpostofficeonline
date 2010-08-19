@@ -112,4 +112,29 @@ public class MagazineBL
       return  dta = helper.ExecuteQuerry("pc_view_order_byId", list);
        
     }
+    public DataTable update_magazine(int magazineDailyID ,int serviceID ,string magazineName ,string magazineDescription ,string magazineImage,string adminUserName ,int magazineStatus ) {
+        list = new List<SqlParameter>();
+        SqlParameter para1 = new SqlParameter("@magazineDailyID", SqlDbType.Int);
+        SqlParameter para2 = new SqlParameter("@serviceID", SqlDbType.Int);
+        SqlParameter para3 = new SqlParameter("@magazineName", SqlDbType.NVarChar);
+        SqlParameter para4 = new SqlParameter("@magazineDescription", SqlDbType.NVarChar);
+        SqlParameter para5 = new SqlParameter("@magazineImage", SqlDbType.NVarChar);
+        SqlParameter para6 = new SqlParameter("@adminUserName", SqlDbType.NVarChar);
+        SqlParameter para7 = new SqlParameter("@magazineStatus", SqlDbType.Int);
+        para1.Value = magazineDailyID;
+        para2.Value = serviceID;
+        para3.Value = magazineName;
+        para4.Value = magazineDescription;
+        para5.Value = magazineImage;
+        para6.Value = adminUserName;
+        para7.Value = magazineStatus;
+        list.Add(para1);
+        list.Add(para2);
+        list.Add(para3);
+        list.Add(para4);
+        list.Add(para5);
+        list.Add(para6);
+        list.Add(para7);
+        return dta = helper.ExecuteQuerry("pc_update_magazin", list);
+    }
 }

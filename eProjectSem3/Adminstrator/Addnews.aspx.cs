@@ -21,7 +21,7 @@ public partial class Addnews : System.Web.UI.Page
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        if (FileUpload1.PostedFile.ContentLength < 55555)
+        if (FileUpload1.PostedFile.ContentLength < 500)
         {
             Response.Write("File nho qua");
         }
