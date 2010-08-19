@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#"  AutoEventWireup="true" MasterPageFile="~/Adminstrator/MasterPage1.master" CodeFile="magazinOrder.aspx.cs" Inherits="Adminstrator_magazinOrder" Title="Untitled Page" %>
+﻿<%@ Page Language="C#"  AutoEventWireup="true" MasterPageFile="~/Adminstrator/MasterPage.master" CodeFile="magazinOrder.aspx.cs" Inherits="Adminstrator_magazinOrder" Title="Untitled Page" %>
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="orderID"
         DataSourceID="SqlDataSource1" 
