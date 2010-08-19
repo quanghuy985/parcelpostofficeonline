@@ -1,5 +1,21 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Magazine.aspx.cs" Inherits="Magazine" %>
 
+<<<<<<< .mine
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" >
+  
+    
+       <asp:Repeater ID="rpt_magazine" runat="server" 
+    onitemcommand="rpt_magazine_ItemCommand" >
+<HeaderTemplate>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <div style="float: left; width: 27%; ">
+           <table style="width: 20%; height: 50px;">
+           <tr align=center>
+           <td colspan=3 align="center"> <img alt="Không có ảnh" width="150"  src="images/<%#DataBinder.Eval(Container.DataItem, "magazineImage")%>" /></td>
+=======
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -20,6 +36,7 @@
     <div id="loader">
         <div id="magazineContent">
             <table width="100%">
+>>>>>>> .r3
             <tr>
                 <td class="style1">
                 </td>

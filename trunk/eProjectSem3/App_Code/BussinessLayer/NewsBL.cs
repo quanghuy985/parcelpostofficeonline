@@ -90,4 +90,12 @@ public class NewsBL
         list.Add(para6);
         helper.ExecuteQuerry("pc_update_news", list);
     }
+    public DataTable view_new_byid(int id) {
+        List<SqlParameter> list = new List<SqlParameter>();
+        SqlParameter para1 = new SqlParameter("@newsID", SqlDbType.Int);
+        para1.Value = id;
+        list.Add(para1);
+        return helper.ExecuteQuerry("pc_view_new_byid", list);
+    }
+
 }
