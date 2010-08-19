@@ -4,8 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Untitled Page</title>
-
+    <title>Black Admin v2 - Template Admin - Nice Theme</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css" media="all">
+		@import url(css/style.css);
+		
+	</style>	
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery_ui.js" type="text/javascript"></script>
+	<script src="js/wysiwyg.js" type="text/javascript"></script>
+	<script src="js/functions.js" type="text/javascript"></script>
     <script src="../js/jquery-1.4.2.js" type="text/javascript"></script>
     <script language="javascript" type="text/javascript">
         var $j = jQuery.noConflict();
@@ -83,12 +91,27 @@
                     return false;
                 });
             });
+            
+</script>
+ <script type="text/javascript">
+     var $j = jQuery.noConflict();
+     $j(document).ready(function() {
+
+     $j("btDelete").click(function() {
+
+ 
+             var agree = confirm("Thông tin hợp lệ. Bạn có muốn tiếp tục đăng ký không?");
+             if (agree)
+                 return true;
+             else
+                 return false;
+         
+
+         });
+     });
+            
 </script>
     <style type="text/css">
-        .style1
-        {
-            width: 901px;
-        }
         #TextArea1
         {
             width: 822px;
@@ -121,21 +144,78 @@
               height: 23px;
           }
             
-          .style6
-          {
-              width: 252px;
-          }
-            
-          .style7
-          {
-              width: 19%;
-          }
-            
-      </style>
+          </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
+   <form id="form1" runat="server">
+<div id="container"> <!-- Container -->
+	<div id="header"> <!-- Header -->
+		<div id="title">
+			Control Panel <span>Adminstrator &amp; Employee</span>
+		</div>
+		<div class="logged">
+			<p>Hello,
+                <asp:Label ID="lbUserName" runat="server" Text="Label"></asp:Label>
+            </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://nicetheme.net" target="_blank">Sign Out</a></p>
+			<p>&nbsp;</p>
+		</div>
+	</div>	
+	<div id="sidebar"> <!-- Sidebar -->
+		<div class="sidebox">
+			<span class="stitle">Navigation</span>
+		<div id="navigation"> <!-- Navigation begins here -->
+			<div class="sidenav"><!-- Sidenav -->
+				<div class="navhead_blank"><span><a href="#" title="">H</a><a href="#">ome</a></span></div>
+				<div class="navhead"><span>Articles</span></div>
+					<div class="subnav">
+						<ul class="submenu">
+							<li><a href="#" title="">Write a new Article</a></li>
+							<li><a href="#" title="">Manage Articles</a></li>
+							<li><a href="#" title="">Manage Comments</a></li>
+							<li><a href="#" title="">Manage Categories</a></li>
+						</ul>
+					</div>
+				<div class="navhead"><span>Events Calendar</span></div>
+					<div class="subnav">
+						<ul class="submenu">
+							<li><a href="#" title="">Submenu Item 1</a></li>
+							<li><a href="#" title="">Submenu Item 2</a></li>
+							<li><a href="#" title="">Submenu Item 3</a></li>
+						</ul>
+					</div>
+				<div class="navhead"><span>Pages</span></div>
+					<div class="subnav">
+						<ul class="submenu">
+							<li><a href="#" title="">Submenu Item 1</a></li>
+							<li><a href="#" title="">Submenu Item 2</a></li>
+							<li><a href="#" title="">Submenu Item 3</a></li>
+							<li><a href="#" title="">Submenu Item 4</a></li>
+						</ul>
+					</div>
+					<div class="navhead"><span>Image Gallery</span></div>
+					<div class="subnav">
+						<ul class="submenu">
+							<li><a href="#" title="">Submenu Item 1</a></li>
+							<li><a href="#" title="">Submenu Item 2</a></li>
+							<li><a href="#" title="">Submenu Item 3</a></li>
+						</ul>
+					</div>
+				<div class="navhead"><span>Settings</span></div>
+					<div class="subnav">
+						<ul class="submenu">
+							<li><a href="#" title="">Submenu Item 1</a></li>
+							<li><a href="#" title="">Submenu Item 2</a></li>
+							<li><a href="#" title="">Submenu Item 3</a></li>
+						</ul>
+					</div>
+			</div>
+		</div> <!-- END Navigation -->
+		</div>
+	</div> <!-- END Sidebar -->
+	<div id="main"> <!-- Main, right side content -->
+		<div id="content"> <!-- Content begins here -->
+            <div>
     
         <table align="center" style="width:100%;">
             <tr>
@@ -281,6 +361,14 @@
         </table>
     
     </div>
+		    
+		</div> <!-- END Content -->
+
+	</div> 	
+		<div id="footer"> 
+			<p>Copyright <a rel="dofollow" target="_blank" href="http://nicetheme.net/">Nice Theme</a> 2009. All rights reserved.</p>
+		</div>	
+</div> <!-- END Container -->
     </form>
 </body>
 </html>

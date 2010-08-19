@@ -24,8 +24,8 @@ public partial class ParcelPostOfficeFunction : System.Web.UI.Page
             lbUser.Text = Session["User"].ToString();
         }
         bindGridDDLCity();
-        int id = Convert.ToInt32(Request.QueryString["id"].ToString());
-       
+        //int id = Convert.ToInt32(Request.QueryString["id"].ToString());
+        int id = 2;
         ParcelPostBO parcel = new ParcelPostBO();
         DataTable dt2 = new DataTable();
         dt2 = parcel.getPriceServiceDetailID(id);
