@@ -1,0 +1,75 @@
+/* CSS Overlay for Post Office on IE6/Windows */
+/* If you need styles to be added or changed, please ask your eBusiness PM about the process. */
+/* Any changes made to this file by other users will be overwritten the next time the file is released. */
+/* RW130June2010 50Plus */
+
+
+
+#rolloverTabs {position: relative; display: block; left:0; top:0;}
+#rolloverTabs #dropbox6 {position: absolute; right: 121px; top:0; display: none;}
+#rolloverTabs #dropbox7 {position: absolute; right: 9px; top:0; display: none;}
+
+
+div.middle-row div.single-column{width:729px;overflow:hidden;}
+div.hnav ul li{line-height:120%;}
+div#Full-Content-Region div#Category-layer-right{margin-bottom:0 !important;}
+div.SecondaryPromotionalSlot ul,div.SecondaryPromotionalSlot div ul,div.InfoPromotionalSlot ul{width:120px;margin:0 0 5px;padding:0;}
+div.InfoPromotionalSlot div.promotion-inner div h3 a{margin-bottom:0;}
+div.Menu-Item-Row div.menu-item p{margin-top:0;}
+div.Menu-Item-Row div.post-it p{margin-top:0}
+div.InfoPromotionalSlot p{margin-left:1px;}
+div.InfoPromotionalSlot div.promotion-inner div h3{margin:0 0 3px;}
+div.PrimaryPromotionalSlot ul,div.HeroPromotionalSlot ul,div.PrimaryPromotionalSlot div.promotion-inner{padding-bottom:5px;}
+div.blue div#Category-Left div#Category-layer-main div.rhs-column div.articlebox h3,div.middle-row div.content-area ul.small-menu-list{float:none;}
+div.PrimaryPromotionalSlot div.promotion-inner img.promo-img {bottom:2px;}
+div.middle-row div.lhs-column div.Content-Area2 div.paragraph p a strong {background:transparent url(../../images/postoffice/rd2009/icon-findoutmore.gif) no-repeat scroll 0 0;margin:0 0 0 -8px;left:5px;position:relative;top:5px;padding: 3px 0 3px 20px;}
+
+/** Start - Site Refresh - Release D - Delphi 2**/
+div.single-column div.HeroPromotionalSlot div.promotion-outer image post-it div.promotion-mid div.promotion-inner img.promo-img{left:auto;}
+div.lhs-column div.faqs ol li div.paragraph BLOCKQUOTE { margin: 0; padding: 20px 0 20px 20px;}
+
+
+
+#repayment-calculator {width:450px;}
+div.miniapp p.morgcopy  {width:400px !important;padding:0;margin:0;float:left;}
+div.miniapp h3.morgcopy{margin:0;padding:0;width:400px !important;float:left}
+
+/** End - Site Refresh - Release D - Delphi 2**/
+
+div.middle-row div.single-column div#Article div.default div.Content-Area2 div.app-top h2{background:#9e1d22 ;position:relative;top:8px;width:706px}
+
+div.middle-row div.single-column div#Article div.default div.Content-Area2 div.app-content {
+position:relative;left:-7px
+}
+
+
+div#parcelforcefinder{margin-left:1px;padding:0;}
+div#parcelforcefinder div.branchfinder-outer label{color:#000;float:left;position:relative;left:-10px;}
+div.branchfinder-outer {margin-left:4px;padding:13px;width:902px;}
+div.bf-tabs div.hnav {margin-left:2px;width:926px;}
+div.Layout-Full-100 div.default {margin:15px 0 10px 4px;width:931px;}
+div.Layout-Full-100 div.default ul {float:left;position:relative;top:5px;}
+div.Layout-Full-100 div.SecondaryPromotionalSlot div.promotion-outer {margin:20px 22px 0 56px;}
+div.Layout-Full-100 div.SecondaryPromotionalSlot, div.single-column div.SecondaryPromotionalSlot {width:900px;position:relative;left:5px;}
+div#parcelforcefinder img {position:relative;right:0;}
+div.Layout-Full-100 div.default {border:1px solid #bebdbb;}
+div#parcelforcefinder table.bf-results thead tr {width:960px !important;padding-left:100px}
+div#parcelforcefinder table td{border-bottom:1px solid #E0E0E0}
+div#parcelforcefinder table .bf-opening-time td{border:0 !important;}
+div#parcelforcefinder table.bf-results {background-color:#fff;width:934px}
+div#parcelforcefinder h2.bf-results-type {clear:both;}
+div#Standard-Template div#Full-Content-Region div.Layout-Full-100 div.default{margin:10px 0 10px 10px;float:none;width:928px}
+table.bf-opening-time th{padding:20px 0 10px 0}
+.Hidden-Label {left:-9999px !important;position:absolute !important;}
+div#parcelforcefinder div.branchfinder-outer label{padding:0 0 5px 10px}
+
+div#fifty-plus .fieldset-gender-txt{
+    padding:3px 0 0 2px;
+}
+
+div#fifty-plus p.Confirm-Payment input{
+    margin: -4px 0 0 0;
+    padding:0;
+    vertical-align:bottom;
+    float:left;
+}
