@@ -174,7 +174,7 @@
 
                             },
                             error: function(errormessage) {
-                                //Hiển thị lỗi nếu xảy ra
+                                //Hi&#7875;n th&#7883; l&#7895;i n&#7871;u x&#7843;y ra
                                 $j("#checkReturn").text(errormessage.responseText);
                             }
                         });
@@ -319,10 +319,11 @@
         <div style="vertical-align: middle; width: 100%">
             <table width="100%">
                 <tr>
-                    <td class="style1">
+                    <td style="width: 200px">
                     </td>
-                    <td class="style2">
-                        <asp:Panel ID="pnFrom" runat="server" GroupingText="From" Width="100%" BorderWidth="0px">
+                    <td >
+                        <asp:Panel ID="pnFrom" runat="server" GroupingText="From" Width="100%" 
+                            BorderWidth="0px" Font-Bold="True">
                             <table style="width: 100%">
                                 <tr>
                                     <td style="width: 25%" align="left">
@@ -371,11 +372,11 @@
                             </table>
                         </asp:Panel>
                     </td>
-                    <td style="width: 30%">
+                    <td style="width: 88px">
                     </td>
                 </tr>
                 <tr>
-                    <td class="style1">
+                    <td class="style1" style="width: 19px">
                     </td>
                     <td class="style2">
                         <asp:Panel ID="pnSendtoforeign" runat="server" GroupingText="Foreign Address">
@@ -398,7 +399,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style1">
+                    <td class="style1" style="width: 19px">
                     </td>
                     <td class="style2">
                         <asp:Panel ID="pnTo" runat="server" GroupingText="To">
@@ -445,7 +446,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style1">
+                    <td class="style1" style="width: 19px">
                     </td>
                     <td class="style2">
                         <asp:Panel ID="pnDetail" runat="server" GroupingText="Detail">
@@ -546,7 +547,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style1">
+                    <td class="style1" style="width: 19px">
                         &nbsp;
                     </td>
                     <td class="style2">
