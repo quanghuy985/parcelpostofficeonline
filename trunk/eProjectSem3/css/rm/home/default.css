@@ -1,0 +1,160 @@
+
+/* Royal Mail homepage generic stylesheet for all browsers */
+/* If you need styles to be added or changed, please ask your eBusiness BRM about the process. */
+/* Any changes made to this file by other users will be overwritten the next time the file is released. */
+/* RW05June09: growth image*/
+
+div#newHomepage p,div#newHomepage a,div#newHomepage li,div#newHomepage ul,div#newHomepage h2,div#newHomepage h3,div#newHomepage h4{margin:0;padding:0;}
+BODY{font-size:100%;font-family:Arial, Helvetica, sans-serif;margin-top:10px;}
+IMG{border:none;}
+OL, UL{font-size:75%;}
+.strong{font-weight:700;}
+.clearProximity{clear:both;}
+div#newHomepage{width:724px;}
+
+
+/* New home welcome */
+OL, UL{font-size:75%;}
+div #content p,div #content a,div #content li,div #content ul,div #content h1,div #content h2,div #content h3,div #content h4{margin:0;padding:0;}
+div #content{ width:724px;}
+div#newHomepage #content{margin:10px 0 5px;}
+div #content-overlay{position:relative;z-index:100;margin:-228px 0 0;display:inline;float:left;width:724px;}
+div #content-overlay .podOne{display:inline;float:left;margin:25px 0 0 25px;width:290px;}
+div #content-overlay .podOne #promoContent{color:#666;}
+div #content-overlay .podOne #promoContent A{font-size:0.75em;color:#C00;display:block;font-weight:700;margin-top:10px;padding:0 10px 0 0;text-decoration:none;/*width:85px;*/}
+div #content-overlay .podOne #promoContent A IMG{margin-left:6px;}
+div #content-overlay .podOne #promoContent A:hover{text-decoration:underline;color:#900;}
+div #content-overlay .podOne #promoContent P{font-size:0.9em;font-weight:700;width:250px;}
+div #content-overlay .podOne #promoContent UL{list-style-type:none;margin:10px 0 0;}
+div #content-overlay .podOne #promoContent UL LI P{line-height:14px;font-size:1em;background:url(../../../images/royalmail/homepage/promo_chevron_listitem.gif) 0 4px no-repeat;display:inline;padding:0 0 0 10px;}
+div #content-overlay .podOne P{font-weight:400;margin:15px 0 0;}
+div #content-overlay .podTwo{display:inline;float:right;height:10em;margin:12px 0 0;width:235px;}
+div #content-overlay .podTwo UL .btnTopCorners{background:url(../../../images/royalmail/homepage/btntopcorners2.gif) left top no-repeat;display:inline;float:left;padding-top:13px;}
+div #content-overlay .podTwo UL LI{display:inline;float:left;margin:0 0 9px;}
+div #content-overlay .podTwo UL LI .btnbackground{background:url(../../../images/royalmail/homepage/btnbackground2.gif) left bottom no-repeat;display:inline;float:left;height:4em;}
+div #content-overlay .podTwo UL LI A{background:url(../../../images/royalmail/homepage/redbtn_chevron.gif) 196px 3px no-repeat;color:#fff;display:inline;float:left;font-weight:700;margin:0 20px 0 10px;padding:0 12px 0 0;text-decoration:none;width:195px;}
+div #content-overlay .podTwo UL LI A SPAN{display:inline;float:left;font-size:0.9em;font-weight:400;padding:3px 0 10px 1px;}
+div #content-overlay .podTwo UL,div .breakingNews .topCnr UL{list-style-type:none;}
+div #content-overlay H1{margin-bottom:0;}
+
+
+#breaking-news{float:left;width:100%;background:url(../../../images/royalmail/redesign/segments/generic_img/news_tile_bottom.jpg) right bottom no-repeat;}
+#breaking-news .bottom-corners-tile{float:left;width:100%;background:url(../../../images/royalmail/redesign/segments/generic_img/news_tile.jpg) right top no-repeat;}
+#breaking-news .bottom-corners-left{float:left;width:100%;background:url(../../../images/royalmail/redesign/segments/generic_img/news_bottom_left.jpg) left bottom no-repeat;}
+#breaking-news .top-corners-left{float:left;width:100%;background:url(../../../images/royalmail/redesign/segments/generic_img/news_top_left.jpg) left top no-repeat;}
+#breaking-news .top-corners-left UL{list-style-type:none;margin:7px 0 0;padding-bottom:23px;}
+#breaking-news .top-corners-left LI{float:left;display:inline;padding:0 10px;background:url(../../../images/royalmail/redesign/homepage/chevron_wht.gif) 0 5px no-repeat;color:#fff;}
+#breaking-news .top-corners-left .first-item{background:none;}
+#breaking-news .top-corners-left .lastItem{white-space:nowrap;}
+#breaking-news .top-corners-left LI A{color:#fff;text-decoration:none;}
+#breaking-news .top-corners-left LI A:hover{text-decoration:underline;}
+div#new-Footer{margin:10px 0 20px;padding:0 0 5px;position:relative;float:left;width:726px;background:url(../../../images/royalmail/redesign/homepage/footer_background.jpg) left bottom no-repeat;}
+div#new-Footer IMG{float:left;display:inline;}
+div#new-Footer .podOne{padding:0;background:none;margin:0 0 0 10px;}
+div#new-Footer UL{list-style-type:none;margin:0 28px 15px 0;padding:0;float:left;}
+div#new-Footer UL .firstItem A{font-weight:700;}
+div#new-Footer UL LI{padding-bottom:2px;}
+div#new-Footer UL LI A{font-size:0.9em;color:#666;text-decoration:none;}
+div#new-Footer UL LI H3{font-size:1.0em;color:#666;}
+div#new-Footer UL LI A:hover{text-decoration:underline;color:#C00;}
+div#new-Footer .podTwo{clear:both;float:right;display:inline;}
+div#new-Footer .podTwo P{position:absolute;bottom:7px;right:10px;font-size:0.6em;color:#666;}
+div#newHomepage .header{background:url(../../../images/royalmail/redesign/homepage/head_background.jpg) left bottom no-repeat;height:6.8em;overflow:hidden;width:724px;}
+div#newHomepage .header .headlinks{display:inline;float:right;height:2em;width:500px;margin-top:7px;margin-right:3px;}
+div#newHomepage .header .headlinks .search{display:inline;float:right;margin:20px 6px 0 0;width:250px;}
+div#newHomepage .header .headlinks INPUT{float:left;}
+div#newHomepage .header .headlinks A{float:left;}
+div#newHomepage .header .headlinks UL{display:inline;float:right;list-style-type:none;margin:0 0 0 5px;}
+div#newHomepage .header .headlinks UL .dottedSeperator{background:url(../../../images/royalmail/redesign/homepage/dotted_seperator.gif) 100% 6px no-repeat;}
+div#newHomepage .header .headlinks UL .dottedSeperator P{display:inline;float:left;padding-top:0;}
+div#newHomepage .header .headlinks UL .lastItem{margin:0;}
+div#newHomepage .header .headlinks UL LI{display:inline;float:left;margin:0 9px 0 0;padding:0 11px 0 0;}
+div#newHomepage .header .headlinks UL LI A{color:#C00;}
+div#newHomepage .header .headlinks UL LI P{clear:none;color:#333;float:none;font-family:Arial, Helvetica, sans-serif;margin-right:0;}
+div#newHomepage .header H1{display:inline;float:left;}
+div#newHomepage .header IMG,div#newHomepage .header .headlinks P INPUT,div#newHomepage .footer IMG{display:inline;float:left;}
+
+.details {
+display:block;
+float:right;
+font-size:75%;
+margin:10px 10px 0 0;
+height:2em;
+width:500px;
+clear:right;
+}
+.details .text {display:inline;float:right;}
+.details .text form{display:inline;}
+.notDisplayed {
+display:none;
+}
+.notShown {
+font-size:0pt;
+left:-9999px;
+position:absolute;
+}
+.details a{color:#C00;}
+div#newHomepage .header .details .text a{
+background: transparent url(../../../images/royalmail/redesign/homepage/dotted_seperator.gif) no-repeat scroll 100% 6px;
+padding:2px 10px 0pt 5px;
+}
+div#newHomepage .header img.sep-pad {display:none;}
+div#newHomepage .header .details .text a.noBorder{background:none;}
+
+/* Promotions */
+div.Homepage-Promotion {
+	padding:0;
+	margin:0px;
+}
+
+.Homepage-Promotion .Promotion-Row {
+	width:760px;
+}
+
+.Homepage-Promotion .Promotion-Row img {
+	margin-right:7px;
+}
+
+div.Spacer-Promo {
+	display:none;
+	overflow:hidden;
+}
+
+div#newHomepage .news-container{
+	float:left;
+	margin:0 0 8px;
+	width:100%;
+}
+
+div#newHomepage .Searchbox {
+	float: right;
+	clear: right;
+	padding: 10px 10px 9px 0;
+	width: 235px;
+}
+
+div#newHomepage .Searchbox input {
+	vertical-align: middle;
+	border: 1px solid #cccccc;
+	font-size: 105%;
+	width: 133px;
+}
+
+div#newHomepage .Searchbox input.search-img {
+	border: 0;
+	padding: 0 0 0 8px;
+	width: 81px;
+	height: 21px;
+}
+
+div#newHomepage .header .details .text input {
+	margin-top: -1px;
+	vertical-align:top;
+	padding-left:7px;
+}
+div#newHomepage #content-overlay #pack-image IMG{
+        position:absolute;
+        top:22px;
+        left:265px;
+}
+

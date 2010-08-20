@@ -1,0 +1,4531 @@
+/* Parcelforce stylesheet for all browsers */
+/* If you need styles to be added or changed, please ask your eBusiness BRM about the process. */
+/* Any changes made to this file by unauthorised users will be overwritten the next time the file is released. */
+/* RW 05Dec2008 PAF table  */
+
+/* Basic Tags */
+u {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+ol  {
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+input, select {
+	color:#204A91;
+}
+
+a {
+	color:#204A91;
+	text-decoration: underline;
+}
+
+a:hover { 
+color:#F00;
+text-decoration: underline;
+}
+
+
+
+fieldset { border:none; }
+
+img {  border: 0; }
+
+.header  { 	position:relative; }
+
+.logobar  {
+	position:relative;
+	height:97px;
+	width:760px;
+}
+
+.logobar .tabs {
+	position:absolute;
+	bottom:25px;
+	left:0px;
+	height:18px;
+	padding:0;
+}
+
+.header .logobar .tabs .position-1 {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.header .logobar .tabs .position-2 {
+	display:block;
+	position:absolute;
+	top:0;
+	left:117px;
+}
+
+.header .logobar .tabs .position-3 {
+	display:block;
+	position:absolute;
+	top:0;
+	left:234px;
+}
+
+#login {
+	display: inline;
+}
+
+.genericBold {
+	font-weight:700;
+}
+
+/* INPUT, OUTPUT AND TOOL APPLICATION STYLES */
+
+div.Application {
+	color:#000000;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+div.Application .Tool,
+div.Application .Input,
+div.Application .Output {
+	display:block;
+	margin:0 0 10px 0;
+	padding:5px;
+}
+
+div.Application .Tool,
+div.Application .Input{
+background:#e3e2f0;
+width: 577px;
+}
+
+div.Application .Tool div.Section-Break,
+div.Application .Input div.Section-Break,
+div.Application .Output div.Section-Break {
+	display:block;
+	margin:0 -5px 0 -5px;
+	padding:0;
+	border:0;
+	height:1px;
+	overflow:hidden;
+	background-color:#ffffff;
+}
+
+div.Application .Input { background:#e3e2f0; }
+div.Application .Output { background:#eff0f2; }
+
+table.Centered-emt { 
+width:567px;
+}
+.Centered-emt td {font-size:110%; padding-bottom:8px; text-align:left; }
+.Centered-emt td span {font-size:100%}
+.Centered-emt td table td table td {font-size:100%}
+
+
+.Tool table.Set-Left,
+.Tool table.Centered,
+.Input table.Set-Left,
+.Input table.Centered,
+.Output table.Set-Left,
+.Output table.Centered {
+	border-collapse:collapse;
+	padding:0;
+	border:0;
+	margin:0;
+	width:100%;
+	font-size:110%;
+}
+
+.Tool table.Set-Left tr,
+.Tool table.Centered tr,
+.Input table.Set-Left tr,
+.Input table.Centered tr,
+.Output table.Set-Left tr,
+.Output table.Centered tr { vertical-align:top; }
+
+.Tool table.Set-Left th,
+.Input table.Set-Left th,
+.Output table.Set-Left th,
+.Tool table.Centered th,
+.Input table.Centered th,
+.Output table.Centered th {
+	margin:0;
+	padding:5px 0 5px 0;
+	text-align:left;
+	color:#003399;
+	font-weight:bold;
+}
+
+table.Centered table#Supplies-Form th{
+font-size: 120%;
+}
+
+.Tool table.Set-Left td,
+.Input table.Set-Left td,
+.Output table.Set-Left td,
+.Tool table.Centered td,
+.Input table.Centered td,
+.Output table.Centered td {
+	padding:5px;
+	margin:0;
+	text-align:left;
+}
+
+
+.Tool table.Set-Left td h1,
+.Input table.Set-Left td h1,
+.Output table.Set-Left td h1,
+.Tool table.Centered td h1,
+.Input table.Centered td h1,
+.Output table.Centered td h1 {
+	margin:0;
+	padding:0;
+	padding-bottom:5px;
+	font-size:100%;
+	text-align:left;
+	color:#003399;
+}
+
+.Tool table.Centered td.Left,
+.Input table.Centered td.Left,
+.Output table.Centered td.Left {
+	text-align:right;
+}
+
+.Tool table.Set-Left .Buttons,
+.Tool table.Centered .Buttons,
+.Input table.Set-Left .Buttons,
+.Input table.Centered .Buttons,
+.Input table.Centred .Buttons,
+.Output table.Set-Left .Buttons,
+.Output table.Centered .Buttons,
+.Output table.Centred .Buttons {
+	text-align:right;
+	padding-bottom:6px;
+	padding-top:6px;
+	margin:0;
+}
+
+.Tool table.Set-Left .Buttons img,
+.Tool table.Centered .Buttons img,
+.Tool table.Centred .Buttons img,
+.Input table.Set-Left .Buttons img,
+.Input table.Centered .Buttons img,
+.Input table.Centred .Buttons img { 	border:0; }
+
+.Tool table.Centered td.Set-Left,
+.Input table.Centered td.Set-Left,
+.Output table.Centered td.Set-Left,
+.Tool table.Centered td.Right,
+.Input table.Centered td.Right,
+.Output table.Centered td.Right { 	text-align:left; }
+
+table.Centered td.Right .radio,
+table.Centered td.Right .checkbox,
+table.Centered td.Left .radio,
+table.Centered td.Left .checkbox { 	background-color: #e3e2f0; }
+
+.Tool table.Centered td.Right,
+.Input table.Centered td.Right,
+.Output table.Centered td.Right { 	padding-left:10px; }
+
+.Tool table.Set-Left td label,
+.Tool table.Centered td.Left label,
+.Tool table.Centered td.Set-Left label,
+.Input table.Set-Left td label,
+.Input table.Centered td.Left label,
+.Input table.Centered td.Set-Left label,
+.Output table.Set-Left td label,
+.Output table.Centered td.Left label,
+.Output table.Centered td.Set-Left label {
+	display:block;
+	font-weight:bold;
+	padding:0 1.0em 0 0;
+	border:0;
+	margin:0;
+}
+
+.Tool  label.Mandatory,
+.Input label.Mandatory { background:transparent url("../../images/parcelforce/asterisk.gif") top right no-repeat; }
+
+.Tool table.Set-Left label.Mandatory,
+.Tool table.Centered td.Set-Left label.Mandatory,
+.Input table.Set-Left label.Mandatory,
+.Input table.Centered td.Set-Left label.Mandatory { display:inline; }
+
+.Tool  label .Info,
+.Input label .Info {
+	display:block;
+	font-weight:normal;
+	padding:0;
+	border:0;
+	margin:0;
+}
+
+.Tool p.Note,
+.Input p.Note,
+.Output p.Note {
+	color:#999999;
+	margin:5px 0;
+}
+
+.Tool select,
+.Tool textarea,
+.Tool input,
+.Input select,
+.Input textarea,
+.Input input {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:1em;
+	vertical-align:middle;
+	background-color:#ffffff;
+	font-size:1em;
+	margin-bottom:4px;
+	margin-right:4px;
+}
+
+p.Privacy {
+	margin:0 30px 0 30px;
+	position:relative;
+}
+
+p.Privacy input.Checkbox {
+	position:absolute;
+	left:-30px;
+	top:0;
+	background:transparent;
+}
+
+/* INPUT, OUTPUT AND TOOL APPLICATION STYLES END */
+
+.NoBorderCheckbox	{
+	background : #E3E2F0;
+	color : #E3E2F0;
+}
+
+
+/* LEFT NAVIGATION STYLES END */
+
+/* GENERAL STYLES */
+div.Spacer-1px-wide {
+	width:1px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-4px-wide {
+	width:4px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-23px-wide {
+	width:23px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-27px-wide {
+	width:27px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-378px-wide {
+	width:378px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-5px-wide {
+	width:5px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-1px-high {
+	width:100%;
+	height:1px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+div.GreySpacer-1px-high {
+	background-color:#cecdcd;
+	width:100%;
+	height:1px;
+	margin:0;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+div.Spacer-8px-wide {
+	width:8px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-5px-high {
+	width:100%;
+	height:5px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+div.Spacer-10px-wide {
+	width:10px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-4px-high {
+	width:100%;
+	height:4px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+div.Spacer-10px-high {
+	width:100%;
+	height:10px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+div.Spacer-20px-wide {
+	width:20px;
+	height:100%;
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+div.Spacer-20px-high {
+	width:100%;
+	height:20px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+div.Spacer-18px-high {
+	width:100%;
+	height:18px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+div.Spacer-30px-high {
+	width:100%;
+	height:30px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	clear:left;
+}
+
+.Absolutely-No-Dots {
+	background-image : none;
+	border : 0;
+}
+
+.Absolutely-No-Dots-white {
+	background-image : none;
+	border : 0;
+	background-color : #fff;
+}
+/* GENERAL STYLES END */
+
+/* CSS OVERLAY TO COMPENSATE FOR BROKEN IE BOX-MODEL */
+
+div.Category-Dropdown div.Selection {
+	position:relative;
+	top:3px;
+}
+
+.Tool table.Set-Left,
+.Tool table.Centered,
+.Input table.Set-Left,
+.Input table.Centered,
+.Output table.Set-Left,
+.Output table.Centered { 	margin:0 -10px 0 0; }
+
+.Category table.Menu .Item h1,
+.Category table.Menu .Item h1 a { background-position:6px 0.9em; }
+
+/* CSS OVERLAY TO COMPENSATE FOR BROKEN IE BOX-MODEL ENDS */
+
+.do {
+	background-color : #c2cae0;
+	background-image : url("../../images/parcelforce/do.gif");
+	background-position : top left;
+	background-repeat : no-repeat;
+	padding-left : 40px;
+	padding-top : 6px;
+	padding-bottom : 8px;
+	padding-right : 8px;
+	border-bottom-style : solid;
+	border-bottom-color : #ffffff;
+	border-bottom-width : 1px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size : 100%;
+}
+
+.dont {
+	background-color : #e0e4ef;
+	background-image : url("../../images/parcelforce/dont.gif");
+	background-position : top left;
+	background-repeat : no-repeat;
+	padding-left : 40px;
+	padding-top : 6px;
+	padding-bottom : 8px;
+	border-bottom-style : solid;
+	border-bottom-color : #ffffff;
+	border-bottom-width : 1px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size : 100%;
+}
+
+
+.header .killer-apps {
+	width:100%;
+	font-size:0;
+	white-space:nowrap;
+	word-spacing:0;
+}
+
+.header .killer-apps img {
+	border:0;
+	padding:0;
+	margin:0;
+}
+
+.header .killer-apps img.home {
+	padding-right:7px;
+}
+
+ /* Main view page styles */
+
+.main-view-table {
+	border : 0;
+	padding : 0;
+	width: 100%;
+}
+
+.detail-view-table {
+	border : 0;
+	padding : 0;
+	width: 100%;
+	background: #ffffff;
+}
+
+.main-view-header {
+	font-family: verdana, arial, helvetica, sans-serif;
+	background:#bec0aa;
+	color:#ffffff;
+	padding: 0px;
+	border: 0px;
+	text-align : left;
+}
+
+.main-view-body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#000000;
+	vertical-align : top;
+	background : #efefe3;
+	padding-top : 5px;
+	padding-bottom : 5px;
+}
+
+.main-view-body-white {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#000000;
+	vertical-align : top;
+	background : #ffffff;
+	padding-top : 5px;
+	padding-bottom : 5px;
+}
+
+.main-view-order {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#000000;
+	vertical-align : middle;
+	background : #efefe3;
+	padding-right : 50px;
+}
+
+.main-view-order-white {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 70%;
+	color:#000000;
+	vertical-align : middle;
+	background : #ffffff;
+	padding-right : 50px;
+}
+
+.main-view-image {
+	padding-left : 5px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	vertical-align : top;
+	background : #efefe3;
+	padding-top : 5px;
+	padding-bottom : 5px;
+}
+
+.main-view-image-white {
+	padding-left : 5px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	vertical-align : top;
+	background : #ffffff;
+	padding-top : 5px;
+	padding-bottom : 5px;
+}
+
+.main-view-divider {
+	height: 1px;
+	width: 100%;
+	background-position:bottom;
+	background-repeat:repeat-x;
+}
+
+/* Detail page styles */
+
+.detailed-view-add {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#000000;
+	vertical-align : middle;
+	background : #f9f9e6;
+	padding-right : 50px;
+}
+
+.Menu .Dots,
+.Menu-Set-Left .Dots,
+.Menu-Set-Right .Dots {
+	margin-bottom:-8px;
+}
+
+/* CATEGORY AND SUBCATEGORY MENU STYLES */
+.Home-Template .Category { margin-top:10px; }
+
+.Category,
+.Subcategory {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+.Category img.TitleImage { margin-left:-3px; }
+
+.Category .Header-Image,
+.Subcategory .Header-Image {
+	display:block;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+.Category table.Menu,
+.Subcategory table.Menu {
+	border-collapse:collapse;
+	margin:0 0 0 5px;
+	padding:0;
+	border:0;
+	width:95%;
+}
+
+.Category table.Menu tr,
+.Subcategory table.Menu tr {
+	vertical-align:top;
+}
+
+.Category table.Menu td.Left,
+.Subcategory table.Menu td.Left {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.Category table.Menu td.Right,
+.Subcategory table.Menu td.Right {
+	margin: 0;
+	padding: 0 0 0 4px;
+	border: 0;
+}
+
+.Category table.Menu .Item,
+.Subcategory table.Menu .Item {
+	display:block;
+	background-color:transparent;
+	border:0;
+	padding:0;
+	margin:0 0 5px 0;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.Subcategory table.Menu .Item h1,
+.Subcategory table.Menu .Item h1 a {
+	background-position:6px 0.6em;
+}
+
+.Category table.Menu .Item h1,
+.Subcategory table.Menu .Item h1 {
+	display:block;
+	font-weight:bold;
+	padding:5px 5px 5px 15px;
+	margin:0 0 0 0;
+	border:0;
+	background:#e2e6f0 url("../../images/parcelforce/nav-arrow-2.gif") 6px 0.8em no-repeat;
+	color:#666666;
+	line-height:1.25em;
+
+}
+
+
+.Subcategory table.Menu .Item {
+width:270px;
+}
+
+.Subcategory table.Menu .Item h1 {
+	padding-top:2px;
+	padding-bottom:2px;
+	background-position:6px 0.5em;
+}
+
+.Category table.Menu .Item h1 a,
+.Subcategory table.Menu .Item h1 a {
+	display:block;
+	font-weight:bold;
+	margin:-5px -5px 0 -15px;
+	padding:5px 5px 0 15px;
+	border:0;
+	background:#e2e6f0 url("../../images/parcelforce/nav-arrow-2-current.gif") 6px 0.8em no-repeat;
+	color:#003399;
+	text-decoration:none;
+	line-height:1.25em;
+}
+
+.Subcategory table.Menu .Item h1 a {
+	margin-top:-2px;
+	padding-top:2px;
+	background-position:6px 0.5em;
+}
+
+.Category table.Menu .Item h1 a:hover,
+.Subcategory table.Menu .Item h1 a:hover {
+	color:#003399;
+	text-decoration:none;
+}
+
+.Category table.Menu .Item .Body,
+.Subcategory table.Menu .Item .Body {
+	display:block;
+	border:1px solid #e2e6f0;
+	padding:5px 5px 5px 15px;
+	margin:0 0 0 0;
+	background-color:#ffffff;
+	font-weight:normal;
+	
+}
+
+.Category .Footnote,
+.Subcategory .Footnote {
+	display:block;
+	color:#666666;
+	margin:15px 5px 0 5px;
+}
+
+/* CATEGORY AND SUBCATEGORY MENU STYLES END */
+
+/* PAGE TITLE COMPONENT STYLES */
+
+/* DEFAULT AND DESTINATION PAGES */
+
+.Application-Page .Title,
+.Destination-2-Page .Title,
+.Title {
+	display:block;
+	position:relative;
+	vertical-align:bottom;
+	margin:5px 0 10px 0;
+	padding:25px 0 5px 0;
+	border:0;
+	font-size:100%;
+	color:#003399;
+	background-color:#eeeef6;
+	width: 100%;
+}
+
+.Title .Rounded-Corners .Top-Left {
+	top:-25px;
+	left: -11px;
+	
+}
+
+
+.Title .Rounded-Corners .Top-Right {
+	top:-25px;
+	right:0;
+}
+
+
+.Title .Rounded-Corners .Bottom-Left {
+	bottom:-5px;
+	left:-5px;
+}
+
+.Title .Rounded-Corners .Bottom-Right {
+	bottom:-5px;
+	right:-10px;
+}
+
+/* TRANSITION PAGES */
+
+.Transition-1-Page .Title,
+.Transition-2-Page .Title,
+.Destination-1-Page .Title { 	background-color:#ececd8; }
+/* PAGE TITLE COMPONENT STYLES ENDS */
+
+/* GENERAL STYLES */
+
+div.Application, div.Registration {
+	margin:0pt 0pt 0pt 2px;
+	padding:0;
+	background:#ffffff;
+	color:#000000;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:100%;
+	font-weight:normal;
+	width: 585px
+}
+
+.Tool,
+.Input,
+.Output {
+	display:block;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.Input,
+.Output { 	margin-bottom:10px; }
+
+.Tool table.Set-Left,
+.Input table.Set-Left,
+.Output table.Set-Left,
+.Tool table.Centred,
+.Input table.Centred,
+.Output table.Centred {
+	border-collapse:collapse;
+	border:0;
+	width:100%;
+}
+
+.Input table.Set-Left,
+.Input table.Centred {
+	background:#efefe3;
+	border-bottom:1px solid #8c939b;
+}
+
+.Tool table.Set-Left,
+.Tool table.Centred {
+	background:#efefe3;
+	border-left:1px solid #bec0aa;
+	border-right:1px solid #bec0aa;
+	border-bottom:1px solid #bec0aa;
+}
+
+.Output table.Set-Left,
+.Output table.Centred {
+	background:#eff0f2;
+	border-bottom:1px solid #8c939b;
+}
+
+.Tool table.Set-Left tr,
+.Tool table.Centred tr,
+.Input table.Set-Left tr,
+.Input table.Centred tr,
+.Output table.Set-Left tr,
+.Output table.Centred tr { 	vertical-align:top; }
+
+.Tool table.Set-Left td.Dots,
+.Tool table.Centred td.Dots,
+.Tool table.Set-Left div.Dots,
+.Tool table.Centred div.Dots,
+.Tool table.Set-Left hr,
+.Tool table.Centred hr,
+.Input table.Set-Left td.Dots,
+.Input table.Centred td.Dots,
+.Input table.Set-Left div.Dots,
+.Input table.Centred div.Dots,
+.Input table.Set-Left hr,
+.Input table.Centred hr {
+	border:hidden;
+	margin:4px 0 4px 0;
+	padding:0;
+	height:1px;
+	overflow:hidden;
+}
+
+.Tool table.Set-Left tr.No-Dots,
+.Input table.Set-Left tr.No-Dots,
+.Output table.Set-Left tr.No-Dots,
+.Tool table.Centred tr.No-Dots,
+.Input table.Centred tr.No-Dots,
+.Output table.Centred tr.No-Dots {
+	background-image:none;
+}
+
+.Tool table.Set-Left tr.Light,
+.Input table.Set-Left tr.Light,
+.Output table.Set-Left tr.Light,
+.Tool table.Centred tr.Light,
+.Input table.Centred tr.Light,
+.Output table.Centred tr.Light {
+	background-color:#ffffff;
+}
+
+.Tool table.Set-Left tr.Light-No-Dots,
+.Input table.Set-Left tr.Light-No-Dots,
+.Output table.Set-Left tr.Light-No-Dots,
+.Tool table.Centred tr.Light-No-Dots,
+.Input table.Centred tr.Light-No-Dots,
+.Output table.Centred tr.Light-No-Dots {
+	background-color:#ffffff;
+	background-image:none;
+}
+
+.Tool table.Set-Left th,
+.Input table.Set-Left th,
+.Output table.Set-Left th,
+.Tool table.Centred th,
+.Input table.Centred th,
+.Output table.Centred th {
+	color:#ffffff;
+	text-align:left;
+	padding:5px;
+}
+
+.Tool table.Set-Left th,
+.Tool table.Centred th,
+.Input table.Set-Left th,
+.Input table.Centred th {
+	background:#bec0aa;
+}
+
+.Tool table.Set-Left th.Empty,
+.Tool table.Centred th.Empty {
+	margin:0;
+	padding:0;
+	border:0;
+	background-color:#bec0aa;
+	height:1px;
+	overflow:hidden;
+}
+
+.Input table.Set-Left th,
+.Input table.Centred th {
+	border-bottom:1px solid #8f926d;
+}
+
+.Output table.Set-Left th,
+.Output table.Centred th {
+	background:#5793a1;
+	border-bottom:1px solid #186e70;
+}
+
+.Tool table.Set-Left td,
+.Input table.Set-Left td,
+.Output table.Set-Left td,
+.Tool table.Centred td,
+.Input table.Centred td,
+.Output table.Centred td {
+	padding:5px 10px 5px 10px;
+	text-align:left;
+}
+
+.Tool table.Set-Left td h1,
+.Input table.Set-Left td h1,
+.Output table.Set-Left td h1,
+.Tool table.Centred td h1,
+.Input table.Centred td h1,
+.Output table.Centred td h1 {
+	margin:0;
+	padding:0;
+	padding-bottom:4px;
+	font-size:100%;
+	text-align:left;
+}
+
+.Tool table.Centred td.Left,
+.Input table.Centred td.Left,
+.Output table.Centred td.Left {
+	text-align:right;
+}
+
+.Tool table.Centred td.Set-Left,
+.Input table.Centred td.Set-Left,
+.Output table.Centred td.Set-Left,
+.Tool table.Centred td.Right,
+.Input table.Centred td.Right,
+.Output table.Centred td.Right {
+	text-align:left;
+}
+
+.Tool table.Set-Left td label,
+.Tool table.Centred td.Left label,
+.Input table.Set-Left td label,
+.Input table.Centred td.Left label {
+	display:block;
+	font-weight:normal;
+	line-height:1.25em;
+}
+
+.Output table.Set-Left td label,
+.Output table.Centred td.Left label {
+	display:block;
+	font-weight:bold;
+}
+
+/* GENERIC TOOL, INPUT AND OUTPUT APPLICATION STYLES END */
+
+/* REGISTRATION STYLES */
+
+div.Registration .Input table.Set-Left,
+div.Registration .Input table.Centred {
+/* Should background be #efe3ef? */
+	background:#f8f1eb;
+	border-bottom:1px solid #b68aa5;
+}
+
+div.Registration .Input table.Set-Left th,
+div.Registration .Input table.Centred th {
+	background:#c0aabe;
+	border-bottom:1px solid #b68aa5;
+}
+
+div.Registration .Output table.Set-Left,
+div.Registration .Output table.Centred {
+	background:#f2eff0;
+	border-bottom:1px solid #b68aa5;
+}
+
+div.Registration .Output table.Set-Left th,
+div.Registration .Output table.Centred th
+{
+	background:#e4accf;
+	border-bottom:1px solid #b68aa5;
+}
+
+div.Registration .Tool table.Set-Left th,
+div.Registration .Tool table.Centred th,
+div.Registration .Input table.Set-Left th,
+div.Registration .Input table.Centred th
+{
+	background:#e4accf;
+	border-bottom:1px solid #926d8f;
+	border-left:1px solid #e4accf;
+	border-right:1px solid #e4accf;
+}
+
+div.Registration .Tool table.Set-Left,
+div.Registration .Tool table.Centred
+{
+	background:#f8f1eb;
+	border-left:1px solid #b68aa5;
+	border-right:1px solid #b68aa5;
+	border-bottom:1px solid #b68aa5;
+}
+
+div.Registration .Tool table.Set-Left th.Empty,
+div.Registration .Tool table.Centred th.Empty
+{
+	background-color:#b68aa5;
+}
+
+/* REGISTRATION STYLES END */
+
+/* FEATURES COMPONENT STYLES */
+
+/* CH10Feb04: These two styles apply in the same places but have different backgrounds. Fix. */
+.Features {
+	border:0;
+	border-left:1px solid #cccccc;
+	padding:6px;
+	margin:0;
+}
+
+h1.Features {
+	margin:0px;
+	margin-bottom:8px;
+	padding:5px;
+	background-color:#e6aad0;
+	border-bottom:1px solid #be87a6;
+	color:#ffffff;
+}
+
+/* CH30Dec03: These overlap with the .Homepage .Feature styles !!! */
+.Feature {
+	display:block;
+	background-color:#ffffff;
+	color:#000000;
+	margin:0;
+	margin-bottom:10px;
+	padding:0;
+	border:0;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.Feature h1 {
+	margin:6px 4px 2px 4px;
+	padding:0 0 4px 0;
+	color:#cc5a9e;
+}
+
+.Feature h1.Orange { color:#f8871f; }
+
+.Feature h1.Blue { 	color:#48909e; }
+
+.Feature h1.Yellow { color:#dfb41a; }
+
+.Feature p.Precis {
+	margin:0 4px 0 4px;
+}
+
+.Feature .GreySpacer-1px-high {
+	margin:0px 0 4px 4px;
+	width:144px;
+}
+
+/* FEATURES COMPONENT STYLES END */
+
+
+/* GENERIC TOOL, INPUT AND OUTPUT APPLICATION STYLES
+ * =================================================
+ * These styles apply to *ALL* tools, input and output
+ * applications. Any variations (e.g. Registration) to
+ * these styles are applied in the latter part of this
+ * file.
+ */
+
+.Tool table.Set-Left,
+.Tool table.Centered,
+.Input table.Set-Left,
+.Input table.Centered,
+.Output table.Set-Left,
+.Output table.Centered
+{
+	margin:0 -10px 0 0;
+}
+
+div .Input,
+div .Output
+{
+	margin-bottom:10px;
+}
+
+/* IC STORY COMPONENT STYLES */
+
+div.Story {
+	font-family: verdana, arial, helvetica, sans-serif;
+	position: relative;
+}
+
+.Story {
+	display:block;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+div.Story h1,
+h1.Page-Title
+{
+	margin:0;
+	margin-bottom:12px;
+	padding:0;
+	padding-bottom:4px;
+	background-position:bottom;
+	background-repeat:repeat-x;
+	color:#5a8888;
+}
+
+div.Story h2
+{
+	margin:0;
+	margin-top:24px;
+	margin-bottom:8px;
+	padding:0;
+	padding-bottom:4px;
+	background-position:bottom;
+	background-repeat:repeat-x;
+}
+
+div.Story .Dots
+{
+	margin:0;
+	padding:2px 0 4px 0;
+	border:0;
+	background-position:bottom;
+	background-repeat:repeat-x;
+}
+
+div.Story p
+{
+	margin:0;
+	margin-top:6px;
+	margin-bottom:6px;
+	line-height: 160%;
+}
+
+div.Story img
+{
+	border:0;
+}
+
+div.Story ul
+{
+	margin:0;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:0;
+	list-style-type:none;
+	line-height: 100%;
+}
+
+div.Story ul li
+{
+	margin:0;
+	padding:0;
+	padding-left:10px;
+	border:0;
+	text-indent:0;
+	background-image:url("../../images/parcelforce/widget/bullet/black.gif");
+	background-position:1px 6px;
+	background-repeat:no-repeat;
+	line-height: 160%;
+}
+
+/* CH16Nov06 Underline */
+div.Story a {
+	color:#0066ca;
+	text-decoration:none;
+}
+
+div.Story a:hover {
+	text-decoration:underline;
+}
+
+div.Story .Precis-No-Image,
+div.Story .Precis-With-Image,
+div.Story .Precis {
+	display:block;
+	position:relative;
+	padding:0;
+}
+
+div.Story .Precis-With-Image {
+	padding-left:130px;
+	height:120px;
+}
+
+div.Story .Precis-No-Image img.Call-To-Action,
+div.Story .Precis-With-Image img.Call-To-Action,
+div.Story .Precis img.Call-To-Action {
+	margin:0;
+	margin-top:8px;
+	margin-right:4px;
+}
+
+div.Story .Precis-With-Image img.Story-Image  {
+	position:absolute;
+	top:2px;
+	left:0;
+}
+
+div.Story .Links a,
+a.Story-Link {
+	display:block;
+	background-image:url("../../images/parcelforce/widget/arrow/right-pink.gif");
+	background-position:0 2px;
+	background-repeat:no-repeat;
+	margin:0;
+	margin-top:9px;
+	padding:0;
+	padding-left:8px;
+}
+
+a.Story-Link { margin-top:3px; }
+
+div.Buttons {
+	text-align:right;
+	padding:0;
+	margin:0;
+	margin-bottom:10px;
+}
+
+div.Buttons img { border:0; }
+
+/* IC STORY COMPONENT STYLES ENDS */
+
+/* PROMOTION STYLES */
+.Promotion {
+	margin:5px 0 0 0;
+	padding:0 0 5px 0;
+	border:0;
+}
+
+.Promotion .Feature {
+	position:relative;
+	margin:0;
+	padding:0;
+	background-color:#0C2C84;
+}
+
+.Promotion .Feature a img { background: #ffffff; }
+
+.Standard-Template .Promotion .Feature { overflow:hidden; }
+
+
+.Promotion .Feature img.Feature-Image,
+.Promotion .Feature img.Promotion-Image {
+	display:block;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+.Promotion .Feature .Link-Text {
+	display:block;
+	margin:0 5px 5px 5px;
+	padding:3px 0 3px 10px;
+	background:transparent url("../../images/parcelforce/white-arrow-feature-text.gif") 0 0.5em no-repeat;
+	border:0;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:normal;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.Standard-Template .Promotion .Feature .Link-Text {
+	display:block;
+	margin:0 5px 5px 5px;
+	padding:3px 0 3px 10px;
+	background:transparent url("../../images/parcelforce/white-arrow-feature-text.gif") 0 0.5em no-repeat;
+	border:0;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:normal;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.Promotion .Feature a.Link-Text:hover { text-decoration:underline; }
+
+.Promotion .Feature div.Rounded-Corners {
+	position:relative;
+	height:5px;
+	top:0;
+	left:0;
+	width: 100%;
+	padding:0;
+	border:0;
+	margin:-5px -1px -5px -1px;
+	z-index:100;
+}
+
+.Promotion .Feature div.Rounded-Corners div.Top-Left {
+	height:5px;
+	width:5px;
+	top:3px;
+	left:0px;
+	background:url("../../images/parcelforce/blue-corner-top-left.gif") no-repeat;
+	z-index:100;
+}
+
+.Standard-Template .Promotion .Feature div.Rounded-Corners div.Top-Left {
+	height:5px;
+	width:5px;
+	top:1px;
+	left:0px;
+	background:url("../../images/parcelforce/blue-corner-top-left.gif") no-repeat;
+	z-index:100;
+}
+
+.Promotion .Feature div.Rounded-Corners div.Top-Right {
+	height:5px;
+	width:5px;
+	top:3px;
+	right:-3px;
+	background:url("../../images/parcelforce/blue-corner-top-right.gif") no-repeat;
+	z-index:100;
+}
+
+.Standard-Template .Promotion .Feature div.Rounded-Corners div.Top-Right {
+	top:0px;
+	left:157px;
+}
+
+.Promotion .Feature div.Rounded-Corners div.Bottom-Left {
+	height:5px;
+	width:5px;
+	bottom:2px;
+	left:0px;
+	background:url("../../images/parcelforce/blue-corner-bottom-left.gif") no-repeat;
+	z-index:100;
+}
+
+.Promotion .Feature div.Rounded-Corners div.Bottom-Right {
+	height:5px;
+	width:5px;
+	bottom:3px;
+	right:-4px;
+	background:url("../../images/parcelforce/blue-corner-bottom-right.gif") no-repeat;
+	z-index:100;
+}
+
+.Standard-Template .Promotion .Feature div.Rounded-Corners div.Bottom-Right {
+	left:158px;
+	bottom:2px;
+}
+
+/* PROMOTION STYLES ENDS */
+.Related-Links  {
+	margin: 0 0 0 0;
+	padding: 0;
+	border: 0;
+	background-color: #f3f5f9;
+}
+
+.Related-Links h1 {
+	border: 0;
+	margin: 5px 0 8px 0;
+	padding: 27px 0 8px 16px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #e2e6f0;
+	color: #003399;
+	width: 161px;
+}
+
+.Related-Links a {
+	display:block;
+	font-family: verdana, arial, helvetica, sans-serif;
+	background:#f3f5f9 url("../../images/parcelforce/widget/arrow/right-grey.gif") 8px 0.4em no-repeat;
+	color:#666666;
+	padding:0px 0 8px 16px;
+}
+/* STORY COMPONENT STYLES */
+
+.Story .Section {
+	display:block;
+	margin:0pt;
+}
+
+/* REDESIGN */
+.Section .Story-Image {
+	margin-bottom:-2px;
+}
+
+table.Data th {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight:bold;
+    color:#000000;
+    background-color:#C2CAE0;
+    text-align:left;
+    padding:10px;
+}
+
+table.Data td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight:normal;
+    color:#000000;
+    background-color:#EEEEF6;
+    padding:10px;
+}
+
+.displaytable td.Dark {
+    color:#000000;
+    background-color:#C2CAE0;
+}
+
+.displaytable th {
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-weight:bold;
+    color:#000000;
+    background-color:#C2CAE0;
+    text-align:left;
+    padding:10px;
+}
+
+.displaytable td {
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-weight:normal;
+    color:#000000;
+    background-color:#EEEEF6;
+    padding:10px;
+}
+
+table.Data td.Dark {
+    color:#000000;
+    background-color:#C2CAE0;
+}
+
+.Story .Section-No-Border {
+	display:block;
+	margin:0 0 1px 0;
+	padding:0 0 5px 0;
+	border:0;
+}
+
+.Story .Section-No-Border p,
+.Story .Section p {
+	margin:0;
+	padding:5px 10px 5px 10px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:normal;
+	color:#000000;
+	background-color:#ffffff;
+}
+
+.Story .Section-No-Border h1,
+.Story .Section h1 {
+	margin:0;
+	padding:1px 10px 10px 10px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:bold;
+	color:#00309C;
+	background-color:#e2e6f0;
+}
+
+.Story .Section-No-Border h2,
+.Story .Section h2 {
+	margin:0;
+	padding:1px 10px 10px 10px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:bold;
+	color:#000000;
+	background-color:#ffffff;
+}
+
+.Story .Section-No-Border .Links,
+.Story .Section .Links {
+	padding:1px 10px 10px 10px;
+}
+
+.Story .Section-No-Border .Links a,
+.Story .Section .Links a {
+	display:block;
+	margin:0;
+	padding:0 0 5px 10px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:normal;
+	background:transparent url("../../images/parcelforce/widget/arrow/right-blue.gif") 0px 0.4em no-repeat;
+}
+
+.Destination-2-Page .Story .Section-No-Border h1,
+.Destination-2-Page .Story .Section h1 { background-color:#e2e6f0; }
+
+div.Form-Description {
+	font-family: verdana, arial, helvetica, sans-serif;
+	position:relative;
+	margin:0 7px 10px;
+	padding:0;
+	background-color:#eeeef6;
+	width: 575px;
+	font-size:120%;
+}
+
+div.Form-Description h1 {
+	margin:0;
+	padding:5px 0 5px 0;
+	color:#003399;
+}
+
+div.Form-Description h2 {
+	margin:0;
+	padding:0;
+	color:#003399;
+	margin-bottom: 13px;
+	font-size: 150%
+}
+
+div.Form-Description p {
+	margin:10px 0 0 0;
+	padding:10px;
+	border:0;
+}
+
+div.Form-Description img { border:0; }
+
+div.Form-Description ul {
+	margin:10px 0 0 0;
+	padding:0;
+	border:0;
+	list-style-type:none;
+}
+
+div.Form-Description ul li {
+	margin:0;
+	padding:0 0 0 10px;
+	border:0;
+	text-indent:0;
+	background-image:url("../../images/parcelforce/widget/bullet/black.gif");
+	background-position:1px 6px;
+	background-repeat:no-repeat;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+/* CH16Nov06 Underline */
+div.Form-Description a {
+	color:#0066ca;
+	text-decoration:underline;
+}
+
+div.Form-Description a:hover { 	text-decoration:underline; }
+
+div.Rounded-Corners {
+	position:relative;
+	top:0;
+	left:0;
+	padding:0;
+	border:0;
+	margin:0;
+	z-index:100;
+}
+
+div.Rounded-Corners div.Top-Left {
+	position:absolute;
+	height:4px;
+	width:4px;
+	top:-5px;
+	left:-5px;
+	background:url("../../images/parcelforce/corner-top-left.gif") no-repeat;
+	overflow:hidden;
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+div.Rounded-Corners div.Top-Right {
+	position:absolute;
+	height:4px;
+	width:4px;
+	top:-5px;
+	right:-5px;
+	background:url("../../images/parcelforce/corner-top-right.gif") no-repeat;
+	overflow:hidden;
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+div.Rounded-Corners div.Bottom-Left {
+	position:absolute;
+	height:4px;
+	width:4px;
+	top: -5px;
+	left: 0px;
+	/*background:url("../../images/parcelforce/corner-bottom-left.gif") no-repeat;*/
+	overflow:hidden;
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+div.Rounded-Corners div.Bottom-Right {
+	position:absolute;
+	height:4px;
+	width:4px;
+	top:-5px;
+	right:0px;
+	/* background:url("../../images/parcelforce/corner-bottom-right.gif") no-repeat;*/
+	overflow:hidden;
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+h1.Page-Title div.Rounded-Corners div.Top-Left { top:-10px; }
+
+h1.Page-Title div.Rounded-Corners div.Top-Right { top:-10px; }
+/* STORY COMPONENT STYLES ENDS */
+
+
+
+/* TEMPLATE STYLES */
+.PW {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 100%;
+	display:block;
+	margin:0;
+	padding:0;
+	border:0;
+	width:760px;
+}
+
+.Transition-1-Page,
+.Transition-2-Page,
+.Destination-1-Page,
+.Destination-2-Page,
+.Application-Page {
+	display:block;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+.Header-Region {
+	position:relative;
+	display:block;
+	padding:0;
+	margin:0 0 5px 0;
+	border:0;
+}
+
+.Content-Region {
+	position:relative;
+	display:block;
+	padding:0;
+	margin:0 0 1px 0;
+	border:0;
+}
+
+.Standard-template .Footer-Region {
+	margin:0;
+	padding:0;
+	border:0;
+}
+.Footer-Region .Copyright {
+    font-size:70%;
+    margin-top:10px;
+	padding:0;
+	color:#0c2c84;
+	background-color:#fff;
+	font-weight: bold;
+}
+
+.Content-Components { position:relative;  }
+
+/* TEMPLATE STYLES END */
+
+/* Styles for Find the Nearest */
+.bluedksm {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+
+.bluedksmb {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.input {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	color: #ff0000;
+	height: 10px;
+}
+
+.form-text {
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+/* End of styles for Find the Nearest */
+div.Application .pffillbox {
+	background-color:#e3e2f0;
+}
+
+
+/* Styles for ParcelForce MyProfile page */
+.Col-584	{
+	width:584px;
+	padding:0;
+	border:0;
+	padding-top:5px;
+}
+
+.checkbox_noborder {
+	border: 0;
+	padding: 0;
+	background: #E3E2F0;
+	color: #E3E2F0;
+}
+
+.reg-error-sorry,
+.redTErr  {
+	font-size: 100%;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: normal;
+	color: #ff0000;
+	text-decoration: none;
+}
+
+.redTErrB, .redTErrB100  {
+	font-size: 100%;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: bold;
+	color: #cc0000;
+	text-decoration: none;
+}
+
+.myProfileAndor {
+	position:absolute;
+	top:540px;
+	left:284px;
+}
+
+/* Styles for Legacy Apps */
+.Centred {
+	background:#ffffff;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	border-top:1px solid #cccccc;
+	padding:0;
+	width: 100%;
+}
+
+.Centred_no_bottom {
+	background:#ffffff;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #ffffff;
+	border-top:1px solid #cccccc;
+	padding:0;
+	width: 100%;
+}
+
+.Centred_no_top {
+	background:#ffffff;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	border-top:1px solid #ffffff;
+	padding:0;
+	width: 100%;
+}
+
+.PCOLbckcol {   background-color:  #CCC;   }
+
+.PCOLbckcolblue {  background-color:  #003366;  }
+
+.PCOLredtxt {
+  font-weight: bold;
+  font-size: 100%;
+  color: #cd1627;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.PCOLwhttxt {
+  font-weight: bold;
+  font-size: 100%;
+  color: #FFF;
+  font-family: verdana, arial, helvetica, sans-serif;
+  background-color:  #CCCCCC;
+}
+
+.PCOLblktxt {
+  font-weight: bold;
+  color: #000000;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+div.legacy-app a:link,
+div.legacy-app a:visited,
+div.legacy-app a:active {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#cc0000;
+	text-decoration:none;
+}
+
+div.legacy-app a:hover  { text-decoration:underline;  }
+
+div.legacy-app li {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#cc0000;
+}
+
+/* End of styles for Legacy Apps*/
+
+h1.Section-text-grey	{
+    font-family: verdana, arial, helvetica, sans-serif;
+    color:#666666;
+    border-bottom:1px solid #CCCCCC;
+    padding:0 0 0px 10px;
+    margin:10px 0 5px 0;
+    text-decoration: none;
+}
+
+/* Login Panel for My Account area */
+.Login-Panel {
+	font-family:verdana, arial, helvetica, sans-serif;
+	background-color:#5384A6;
+	color:#ffffff;
+	width:150px;
+}
+
+.Login-Panel a {
+	color:#ffffff;
+	text-decoration:none;
+}
+
+ .Login-Panel a:hover {
+	color:#ffffff;
+	text-decoration: underline;
+}
+
+.Login-Panel .Copy {
+	padding:4px 16px 4px 16px;
+}
+
+.Login-Panel .Buttons {
+	display:block;
+	text-align:right;
+	white-space:nowrap;
+	padding:4px 16px 4px 0px;
+}
+
+.Login-Panel .Text-Field {
+	width: 100%;
+	border:1px solid #000000;
+}
+
+/* PFW redesign */
+#topboxes {
+	background-color:#D2DADE;
+	width:583px;
+	max-width:583px;
+	padding:0 0 10px 7px;
+}
+
+#topboxes table{
+	width:583px;
+	max-width:583px;
+}
+
+.midrow {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #204A91;
+	width:194px;
+	background: url("../../images/parcelforce/redesign/whitebox_mid.gif") repeat-y;
+	margin:0;
+	padding:0;
+}
+
+.box {
+	float:left;
+	margin-left:3px;
+}
+
+.botrow {
+	padding:0 0 10px 0;
+	margin-bottom:-9px;
+}
+
+.formselect {
+	margin-top:0;
+	width:115px;
+}
+.sectionTitle {font-weight: bold;}
+
+.midrow p {
+	margin:5px 4px 4px 5px;
+	padding-right:12px;
+}
+
+.midrow ul li {
+	margin:5px  13px 4px -12px;
+	padding-right:5px;
+}
+
+img,
+.midrow img{ 
+border:0; 
+}
+
+.select-button { margin-bottom:-3px; }
+.icon { vertical-align:top; }
+
+.clear {
+	clear:both;
+	line-height:0px;
+	height:0px;
+}
+
+.last { margin-bottom:-10px; }
+.padtop { padding-top:4px; }
+
+.horiz1,
+.horiz2 {
+	background: url("../../images/parcelforce/redesign/hr.gif") repeat-x;
+	background-color:#D2DADE;
+	height:4px;
+}
+
+.horiz2 { background-color:#E4E9EB; }
+
+.actionImage{ padding-bottom:2px; }
+
+/* Masthead */
+#topNav {
+	margin-bottom:1px;
+	background-color:#6D80B5;
+	clear: both;
+	font-size: 0.8em;
+	height:20px;
+}
+
+#topNav ul {margin: 0; padding: 0;}
+
+#topNav li {
+	display:block;
+	float:left;
+	background-color: #6D80B5;
+	line-height:20px;
+}
+
+#topNav li a:link,
+#topNav li a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top:4px;
+	padding-bottom:4px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color:#fff;
+}
+
+#topNav li a:hover,
+#topNav .down {
+	background-color:#edecd8;
+	color: #6D80B5;
+	text-decoration: none;
+	border-right-color:#edecd8;
+}
+#topNav .start a { margin-left: -3px; }
+#topNav li.end a:link,
+#topNav li.end a:visited {
+	padding-right: 24px;
+	border-right-color:#6D80B5;
+}
+#topNav li.end a:hover { border-right-color:#edecd8; }
+
+#header {
+	position:relative;
+	height: 85px;
+	background-color: #FE000B;
+	background: url("../../images/parcelforce/redesign/logo_parcelforce.gif") right bottom no-repeat;
+	margin-bottom: 5px;
+}
+
+#tabNav ul {
+	position:absolute;
+	width:760px;
+	bottom: 0;
+}
+
+* html #tabNav ul { bottom: -1px; } /* kz ???*/
+
+#tabNav li {
+	display:block;
+	float:left;
+	background: url("../../images/parcelforce/redesign/tab_blue.gif") 100% 0 no-repeat;
+	margin-left:-15px;
+}
+
+#tabNav li.down {
+	background: url("../../images/parcelforce/redesign/tab_white.gif") 100% 0 no-repeat;
+	color:#0C2C83;
+	margin-left:-15px;
+}
+
+#tabNav li.start { margin-left:0; }
+#tabNav li a:link,
+#tabNav li a:visited {
+	display:block;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	background-image: url("../../images/parcelforce/redesign/tab_blue_left.gif");
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-right:40px;
+	line-height:28px;
+}
+
+#tabNav li.down a:link,
+#tabNav li.down a:visited {
+	color: #0C2C83;
+	background-image: url("../../images/parcelforce/redesign/tab_white_left.gif");
+}
+
+#tabNav li a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+#tabNav li.down a:hover	{ color:#f00; }
+#tabNav .down { background-color:#ECECD8; }
+
+
+/* Footer Styles */
+#footer {
+	line-height:24px;
+	color: #fff;
+	clear: both;
+	background-color: #0C2C83;
+	margin:0;
+	padding: 0;
+}
+/*kz070307 end */
+#footer a:link,
+#footer a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #edecd8;
+	text-decoration: underline;
+}
+
+#footer ul {
+	margin-top:0;
+	padding: 0;
+	background-color: #0C2C83;
+}
+
+#footer li {
+	display:inline;
+	border-right: 1px solid #ccc;
+	padding-left:10px;
+	padding-right:8px;
+}
+
+#footer li.end	{ border: none;}
+#footer li.start { padding-left:8px; }
+
+/* Search Area */
+#sitesearchnav { display:block;position:relative;width:161px; background-color:#6D80B5; margin:10px 0 0 0; overflow:hidden; height:25px; padding-top:3px;}
+#search .field1 { width:99px; margin-left:5px; /*font-size:70%;*/ padding-top:2px;}
+#search .button1 { width:27px;margin: 2px 0 0 -8px; }
+.Standard-Template #sitesearchnav {
+margin-top:20px;
+}
+
+#searcharea {display:block; position:relative; width: 161px; background-color:#6D80B5; margin:0 0 0 0; padding-top:3px; overflow:hidden; height:25px; }
+#quickfind .field2 {width:105px; margin: 0 0 3px 5px; /*font-size:70%;*/}
+#quickfind input.quickfinderGo {width:27px;  margin:0 0 0 4px;}
+
+#searcharea legend,
+#searcharea label { display: none }
+
+.HeaderImage {
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding-left: 10px;
+	color:#204A91;
+	padding-top:35px;
+	padding-bottom:5px;
+	width:330px;
+}
+
+
+/* Breadcrumbs */
+#Breadcrumb { padding:3px 0 3px 10px;color:#8CA0AA;font-family:verdana,helvetica,arial;font-size:120%;}
+#Breadcrumb a {text-decoration:none;}
+#Breadcrumb a:hover {color:red;}
+
+/* Lower light blue page rows */
+.liteblueRow {background-color:#E4E9EB; height:auto;}
+.liteblueRow img { margin-left:5px;}
+* html .liteblueRow {height:0;margin-top:-9px;}
+
+.bullet{
+	font-family: verdana, arial, helvetica, sans-serif;
+	float:left;
+	padding:0;
+}
+
+.bullet a {
+	display:block;
+	position:relative;
+	float:left;
+	background: url("../../images/parcelforce/widget/bullet/blue.gif") 0 4px no-repeat;
+	padding: 0 0 8px 7px;
+	margin-left:5px;
+	width:180px;
+}
+
+.liteblueRow li{padding-bottom:5px;}
+
+#promo {
+display:block;
+position:relative;
+clear:both;
+padding:0;
+margin:10px 0 0 0;
+max-width:161px;
+text-align:left;
+}
+
+#promo li {display:inline;}
+
+h3.ItemsContent {
+	border-bottom:1px solid;/* kz check that colour should be added */
+	padding-bottom:5px;
+}
+
+ul.circleitems {
+	font-family: verdana, arial, helvetica, sans-serif;
+	list-style: circle inside none;
+	margin-left:5px;
+}
+
+#track .trackbutton {
+	float:left;
+	margin-left:5px;
+}
+
+#track .needhelp {
+	clear:left;
+	margin-top:20px;
+}
+
+#track p {
+	margin-top:-5px;
+	margin-bottom:8px;
+}
+
+#track legend { display: none;  }
+
+.Application-emt { width:584px; }
+
+/* Changing forms to CSS rather than tables */
+div.Left {
+		width: 260px;
+		font-size: 120%; 
+		font-weight: bold;
+		clear: left;
+		float: left;
+		margin: 0.5em 10px 0.5em 5px;
+		text-align: right;
+}
+
+div.Right {
+	text-align: left;
+	float: left;
+	font-size: 110%; 
+	font-weight: bold;
+	margin: 0.5em 10px 0.5em 0;
+	width: 200px;
+}
+
+div.Right select, input.pffillbox { margin-left: 0; }
+
+div.Set-Left {
+	clear: left;
+	font-size: 120%; 
+/*	margin: 0.5em 10px 0.5em 10px; */
+	width: 100%;
+}
+.Set-Left p {
+	line-height: 160%;
+	margin-bottom:10px;
+}
+
+div.Application  div.Tool div.Left label.Mandatory {
+	background:transparent url("../../images/parcelforce/asterisk.gif") top  no-repeat;
+	padding-right: 7px;
+}
+
+div.Application div.Tool h1 {font-size: 100%; background:#e3e2f0; width: 80%;}
+div.Application div.Tool p { background:#e3e2f0; margin-top: 0; padding: 0 0 5px 0;} /*28Apr*/
+div.Application div.Tool div.Section-Breakt {width: 600px }
+/* End forms into CSS */
+
+/* New styles added to support authentication and pfhome pages */
+table.Col-Auth-Content { 
+background-color:#D2DADE;
+}
+
+#singleCol {background-color:#D2DADE;width:194px;max-width:194px;padding:0 0 10px 7px;}
+td.Auth-Col #singleCol {background-color:#D2DADE;width:100%;}
+#singleCol table { width: 194px; margin:0; padding:0; margin-right:-6px;}
+td.Auth-Col legend { display: inline; position: absolute; left: -1000px;}
+td.Auth-Col .box{float:left;margin-left:3px; min-height:360px; width: 194px;}
+td.Auth-Col .box p {width: 173px; margin:7px 0 0 0;padding:0;}
+td.Auth-Col .box h1 { margin:0;padding:0;}
+td.Content-Col #topboxes  {background-color:#D2DADE;width:100%;margin-left:0;margin-right:0;padding:0;}
+td.Content-Col  #topboxes table{width:100%;margin-left:0;margin-right:0;padding:0;}
+td.Content-Col .box{float:left;margin-left:3px; height:360px;}
+
+.boxblock{ display:block; }
+
+/* End authentication and pfhome pages */
+
+/* Worldwide directory BEGIN*/
+
+#wrapper {float:left; }
+* html #wrapper {width:590px; float:left; margin-left:0px;  margin-right:0px;}
+#wrapper p.wwdInstrucCopy{
+}
+#tableWrapper legend,
+#tableWrapper label,
+#searchMain legend,
+#searchMain label,
+#searchAreaWWD legend,
+#searchAreaWWD label,
+#general legend,
+#general label,
+#promo legend,
+#promo label { display:none; }
+
+#tableWrapper img,
+#tableWrapper img,
+#searchMain img,
+#searchMain img,
+#searchAreaWWD img,
+#searchAreaWWD img,
+#general img { vertical-align:bottom;}
+
+.buttonGo { width:25px; }
+
+.contain:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.contain{display:inline-table;}
+* html .contain{/* nomac \*/height:1%;/* nomac */}
+.contain{/* nomac \*/display:block;/* nomac */}
+
+#tableWrapper * {margin:0;padding:0; color:#204A91;}
+#tableWrapper {width:590px;font-size:120%;padding: 0 0 0 4px;line-height:1.25em;}
+#tableWrapper td {font-size:0.7em;vertical-align:top;padding-right:10px;border-bottom:1px solid #A6C0EC;}
+#tableWrapper h2 {font-size:1.5em;padding-left:9px;}
+#tableWrapper caption h3 {font-size:1em;font-weight:bold;border-bottom:1px solid #204A91}
+#tableWrapper div.table390 caption h3 {font-size:1.4em;}
+#tableWrapper #country,
+#tableWrapper #zone {float:left;width:370px;margin-bottom:1em}
+#tableWrapper #zone {width:200px;margin-left:20px}
+#tableWrapper .product {margin-bottom:2em;margin-right:20px}
+#tableWrapper .product td {font-size:1em;width:130px;padding:0 2px 0 0; }
+#tableWrapper .product col.product_middle {text-indent: 5px;}
+
+#tableWrapper th, #tableWrapper caption {text-align:left;font-size:0.7em;}
+#tableWrapper h4 {font-size:1.4em;background-color:#E0EAF8;}
+#tableWrapper .shortText {margin-bottom:2em;}
+#tableWrapper .shortText h3{font-size:1em;}
+#tableWrapper .wider {float:left;width:285px;}
+
+#tableWrapper .table390 {float:left;width:370px; }
+#tableWrapper .table200 {float:left;width:170px}
+#tableWrapper .marginbottom2em {margin-bottom:2em;font-size:1.4em;}
+#tableWrapper .padright20px {padding-right:20px;}
+#tableWrapper .uk {margin-bottom:2em;clear:both;font-size:1.4em;}
+#tableWrapper .uk td, #tableWrapper .uk th {padding:10px}
+#tableWrapper .uk th {background-color:#E0EAF8}
+#tableWrapper .first {width:250px}
+#tableWrapper .wider2 {float:left;width:365px;padding-right:20px}
+
+#tableWrapper .uk caption {background-color:#204A91;color:#FFFFFF;padding:4px; overflow: visible;}
+
+#searchMain {float:left;width:415px;margin-right:5px; color:#204A91;font-size:120%;}
+#searchMain *{width:100%;}
+div#searchMain h2 { font-size: 1.5em; margin: 12px 0 10px 10px; }
+div#searchMain p { margin: 12px 0 10px 10px; }
+
+div#searchMain ul {
+	margin:0;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:0;
+	list-style-type:none;
+}
+
+div#searchMain li { margin:0;
+	padding:0;
+	padding-left:10px;
+	border:0;
+	text-indent:0;
+	background-image:url("../../images/parcelforce/widget/bullet/black.gif");
+	background-position:1px 6px;
+	background-repeat:no-repeat;
+	line-height:1.25em;
+}
+
+#searchAreaWWD {width:165px;padding:0;margin:12px 0 20px 4px; display: block; position: relative; float:left; color:#204A91;}
+#searchAreaWWD #searchBG {/*height:296px;*/background-image:url("../../images/wwd/searchBG.gif");font-size:120%;}
+
+#searchAreaWWD p,
+#searchAreaWWD form {padding:15px 15px 0 30px;}
+#searchAreaWWD input {width:110px; margin: 5px 0 5px 0;}
+
+#nav ul {margin:0; padding:0;}
+* html #nav li {background-position:10px 9px;}
+#nav li a:link, #nav li a:visited, #nav li a:hover {text-decoration: none;}
+#nav li.navdown {border-left-width: 5px; border-left-style: solid; border-left-color: #FE000B;}
+
+#pageheading {margin-bottom:1px}
+#pageheading #imgSearch {background-image:url(../../images/wwd/headerSearch.jpg);}
+#pageheading #imgCustoms {background-image:url(../../images/wwd/headerCustoms.jpg);}
+#pageheading #imgHelp {background-image:url(../../images/wwd/headerHelp.jpg);}
+#pageheading #imgPackaging {background-image:url(../../images/wwd/headerPackaging.jpg);}
+#pageheading #imgProhibitions {background-image:url(../../images/wwd/headerProhibitions.jpg);}
+
+#general p { margin-bottom:1em; color:#204A91; }
+#general h3 {
+	font:bold 1.4em verdana, arial, helvetica, sans-serif;
+	margin-top:1.5em;
+	margin-bottom:5px;
+	border-bottom:2px solid #204A91;
+}
+
+#general h4 { font:bold 1.1em verdana, arial, helvetica, sans-serif; }
+#general ul { margin-left:1.5em; margin-bottom:1.5em; }
+#general li { margin:0.2em; }
+#general dl { clear:left; height:2em;}
+#general dt {float:left; width:240px; margin-right:20px;}
+#general dd {float:left; width:220px;}
+#general dd.right {width:100px;}
+#general .listTable {float:left;border:1px solid #E0EAF8;margin-right:20px;margin-bottom:20px;}
+#general .listTable h4 {background-color:#E0EAF8;padding:4px;}
+#general .pad {padding:10px 20px 10px 10px;}
+#general .last {margin-right:0;width:150px;}
+#general .goLeft {float:left;}
+#general img {float:right;}
+
+#error { color: #CC3333;padding:0 15px 0 15px }
+#searchAgain {text-align:right;margin-right:15px;}
+
+/* Worldwide directory END */
+
+/* Send now start */
+div.box {width:172px; margin-left: 3px; }
+div.box h3 {width:172px; margin-bottom: -10px; font-size: 1em;}
+div.box h3.shortBottom {margin: -20px 0 0 0; }
+div.box p.shortBottom {margin: 10px 0 -10px 0; }
+div.box .fCheckbox { margin: 5px 5px 0 -10px; padding: 0;}
+div.box .fCheckbox .fInput {float:left; width:15px; margin: -3px 0 0 0;}
+div.box .fCheckbox .fInput input {
+width:1.3em;
+height:1.3em;
+margin: 0;
+padding: 0;
+}
+div.box .fCheckbox .fLabel {margin-left:20px;}
+div.box .fCheckbox .fLabel label {display:block;}
+div.box .fField {margin:0 0 0.5em 0;}
+div.box .fField input {width:160px; font-size:0.7em; padding:0.2em;}
+div.box .fSubmit {margin:10px 30px 10px 0; text-align: right;}
+div.box .fButton {float:left; padding:0 5px 5px 0; margin-left: 10px; }
+div.box .fSubmit input,
+div.box .fButton input {padding:0.2em;}
+div.box .fSubmit input,
+div.box .fButton input {font-size:1em;}
+/* Send now end */
+
+/* link to homepage start */
+.pfw-link {
+	border:0;
+	float:right;
+	width:244px;
+	height:79px;
+}
+/* link to homepage end */
+
+/* CH16Nov06: Duplicated hr on homepage  */
+.layout-horiz1{
+	background-color:#D2DADE;
+	height:4px;
+}
+
+div.Home-Template .layout-horiz1 { display: none;}
+
+.blueCategory {
+	display:block;
+	position:relative;
+	width:590px;
+	color:#003399;
+	background-color:#D2DADE;
+}
+
+.blueCategory .content-horiz1 {
+	background-color:#D2DADE;
+	height:4px;
+}
+/* CH16Nov06: Duplicated hr on homepage  END */
+
+.blueCategory h1 {
+	margin:0;
+	padding:0;
+}
+
+.blueCategory .Title {
+	display:block;
+	position:relative;
+	vertical-align:bottom;
+	margin:5px 0 1px 0;
+	border:0;
+	color:#003399;
+	background-color:#D2DADE;
+}
+
+.blueCategory .Story,
+.blueCategory .Section {
+	display:block;
+	margin:0;
+	padding:0;
+	border:0;
+	color:#003399;
+	background-color:#D2DADE;
+}
+
+.blueCategory .story {
+	background-color:#D2DADE;
+	height:0;
+}
+
+.blueCategory .Section p,
+.blueCategory .Section h1 {
+	color:#204A91;
+	background-color:#D2DADE;
+	margin: 2px 0 0 0;
+}
+
+.blueCategory .Rounded-Corners,
+.blueCategory .Rounded-Corners .Top-Left,
+.blueCategory .Rounded-Corners .Top-Right {
+	margin:0;
+	padding:0;
+	background:none;
+}
+
+#form_login {
+	margin:0 0 0 3px;
+	width:173px;
+}
+
+#form_login input.login_text,
+#form_login input.login_password { width:153px; }
+
+#form_login p,
+#form_login p label{
+	margin:0;
+	padding:0;
+	clear:both;
+}
+
+#form_login input.login_button {
+	display:block;
+	margin-top:10px;
+	margin-right:10px;
+	width:52px;
+}
+
+
+/* HOMEPAGE NAVIGATION STYLES */
+.Home-Template .default  {
+	display:block;
+	margin:5px 0 0 0;
+	padding:0;
+	border:1px solid #204A92;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.Home-Template .default  a {
+	color:#1E4894;
+	text-decoration:none;
+}
+
+.Home-Template .default a:hover {
+	color:#1E4894;
+	text-decoration:underline;
+}
+
+.Home-Template .default h2 {
+	display:block;
+	border:0;
+	margin:0 0 0 0;
+	padding:0 0 0 5px;
+	background:#333399 ;
+	color:#ffffff;
+	font-family: verdana, arial, helvetica, sans-serif;
+	line-height:2em;
+	font-size:100%;
+}
+
+.Home-Template .default ul {
+	display:block;
+	border:0;
+	margin:5px 0 5px 5px;
+	padding:0 ;
+}
+
+.Home-Template .default li {
+	display:block;
+	border:0;
+	margin:0 0 0 2px;
+	padding:0px 0 5px 12px;
+	background:transparent url("../../images/parcelforce/home-nav-arrow.gif") 0 7px no-repeat;
+	color:#1E4894;
+	font-weight:normal;
+	list-style:none;
+}
+
+
+/* HOMEPAGE NAVIGATION END */
+
+img.register-button { margin-top:3px; }
+
+
+div#findpostcode {
+	position:relative;
+	left: 10px;
+	width:704px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #000000;
+	float:left;
+	font-size:120%; /*28Apr*/
+}
+
+div#findpostcode img {
+	border:0;
+}
+
+div#findpostcode .nav {
+	width: 704px;
+}
+
+div#findpostcode .nav-pf {
+	position: relative;
+	padding:0;
+	margin:0;
+	height:50px;
+	width:704px;
+	float:left;
+}
+
+div#findpostcode .nav-pf[class] {
+	display: table;
+	position: static;
+}
+
+div#findpostcode .nav-pf-middle {
+	position: absolute;
+	padding: 0;
+	top: 100%;
+}
+
+div#findpostcode .nav-pf-middle[class] {
+	position: static;
+	display: table-cell;
+	vertical-align:bottom;
+}
+
+div#findpostcode .nav-pf-inner-1 {
+	position: relative;
+	top: -100%;
+	float:left;
+}
+
+div#findpostcode .nav-pf-inner-1 h1 {
+	display:inline;
+}
+
+div#findpostcode .nav-pf-inner-2 {
+	position: relative;
+	top: -100%;
+	float:right;
+}
+
+div#findpostcode .name-login-pf {
+	width:399px;
+	color:#666666;
+	text-align:right;
+}
+
+div#findpostcode .name-login-pf .top {
+	padding: 0;
+	margin: 0 0 5px 0;
+	text-align:right;
+}
+
+div#findpostcode .name-login-pf .bottom {
+	width:399px;
+	height:9px;
+}
+
+div#findpostcode .greytext {
+	color:#666666;
+	display:block;
+	padding: 0 0 10px 0;
+}
+
+div#findpostcode .grey-container {
+	background:#E5E5E5;
+	float:left;
+}
+
+div#findpostcode h1,
+div#findpostcode h2,
+
+
+div#findpostcode h1 {
+	display:inline;
+}
+div#findpostcode h2 {
+	font-size:130%;
+	display:inline;
+}
+div#findpostcode h2.hp {
+	font-size:100%;
+	padding: 0 0 10px 0;
+	clear:both;
+}
+div#findpostcode h3 {
+	font-size:100%;
+	padding: 0 0 10px 0;
+	margin-bottom:0;
+	clear:both;
+	border-bottom:0;
+
+}
+
+div#findpostcode .greybox h3 {
+	font-size:100%;
+	padding: 0;
+	margin:0;
+}
+
+div#findpostcode br {
+	clear:both;
+}
+
+div#findpostcode div.greysides-box {
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	padding: 0 10px 0 10px;
+	float:left;
+}
+
+div#findpostcode div.greysides-greybox {
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	padding: 0 10px 0 10px;
+	background:#E2E1E1;
+	float:left;
+}
+
+div#findpostcode div.resultsbar {
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 3px 10px 3px 10px;
+	background:#F0F0F0;
+	color:#000000;
+}
+
+div#findpostcode div.resultsbar strong,
+div#findpostcode .nolink {
+	padding: 0 3px 0 3px;
+}
+
+div#findpostcode .result {
+	padding: 0 7px 0 0;
+}
+
+div#findpostcode div.left-50towns {
+	width:479px;
+	float:left;
+}
+
+div#findpostcode div.left-50towns a {
+	padding:0 24px 0 0;
+}
+div#findpostcode div.left-50towns p.first {
+	margin:0;
+	padding:14px 0 0 0;
+}
+
+div#findpostcode div.left-50towns p.second {
+	margin:0;
+	padding:14px 0 20px 0;
+}
+
+div#findpostcode p.norm {
+	margin:0;
+	padding:14px 0 0 0;
+	width: 660px;
+	float:left;
+}
+
+div#findpostcode div.left-50towns p.help {
+	margin-left:-23px;
+	margin-bottom:20px;
+	padding:14px 15px 0px 0;
+}
+
+div#findpostcode div.left-50towns p.third {
+	margin:0;
+	padding:14px 0 5px 10px;
+}
+
+div#findpostcode div.greybox p.fourth {
+	margin:0;
+	padding:0;
+}
+
+div#findpostcode p.thanks {
+	margin:0;
+	padding:0;
+	width:660px;
+}
+
+div#findpostcode div.right-searchbox {
+	padding: 1px 0 15px 0;
+	width:203px;
+	float:left;
+}
+div#findpostcode div.right-searchbox .search-limit {
+	font-size:120%;
+}
+div#findpostcode div.right-searchbox p.first {
+	width:181px;
+	margin:0;
+	padding:0 0 5px 0;
+}
+div#findpostcode div.right-searchbox p.second {
+	width:181px;
+	margin:0;
+	padding:0;
+}
+
+div#findpostcode div.section-black {
+	padding: 0 0 0 35px;
+	margin:0;
+}
+
+div#findpostcode ul.faq {
+    font-family: verdana, arial, helvetica, sans-serif;
+    margin:0 0 0 0;
+    padding:0 0 0 30px;
+	font-size: 100%;
+    list-style:none outside;
+}
+
+div#postcode div.left-50towns
+table.displaytablepostcode,
+div.displaytablepostcode table {
+    border-collapse: collapse;
+    margin:0;
+    padding:0;
+    width:460px;
+    border:1px solid #ccc;
+    text-align:left;
+    clear:both;
+    font-size:100%;
+}
+ displaytablepostcode th {
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding:5px 10px 3px 10px;
+    vertical-align:top;
+    text-align:left;
+    font-weight:700;
+}
+.displaytablepostcode td {
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-top:0;
+    border-left:0;
+    padding:5px 10px 3px 10px;
+    vertical-align:top;
+    text-align:left;
+}
+
+/* CH16Nov06: Broken image */
+div#findpostcode ul.faq li {
+    list-style:none;
+    background:url(../img/faq-arrow.gif);
+    font-weight:normal;
+    color:#000000;
+    margin:0;
+    padding:0;
+}
+
+div#findpostcode ul.faq li a:link,
+div#findpostcode ul.faq li a:active,
+div#findpostcode ul.faq li a:visited,
+div#findpostcode ul.faq li a:hover {
+	padding:0;
+	margin:0;
+}
+
+div#findpostcode div.section-black ul {
+    font-family: verdana, arial, helvetica, sans-serif;
+    margin:0;
+    padding:15px 0 0 0;
+	font-size: 100%;
+    list-style:none outside;
+}
+div#findpostcode div.section-black ul li
+{
+    background:url(../../images/pcaf/pw/en/bullet-black.gif) 0 0.55em no-repeat;
+    text-align:left;
+    font-weight:normal;
+    color:#000000;
+    margin:0;
+    padding:0.2em 0 1.2em 12px;
+}
+
+div#findpostcode div.section-black li a {
+	padding:0;
+}
+
+div#findpostcode .greybox {
+	border: 1px solid #cccccc;
+	padding: 15px 10px 15px 10px;
+	float:left;
+}
+
+div#findpostcode .greybox input {
+	border: 1px solid #999999;
+	color: #000000;
+	font-size:100%;
+	padding: 0;
+	margin: 0 0 20px 0;
+	float:left;
+}
+
+div#findpostcode .greybox textarea {
+	font-family: verdana, arial, helvetica, sans-serif;
+	border: 1px solid #999999;
+	color: #000000;
+	font-size:100%;
+	width:277px;
+	float:left;
+	margin: 0 0 20px 0;
+}
+
+div#findpostcode .greybox .eg {
+	margin: 0 0 0 10px;
+	width: 253px;
+	color:#666666;
+	float:left;
+}
+
+div#findpostcode input.min {
+	width:135px;
+}
+
+div#findpostcode input.max {
+	width:277px;
+}
+
+div#findpostcode .greybox label {
+	width:120px;
+	float:left;
+	clear:both;
+}
+
+div#findpostcode .bottomline {
+	float: left;
+	clear:both;
+	border-bottom: 1px solid #cccccc;
+	width:100%;
+}
+
+div#findpostcode div.bottomline h3,
+div#findpostcode div.greybox h3.search {
+	padding: 0 0 15px 0;
+	clear:both;
+}
+div#findpostcode .bottomline h3.details {
+	float: left;
+}
+div#findpostcode .bottomline .indicates {
+	float: right;
+}
+div#findpostcode .button-find {
+	width:402px;
+	text-align:right;
+	padding:5px 0 0 0;
+}
+
+div#findpostcode .button-find input {
+	padding:0;
+	margin:0;
+	border:0;
+	float:right;
+}
+div#findpostcode .corner-bottom {
+	padding:  0 0 10px 0;
+}
+
+div#findpostcode div.postal-border-top-holder {
+	width:100%;
+	float:left;
+}
+div#findpostcode div.postal-border-top-holder {
+	background: red url(../../images/pcaf/rm/en/border_top_30tall_grey_on_w.gif) repeat-x;
+	height:34px;
+}
+div#findpostcode div.postal-border-bottom-holder {
+	background: red url(../../images/pcaf/rm/en/border_bot_grey_on_white.gif) repeat-x;
+	height:5px;
+}
+div#findpostcode div.float-left {
+	float:left;
+}
+div#findpostcode div.float-right {
+	float:right;
+}
+
+div#findpostcode div.postal-border-left-right {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+
+div#findpostcode div.help-inner {
+	margin: 0 10px 0 10px;
+	padding: 7px 0 2px 0;
+}
+div#findpostcode .clear {
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+/* CH16Nov06 Broken image */
+div#findpostcode ul.question {
+	list-style-type: disc;
+	list-style-image: url(../img/button_question.gif);
+	list-style-position: outside;
+	font-size : 100%;
+	margin-top:0;
+	margin-bottom:6px;
+	padding-left:0em;
+	padding-top:2px;
+	width:90%;
+}
+
+/* CH16Nov06 Broken image */
+div#findpostcode ul.redq  {
+	list-style-image: url(../img/button_question.gif);
+	margin-left:0em;
+	margin-right:0;
+	padding-right:0;
+}
+div#findpostcode ul.question li {
+	margin-left:17px;
+	margin-top:0px;
+	padding-top:5px;
+}
+
+
+div#findpostcode img.topborder {
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+
+div#findpostcode h1.finder-heading {
+	padding: 8px 0 13px 0;
+	float:left;
+}
+
+div#findpostcode p.toppad {
+	margin: 0;
+	padding:10px 0 0  0;
+}
+
+div#findpostcode .left-map-box {
+	margin: 0;
+	padding: 0;
+	float:left;
+	width: 184px;
+	clear:both;
+}
+
+div#findpostcode .left-map-box p {
+	font-weight: bold;
+	padding: 7px 0 5px 0;
+	margin: 0;
+}
+
+div#findpostcode .right-map-box {
+	float:right;
+	padding:0;
+	margin: 1px 0 0 0;
+}
+
+div#findpostcode .button-box {
+	margin: 17px 0 193px 0;
+	padding: 0;
+	float:left;
+}
+
+div#findpostcode .button-box input {
+	margin: 0;
+	padding: 0;
+}
+
+div#findpostcode .button-box img.calc-pad {
+	margin:10px 0 0 0;
+}
+
+div#findpostcode .greybox-nobottompad {
+	border: 1px solid #cccccc;
+	padding: 15px 10px 0 10px;
+	float:left;
+}
+
+div#findpostcode form {
+	padding: 0;
+	margin: 0;
+}
+
+div#findpostcode .greybox p.t-and-c,
+div#findpostcode div.greysides-box p.t-and-c {
+	width: 500px;
+	padding: 10px 0 0 0;
+	margin: 0;
+	float: left;
+}
+
+div#findpostcode .greybox .addressFinder {
+	float:left;
+	margin: 0;
+	width: 660px;
+}
+
+div#findpostcode .greybox .addressFinder img {
+	vertical-align: middle;
+}
+
+
+div#findpostcode .greybox .addressFinder p {
+	float:left;
+	padding: 0;
+	margin: 0;
+	width: 300px;
+}
+
+div#findpostcode .greybox .addressFinder label {
+	float:left;
+	padding: 0;
+	margin: 0;
+	clear: left;
+	width: 500px;
+}
+
+div#findpostcode h2.hd-h2 {
+	font-size:100%;
+	padding: 0 0 10px 0;
+	float: left;
+}
+
+div#findpostcode .greybox input.continue {
+	float:right;
+	margin: 10px 132px 0 0;
+	border:0;
+}
+
+div#findpostcode .addressFinder .add-code {
+	float: left;
+	padding: 2px 0 0 0;
+	margin: 0;
+}
+
+div#findpostcode .addressFinder .add-code input {
+	float: left;
+	width: 95px;
+	padding: 0;
+	margin: 0;
+}
+
+div#findpostcode h1.login-heading {
+	padding: 2px 0 14px 0;
+	float: left;
+}
+
+div#findpostcode .login-searches {
+	float: left;
+	clear: both;
+	width:479px;
+	padding: 0 0 15px 0;
+}
+
+div#findpostcode .login-searches h2 {
+	margin: 0 0 0 38px;
+}
+div#findpostcode .login-searches p {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+div#findpostcode .login-searches img {
+	float: left;
+	margin: 2px 10px 0 0px;
+}
+
+div#findpostcode fieldset.login-field {
+	border: 0;
+	margin: 0 0 0 -6px;
+	padding: 0 0 5px 6px;
+	clear: both;
+	float: left;
+	width: 660px;
+}
+
+div#findpostcode .login-col-1 {
+    float: left;
+		padding: 0;
+		margin: 5px 5px 0 0;
+}
+
+div#findpostcode fieldset.login-field .login-col-2 {
+    float: left;
+		padding: 0;
+		margin: 5px 5px 0 0;
+		clear: both;
+}
+
+div#findpostcode fieldset.login-field label.login-col-3 {
+	width: auto;
+	float: left;
+	padding: 0 5px 0 0;
+	margin: 5px 0 10px 0;
+}
+
+div#findpostcode .greybox-nobottompad input.login-continue {
+	float:right;
+	padding: 0;
+	margin: 20px 188px 5px 0;
+}
+
+
+div#findpostcode fieldset.login-field legend.login-legd {
+	padding: 10px 0 2px 0;
+	color: #000000;
+	font-weight: bold;
+	float:left;
+	clear: both;
+}
+
+div#findpostcode fieldset.login-field input.noborder {
+	border: 0;
+	height: 17px;
+	padding: 0;
+	margin: 0;
+}
+
+div#findpostcode fieldset.login-field input {
+	margin: 0;
+}
+
+div#findpostcode .greybox-nobottompad p.forgotten {
+	clear: both;
+	float:left;
+	padding: 0;
+	margin: 0;
+}
+
+div#findpostcode div.left-50towns p {
+	margin:0;
+	padding:7px 10px 0 0;
+}
+
+div#findpostcode div.left-50towns a.first-link {
+	margin:0;
+	padding:0 15px 0 0;
+}
+
+div#findpostcode .left-help-box {
+	float: left;
+	width: 413px;
+}
+
+div#findpostcode .right-help-box {
+	float: left;
+	margin: 25px 0 0 20px;
+	padding: 0;
+}
+
+div#findpostcode .right-help-box h3 {
+	margin: 0;
+	padding: 0;
+	width: 250px;
+}
+div#findpostcode .right-help-box p {
+	padding: 0 0 10px 0;
+	margin: 0;
+	width: 250px;
+}
+
+div#findpostcode .right-help-box a {
+	white-space:nowrap;
+}
+div#findpostcode .greybox-nobottompad .remember {
+	padding: 0;
+	margin: 10px 0 0 0;
+	float: left;
+	clear: both;
+}
+
+div#findpostcode .greybox-nobottompad .remember p,
+div#findpostcode .greybox-nobottompad .remember label {
+	float:left;
+	padding: 0 5px 0 0;
+	margin: 0;
+}
+div#findpostcode .greybox-nobottompad .remember input {
+	float:left;
+	padding: 0;
+	margin: 0 5px 0 0;
+	height: 15px;
+	width: 15px;
+}
+
+div#promo img.pad-panels {
+	margin: 0 14px;
+}
+
+/* CH16Nov06 No postcode finder on homepage in PW */
+div.Layout-100 .Title {
+	display:block;
+    position:relative;
+	vertical-align:bottom;
+	margin: 0px 0px 0px 10px;
+	padding:0px 0px 0px 0px;
+	color:#666666;
+	background-color:#fff;
+	font-size:100%;
+	clear: both;
+}
+
+div.Layout-100 h1.Title .Rounded-Corners{
+	margin-bottom:0px;
+}
+
+div.Layout-100 .Story .Section h1{
+	margin-top:15px;
+}
+
+div.Layout-100  p {
+	margin:0;
+	padding:0px 0px 0px 10px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight:normal;
+	color:#000000;
+	background-color:#ffffff;
+}
+
+h1.Title .Rounded-Corners{
+	margin-bottom:17px; 
+	padding:0 0 0 10px;
+}
+
+div.Story .Section {
+	width:96%;
+}
+
+div.Story .Section h1 {
+	background-image:none;
+	background-color:#fff;
+	color:#000;
+	margin: 0 0 0 10px;
+	padding:0;
+}
+
+/* search info ends*/
+
+/* Contextual Help */
+div.Help-Panel {
+	background: #ffffff ;
+	height:34px;
+	margin:9px 0 0 10px;
+}
+
+div.Help-Panel,
+div.Help-Panel-bottom {
+	width:94%;
+}
+
+.Help-Panel h1 {
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+div.Help-Panel h2.HelpTitle {
+	padding:17px 0 0 15px;
+	width:136px;
+	color:#555;
+	height:34px;
+	font-size:180%;
+	font-weight: 200;
+}
+
+.Help-Panel div.float-left,
+.Help-Panel-bottom div.float-left {
+	float:left;
+}
+
+.Help-Panel div.float-right,
+.Help-Panel-bottom div.float-right {
+	float: right;
+}
+
+div.Help-Panel-left-right {
+	border: 1px solid #cccccc;/*jm070706*/
+	width:94%;
+}
+
+div.help-inner {
+	margin: 0 ;
+	width:100%;
+}
+
+/* CH16Nov06 Image has light blue background. Needs replacing */
+div.help-inner ul {
+	list-style-type: disc;
+	list-style-image: url(../../images/pricingcalc/pw/button_question.gif);
+	list-style-position: outside;
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin: 0;
+	padding:0;
+	margin-top:15px;
+	width:90%;
+	font-size:120%;
+}
+
+div.help-inner ul li {
+	margin-left:23px;
+	margin-top:0px;
+	padding-bottom:5px;
+}
+
+div.Help-Panel-bottom {
+	background: #fff url(../../images/royalmail/border_bot_grey_on_white.gif) repeat-x;
+	height:5px;
+	margin-left: 10px;
+}
+/* Contextual Help End */
+
+/* Sitemap */
+#sitemap {
+	padding:0;
+/*	margin:-2px 0 0 -6px; */
+	color:#003399;
+	position:relative;
+/*	background-color:#fff;*/
+
+}
+
+#sitemap .sitemap_header {
+	position:relative;
+	/*width:590px;*/
+	margin:0;
+	padding:0;
+}
+
+#sitemap .top_image {
+	background-color:#D2DADE;
+	padding:0;
+	margin:10px 0 0 0; 
+}
+
+#sitemap .box_sitemap,
+#sitemap .first_box_sitemap{
+	margin:0px;
+	background-color:#D2DADE;
+	float:left;
+	
+	display:block;
+}
+#sitemap .first_box_sitemap { 
+padding-left:8px; 
+}
+#sitemap .midrow { /*height:500px; */}
+#sitemap .midrow img { margin-left:5px; }
+
+#sitemap .blueCategory {
+	
+	margin-top:-5px;
+}
+
+.dotted_line {
+	list-style-type:none;
+	margin:0px -5px -12px -27px;
+	border-top:3px dotted #204A91;
+}
+/* Sitemap  END */
+
+div.trackparcel-body-left a,
+div.box a, div.trackbutton a { text-decoration: underline;}
+
+/* Branch locator start */
+tbody.POLarger td p{
+padding: 0;
+margin: 0;
+}
+
+td.POLarger td,
+td.POLarger div{
+font-size: 140%;
+}
+
+td.POLarger td p{
+padding: 0;
+margin: 0;
+}
+
+td.POLarger table td {
+font-size: 110%;
+padding: 0 5px 0 0;
+}
+
+
+/* Branch locator end */
+
+/* doctype fixes start */
+a.underline{
+text-decoration: underline;
+}
+
+div#registration .Application{font-size: 120%;}
+/* div#registration .Application font ul{font-size: 140%;}*/
+div#registration .Application font{/*font-size: 60%;*/}
+
+#claims{
+display: block;
+width: 595px;
+}
+
+div.claimsform{
+display: block;
+position: relative;
+top:-40px;
+}
+/*28Apr*/
+table#Supplies-Form{
+font-size: 120%;
+}
+/*28Apr*/
+table#Multitrack-Summary{
+font-size: 120%;
+}
+
+table#Supplies-Form,
+table#Supplies-Form td.Right,
+table#Supplies-Form2 td,
+table#Supplies-Form3 td,
+table#Supplies-Form4 td{
+
+}
+table#Supplies-Form2 {
+margin:0;
+}
+/* doctype fixes end*/
+
+
+
+/* ----- ( RESET ) ----- */
+html {
+	background-color:#FFF;
+	color: #000;
+	line-height: 1;
+}
+blockquote, body, button, code, dd, dl, div, dt, form, fieldset, h1, h2, h3, h4, h5, h6, legend, li, input, ol, p, pre, ul, select, td, textarea, th {
+	margin: 0;
+	padding: 0; 
+}
+/* 29Apr */
+div#layout-top-left button, div#layout-top-left fieldset, div#layout-top-left img, div#layout-top-left input, div#layout-top-left select, div#layout-top-left textarea{
+	border-width: 0;
+}
+address, caption, code, cite, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: 400;
+}
+button {
+	background-color: transparent;
+}
+ul {
+	list-style: none;
+}
+caption, th {
+	text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: 400;
+}
+q:before, q:after {
+	content: '';
+}
+abbr, acronym {
+	border-width: 0;
+	font-variant: normal;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+button, input, textarea, select {
+	font-family: inherit;
+	font-size: 100%;
+	font-weight: inherit;
+}
+legend {
+	color: #000000;
+}
+
+*.notShown {
+	position: absolute;
+	left: -5000px;
+}
+
+
+body {
+	padding-bottom: 144px;
+}
+
+
+div#layout {
+	margin: 0 auto;
+	width: 774px;
+}
+
+div#layout-header {
+	height: 85px;
+	padding-right: 13px;
+	position: relative;
+	width: 761px;
+}
+div#layout-header h1 {
+	float: right;
+}
+
+div#nav {
+	bottom: 0;
+	position: absolute;
+}
+div#nav ul {
+	margin-bottom: -1px;
+	margin-right: 19px;
+	padding-right: 50px;
+	padding-top: 8px;
+}
+div#nav a {
+	float: left;
+	height: 13px;
+	padding: 10px 12px;
+}
+div#nav li {
+	display: inline;
+}
+
+div#search {
+	margin-top: 10px;
+	overflow: auto;
+	padding: 5px 10px;
+}
+
+
+div#search .inputsearch {
+	font-family: verdana;
+	font-size: 10px;
+	padding: 2px;
+	width: 97px; 
+	margin-right: 1px; 
+}
+div#search button {
+	position: absolute;
+}
+div#jump {
+	overflow: hidden;
+	padding: 0px 10px 5px 10px;	
+	background: #C2D1D4 url(../../images/parcelforce/redesign08/img/jump.png) 100% 100% no-repeat;
+	font-size: 12px;
+}
+div#jump select {
+	font-family: verdana;
+	font-size: 10px;
+	margin:0px;
+	margin-right: 1px;
+	padding: 2px;
+	width: 104px;
+}
+div#jump input.inputbutton { 
+	margin:0px 0px 0px 5px;
+}
+
+div#promo {
+	margin-top: 10px;
+}
+
+div#track {
+	margin-top: 10px;
+	overflow: hidden;
+	padding: 10px;
+	width: 137px;
+}
+div#track p {
+	margin-top: 5px;
+}
+div#track button {
+	float: left;
+}
+div#track button img {
+	float: left;
+}
+div#track input {
+	margin-top: 5px;
+	padding: 2px 5px;
+}
+div#track a {
+	margin: 5px 0 0 5px;
+	float: left;
+	white-space: nowrap;
+}
+
+div#news {
+	margin-top: 10px;
+	overflow: hidden;
+	width: 157px;
+}
+div#news h1 {
+	padding: 5px 10px;
+}
+div#news ul {
+	padding: 0 10px 10px;
+	font-family:verdana;
+}
+div#news li {
+	margin-top: 5px;
+	font-family:verdana;
+	font-weight:500;
+	font-size:110%;
+}
+div#news a {
+text-decoration:none;
+}
+
+div#quick-links {
+	margin-top: 10px;
+	width: 154px;
+	overflow: hidden;
+}
+div#quick-links h1 {
+	padding: 10px 15px 0;
+}
+div#quick-links a {
+	display: block;
+	padding: 3px 15px;
+}
+div#quick-links ul {
+	padding-top: 10px;
+}
+div#quick-links ul ul {
+	padding-top: 0;
+	padding-left: 30px;
+}
+div#quick-links ul ul a {
+	padding: 3px 0;
+}
+div#quick-links li {
+	width: 154px;
+}
+
+div.default, div.Left-Navigation {
+	margin-top: 10px;
+	padding-top: 5px;
+	width: 154px;
+	overflow: hidden;
+}
+div.default h2 {
+	padding: 5px 15px;
+}
+div.default a, div.Left-Navigation a {
+	display: block;
+	padding: 3px 15px;
+	width: 124px;
+	text-decoration:none;
+}
+div.Level-2 {
+	padding-left: 30px;
+}
+div.Level-2 a {
+	padding: 3px 0;
+}
+div.Separator {
+	display: none;
+}
+
+div#layout-top-left {
+	float: left;
+	width: 157px;
+}
+
+div#content {
+	float: right;
+	padding-bottom: 26px;
+	width: 617px;
+}
+div#content div.column {
+	float: left;
+	margin-left: 6px;
+	margin-top: 10px;
+	width: 188px;
+	overflow: hidden;
+}
+div#content div.column div.header {
+/*	height: 34px; */
+	padding: 10px;
+}
+div#content div.column div.header h1 img{
+margin:-10px;
+}
+div#content div.column div.body {
+	padding: 0 10px;
+}
+div#content div.column div.body p {
+	margin-top: 10px;
+}
+div#content div.column div.body input {
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 5px;
+	padding: 2px 5px;
+	font-size:120%; /*28apr*/
+}
+
+
+div#content div.column div.body ol {
+	margin-top: 10px;
+	padding-left: 20px;
+}
+div#content div.column div.body ul {
+	margin-top: 10px;
+	padding-left: 20px;
+}
+div#content div.column div.body li {
+	margin-top: 5px;
+}
+div#content div.column .action {
+	display: block;
+	height: 21px;
+	margin: 0 auto;
+	width: 158px;
+}
+div#content div.column a.action {
+	padding-top: 3px;
+}
+body#education div.column .action {
+	padding-left: 10px;
+	width: 148px;
+}
+div#content div.column div.body ul.actions {
+	padding: 0;
+}
+
+div#content-inner {
+	padding-left: 13px;
+	width: 604px;
+	overflow:hidden;
+}
+
+div#register {
+	margin-top: 10px;
+	padding-bottom: 10px;
+	width: 168px;
+}
+div#register h3 {
+	padding: 10px 5px 0 10px;
+}
+div#register p {
+	padding: 0 10px;
+}
+
+div#layout-top {
+	height: 14em;
+	margin-top: 10px;
+	margin-bottom: 8px;
+	padding-top: 40px;
+	position: relative;
+	width: 584px;
+	z-index: 1;
+}
+div#layout-top:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: left;
+	visibility: hidden;
+}
+div#layout-top div {
+	float: left;
+	margin-right: 10px;
+	width: 250px;
+}
+div#layout-top div p {
+	margin-top: 10px;
+	width: 220px;
+}
+div#layout-top h1 {
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+div#layout-top h2 {
+	padding-left: 12px;
+	width: 350px;
+}
+div#layout-top p {
+	margin: 5px 0;
+	padding-left: 12px;
+	width: 300px;
+}
+div#layout-top a.button {
+	display: block;
+	float: left;
+	height: 33px;
+	overflow: hidden;
+	padding-left: 15px;
+}
+div#layout-top a.button span {
+	display: block;
+	float: left;
+	height: 33px;
+	padding: 9px 15px 0 0;
+}
+div#layout-top p.error {
+	position: absolute;
+	top: 0;
+	left: 150px;
+	width: 400px;
+}
+div#card label {
+	font-size:115%;
+}
+div#card h2 {
+	width: auto;
+}
+div#card button img {
+	float: left;
+}
+div#frank {
+	margin: 0px 0px 0px -35px;
+	padding: 0px 0px 0px -35px;
+}
+div#frank label {
+	font-size:115%;
+}
+div#frank h2 {
+	width: auto;
+}
+div#frank .inputtext {
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px 2px;
+	width: 150px;
+}
+div#frank button {
+	float: left;
+}
+div#frank button img {
+	float: left;
+}
+div#frank a {
+/*	float: left;*/
+	margin: 5px 0 0 5px;
+	white-space: nowrap;
+}
+
+div#layout-footer {
+	clear: both;
+}
+div#layout-footer div {
+	margin-top: 75px;
+	position: absolute;
+}
+div#layout-footer ul {
+	padding: 10px 0;
+	overflow: auto;
+	width: 100%;
+}
+div#layout-footer li {
+	border-left-style: solid;
+	border-left-width: 1px;
+	float: left;
+	margin-left: 10px;
+	padding-left: 10px;
+	text-decoration:underline;
+}
+div#layout-footer li.first {
+	border-left: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+body {
+	background: url(../../images/parcelforce/redesign08/img/body.png) 0 100% repeat-x;
+}
+
+/* a {
+	color: #555;
+}
+a.line { 
+	text-decoration: underline; 
+}
+a.line:hover { 
+	text-decoration: none; 
+} */
+
+
+
+div#layout-header {
+	background: #FE000B url(../../images/parcelforce/redesign08/img/layout-header.png) 0 0 no-repeat;
+}
+
+div#nav {
+	background: #1D6799 url(../../images/parcelforce/redesign08/img/nav.png) 100% 0 no-repeat;
+}
+div#nav ul {
+	background: url(../../images/parcelforce/redesign08/img/nav/ul.png) 0 0 repeat-x;
+}
+div#nav a {
+	color: #FFF;
+}
+div#nav a.current {
+	background-color: #555;
+}
+
+div#search {
+	background: #C2D1D4 url(../../images/parcelforce/redesign08/img/search.png) 100% 0 no-repeat;
+}
+
+div#track {
+	font-family: arial;
+	background-color: #5384A6;
+	color: #FFF;
+}
+div#track a {
+	margin-top:17px;
+	font-family: arial;
+	font-size: 10px;
+	color: #FFF;
+}
+
+div#track .inputfield {
+	font-family: verdana;
+	font-size: 10px;
+}
+div#track .inputbutton {
+	white-space: nowrap;
+	float: left;
+}
+
+div#news {
+	background: #EEE url(../../images/parcelforce/redesign08/img/news.png) 100% 100% no-repeat;
+}
+div#news h1 {
+	background: #6B6A6A url(../../images/parcelforce/redesign08/img/news/h1.png) 100% 0 no-repeat;
+	color: #FFF;
+	font-weight:bold;
+}
+div#news a {
+	color: #555;
+}
+div#news a:hover {
+	color: red;
+	text-decoration: underline;
+}
+div#quick-links {
+	background: url(../../images/parcelforce/redesign08/img/quick-links.png) 0 0 no-repeat;
+	color: #555;
+}
+div#quick-links a {
+	color: #555;
+}
+div#quick-links a.current {
+	background-color: #555;
+	color: #FFF;
+}
+div#quick-links a.current_sub {
+	text-decoration: underline;
+}
+
+
+div.default, div.Left-Navigation {
+	background: url(../../images/parcelforce/redesign08/img/quick-links.png) 0 0 no-repeat;
+	color: #555;
+}
+div.default a, div.Left-Navigation a {
+	color: #555;
+}
+div.Level-1-Current a {
+	background-color: #555;
+	color: #FFF;
+}
+div.Level-2 {
+	background: url(../../images/parcelforce/redesign08/img/quick-links/li.gif) 15px 50% no-repeat;
+}
+div.Level-2 a.Current {
+	text-decoration: underline;
+}
+
+div#content {
+	background: url(../../images/parcelforce/redesign08/img/content.png) 0 100% no-repeat;
+}
+div#content div.column {
+	background: url(../../images/parcelforce/redesign08/img/column.png) 0 0 repeat-x;
+}
+div#content div.column div.header {
+	background-color: #5384A6;
+	color: #FFF;
+}
+div#content div.column input {
+	border-color: #A3A3A3;
+}
+div#content div.column .action {
+	background: url(../../images/parcelforce/redesign08/img/action.gif) 0 0 no-repeat;
+	color: #FFF;
+}
+body#education div#content div.column div.header {
+	background-color: #FBEDA4;
+	color: #1D6799;
+}
+.arrow {color:#F8EB95; font-weight:bold;}
+
+div#content-inner {
+	background: url(../../images/parcelforce/redesign08/img/layout.png) 0 0 repeat-y;
+}
+
+div#layout-top {
+	color: #6D6C6C;
+}
+div#layout-top a.button {
+	background: #1D6799 url(../../images/parcelforce/redesign08/img/button.gif) 0 0 no-repeat;
+	color: #FFF;
+}
+div#layout-top a.button span {
+	background: url(../../images/parcelforce/redesign08/img/button/span.gif) 100% 0 no-repeat;
+}
+div#layout-top p.error {
+	color: #FE202D;
+}
+
+div#card h2 {
+	color: #336699;
+}
+
+div#frank input {
+	border-color: #AEAEAE;
+}
+
+div#register {
+	font-family: arial, verdana, helvetica, sans-serif;
+	background: url(../../images/parcelforce/redesign08/img/register.gif) 0 100% no-repeat;
+	color: #FFF;
+}
+div#register h3 {
+	background: url(../../images/parcelforce/redesign08/img/register/h3.gif) 0 0 no-repeat;
+}
+div#content div#register a.action {
+	background: url(../../images/parcelforce/redesign08/img/register/action.gif) 0 0 no-repeat;
+	color: #444;
+}
+
+
+div#layout-footer {
+	color: #6D6C6C;
+}
+div#layout-footer a {
+	font-size:90%;
+	color: #6D6C6C;
+	text-decoration:underline;
+}
+div#layout-footer a:hover {
+text-decoration:underline;
+}
+
+/* a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+} */
+body {
+	font-size: 0.575em;
+	/*font-size: 0.625em;*/
+}
+body, input, select, textarea {
+	font-family: verdana;
+}
+strong {
+	font-weight: bold;
+}
+p.centre {
+	text-align: center;
+}
+
+div#nav a {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 140%;
+	font-weight: bold;
+}
+
+div#search {
+	font-size: 12px;
+}
+
+div#track h1 {
+	font-size: 150%;
+	font-weight: bold;
+}
+div#track p {
+	font-size: 110%;
+}
+
+div#news h1 {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 160%;
+}
+div#news ul {
+	font-size: 110%;
+	font-weight: bold;
+}
+
+div#quick-links {
+	line-height: 120%;
+}
+div#quick-links h1 {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 170%;
+	font-weight: bold;
+}
+div#quick-links a {
+	font-size: 110%;
+}
+div#quick-links ul ul {
+	list-style-image: url(../../images/parcelforce/redesign08/img/quick-links/li.gif);
+}
+
+
+div.default, div.Left-Navigation {
+	line-height: 120%;
+}
+div.default h2 {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 170%;
+	font-weight: bold;
+	line-height: 100%;
+}
+div.default a, div.Left-Navigation a {
+	font-size: 110%;
+}
+div.default a:hover {
+	text-decoration:underline;
+}
+
+div#content div.column div.header {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-weight: bold;
+}
+div#content div.column div.header h2 {
+	font-size: 170%;
+	font-weight: bold;
+}
+div#content div.column div.header p {
+	font-size: 140%;
+	line-height: 120%;
+}
+div#content div.column div.body p {
+	font-size: 120%;
+	line-height: 120%;
+}
+div#content div.column div.body ul {
+	font-size: 120%;
+}
+div#content div.column div.body ol {
+	font-size: 120%;
+}
+div#content div.column div.body ol li {
+	list-style: decimal;
+}
+div#content div.column div.body li {
+	list-style: disc;
+}
+div#content div.column .action {
+	text-align: center;
+}
+body#education div.column .action {
+	text-align: left;
+}
+div#content div.column ul.actions li {
+	list-style: none;
+}
+
+div#register h3 {
+	font-size: 160%;
+	font-weight: bold;
+}
+div#register p {
+	font-weight: bold;
+}
+
+div#layout-top {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-weight: bold;
+}
+div#layout-top h2 {
+	font-size: 240%;
+}
+div#layout-top p {
+	font-size: 130%;
+	line-height: 120%;
+}
+div#layout-top a.button {
+	font-size: 120%;
+}
+div#layout-top div p {
+	font-size: 110%;
+	font-weight: normal;
+}
+div#layout-top p.error {
+	font-weight: normal;
+	font-size: 110%;
+}
+
+div#card button {
+	font-size: 130%;
+}
+
+div#frank button {
+	font-size: 130%;
+}
+
+div#layout-footer {
+	font-size: 110%;
+}
+
+div#content h1.Title{
+background:none;
+font-size:240%;
+}
+div#content h1.Title .Rounded-Corners {
+padding:0 0 5px 10px;
+margin:0;
+}
+div#content h1.Title .Rounded-Corners .Top-Left,
+div#content h1.Title .Rounded-Corners .Top-Right {
+display:none;
+}
+
+div#content .Section p {
+	margin:0;
+	padding:0 10px 5px 10px;/*28 Apr*/
+}
+div#content .Section p,
+div#content .Section ul,
+div#content .Section h1,
+div#content .Section .displaytable{
+	font-size:120%;
+}
+div#content .Section h1 {padding:10px 0 5px 0; }
+div#content .Section ul {padding:0 0 0 10px; }
+div#content .Subcategory table.Menu {font-size:120%;}
+div#content .Subcategory table.Menu td { padding:4px;}
+
+div#layout-top-middle {
+    margin:0 0 0 5px ;
+    padding:0;
+    width:416px;
+    float:left;
+}
+div#layout-top-right {
+    float:left;
+    width:164px;
+    margin-right:12px;
+}
+div#layout-top-right .Subcategory table.Menu,
+div#layout-top-right .Subcategory table.Menu td {
+margin:0;
+padding:0;
+}
+div#layout-top-right div.Spacer-5px-high{
+	height:0;
+}
+div#sitesearch h2{
+	font-size:180%;
+	margin-bottom:10px;
+}
+div#sitesearch input{
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 5px;
+	padding: 2px 5px;
+}
+div#sitesearch{
+	font-size:120%;
+}
+div#layout-top-left table.Menu{
+	margin:0;
+	padding:0;
+}
+div#layout-top-left img.Feature-Image{
+	width: 157px;
+}
+div#content div#parcelforcetrack,
+div#content div#parcelforcefinder{
+	margin:5px 0 0 5px;
+}
+div#content div#parcelforcefinder{
+	font-size:120%;
+	}
+div#content div#parcelforcetrack td.POLarger,
+div#content div#parcelforcetrack span.POLarger,
+div#content div#parcelforcetrack div.POLarger,
+div#content div#parcelforceemttrack td.POLarger,
+div#content div#parcelforceemttrack span.POLarger,
+div#content div#parcelforceemttrack div.POLarger{
+font-size:180%;
+}
+
+div#content div#parcelforcetrack td.POLarger p{
+padding:5px;
+}
+div#content div#parcelforcefinder div.POLarger,
+div#content div#parcelforcefinder div.PWSmaller {
+	font-size:140%;
+	}
+
+div#content div#parcelforcetrack table.PWTrackResults td {
+font-size:100%;
+padding:2px 0 5px 0;
+}
+div#content div#parcelforcetrack  .redTErr,
+div#content div#parcelforcetrack  .redTErrB {
+font-size:120%;
+}
+
+input.pwaccounttext {
+border-style:solid;
+border-width:1px;
+font-size:120%;
+margin-top:5px;
+padding:2px 5px;
+border-color:#A3A3A3;
+width:153px;
+}
+/* div#content div#parcelforcetrack input,
+div#content div#parcelforcefinder input{
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 5px;
+	padding: 2px 5px;
+	}*/
+div#content div#parcelforcetrack p.trtheader{
+	font-size:140%;
+	margin-bottom:10px;
+}
+
+div#content div#parcelforcetrack input.trtnoborder,
+div#content div#parcelforcefinder input.trtnoborder{
+	border:0;
+	} 
+div#content div#parcelforcefinder,
+div#content div#parcelforcefinder table{
+	width : 570px;
+}
+div#content div#parcelforcefinder table.findertable {
+	width:500px;
+	}
+div#content div#parcelforcefinder table.addresstable{
+	width:120px;
+	}	
+div#content div#parcelforcefinder table.addresstable td{
+font-size:130%;
+}	
+
+div#content div#parcelforcefinder table.findertable td.POLarger table {
+	width:120px;
+	}
+div#content div#parcelforcefinder td.POLarger p,
+div#content div#parcelforcefinder td.PWLarger {
+	font-size:140%;
+}
+div#content div.column div.body .newbutton{
+	border-width: 0px;
+}
+div#content div#parcelforcetrack input.newbutton{ border:0; }
+
+/* 28Apr*/
+div#content div.column div.body #form_login input.login_text,
+div#content div.column div.body #form_login input.login_password,
+div#content #parcelforcetrack input {
+font-size:100%;
+}
+
+div#content div.Section ol{
+margin-left:35px;
+font-size:120%;
+}
+div#content div.Section div.Links {
+font-size:120%;
+}
+
+.Section p
+{
+	line-height: 120%;
+}
+/* 28 Apr end*/
+div#Pop-Up {
+font-size:120%;
+}
+div#Pop-Up p.Header {
+padding:5px;
+}

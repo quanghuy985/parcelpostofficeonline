@@ -1,0 +1,1456 @@
+/* New PCI PO payment css start */
+#kyc a,#kyc a:link,#TravelMoney a,#TravelMoney a:link,div#PciPayment a:link,div#PciPayment a,#Phonecard a,#Phonecard a:link,div.default div.stone a:link{
+	text-decoration:underline;
+}
+#TravelMoney .radio-pair{
+	padding-top:10px;
+}
+div#PciPayment{
+    font:400 100% Verdana,Arial,Helvetica,Sans-Serif;
+}
+div#PciPayment .step-indicator{
+	padding-left:6px;
+}
+div#PciPayment .step-indicator img{
+	float:left;
+}
+div#PciPayment input,div#PciPayment fieldset,div#PciPayment h3,div#PciPayment p{
+	margin:0;
+	padding:0;
+}
+div#PciPayment h2{
+	padding:0;
+	margin:0;
+    font:400 140% Verdana,Arial,Helvetica,Sans-Serif;
+	color:#000;
+}
+div#PciPayment div.PaymentSubhead h2{
+	padding:15px 0 10px 10px;
+	width:473px;
+	float:left;
+    font:700 140% Verdana,Arial,Helvetica,Sans-Serif;
+	color:#BB0032;
+}
+div#PciPayment .PaymentHead h2{
+	padding:0 0 5px 5px;
+	margin:5px 0;
+	border-bottom:1px solid #ccc;
+}
+
+div#PciPayment div.secure-page{
+	width:805px;
+}
+div#PciPayment div.secure-page .text-content{
+    width:410px;
+    float:left;
+}
+div#PciPayment .float-left{
+	float:left;
+	padding-top:0;
+}
+div#PciPayment .clear-both{
+	clear:both;
+}
+div#PciPayment div.secure-page .bank-form{
+    width:358px;
+    border:1px solid #000;
+    float:right;
+    margin:23px 0 0 10px;
+    overflow:hidden;
+}
+div#PciPayment div.secure-page .bank-form iframe{
+	height:389px;
+	overflow:scroll;
+	width:375px;
+}
+div#PciPayment div.secure-page .text-content p{
+      margin:0 0 0 10px;
+}
+div#PciPayment div.form .PaymentHead span.required{
+    float:right;
+    text-align:right;
+}
+div#PciPayment div.form .PaymentHead span.required .Star{
+    font-size:120%;
+    font-weight:700;
+}
+div#PciPayment div.form .Cleared-Row{
+    clear:left;
+    margin-top:10px;
+}
+div#PciPayment .FormTxt-wideleft,
+div#PciPayment .FormTxt-left,
+div#PciPayment .FormTxt-right{
+    clear:left;
+    display:block;
+    float:left;
+    padding:3px 14px 0 4px;
+    text-align:right;
+    width:140px;
+}
+div#PciPayment .FormTxt-wideleft{
+	width:200px;
+}
+div#PciPayment .FormTxt-right{
+	clear:none;
+	width:230px;
+}
+div#PciPayment legend.Hidden-Legend,div#PciPayment label.Hidden-Label{
+    display:none;
+}
+div#PciPayment .small-label {
+    margin-bottom:10px;
+    padding-right:14px;
+    width:115px;
+}
+div#PciPayment h3 {
+    font:700 120% Verdana,Arial,Helvetica,Sans-Serif;
+    padding:15px 0 12px 10px;
+	margin-bottom:10px;
+	border-bottom:1px solid #ccc;
+	color:#BB0032;
+}
+div#PciPayment div.billing-details {
+    width:450px;
+	padding-left:5px;
+}
+div#PciPayment div.billing-details p{
+   font-weight:700;
+}
+div#PciPayment p.instruction{
+   padding:5px;
+}
+div#PciPayment p.verticalspace{
+   padding:15px 5px;
+   clear:both;
+}
+div#PciPayment .issueNumber{
+	margin-bottom:20px;
+}
+div#PciPayment label.terms {
+   padding:2px 0 0 2px;
+}
+div#PciPayment div.buttondiv{
+    width:549px;
+	margin:20px 0 0 5px;
+}
+div#PciPayment .left-button{
+	float:left;
+	width:410px;
+    clear:left;
+}
+div#PciPayment .right-button{
+	display:block;
+	float:left;
+}
+div#PciPayment select.card-type{
+	width:211px;
+}
+div#PciPayment .site-info{
+    border:1px solid #999;
+    padding:10px 5px 0 10px;
+	margin:30px 0 10px;
+	clear:both;
+}
+div#PciPayment .site-info p{
+	margin:0 0 10px;
+}
+div#PciPayment .site-info div.info{
+	float:left;
+	width:400px;
+	padding-left:6px;
+}
+div#PciPayment .site-info div.info a {
+	display:block;
+	width:212px;
+}
+div#PciPayment .site-info div.info a.MasterCard{
+		padding-bottom:20px;	
+}
+div#PciPayment .site-info div.info a.visaCard{
+	width:180px;
+	padding-bottom:3px;
+}
+div#PciPayment .site-info img{
+	margin:0 3px 4px 0;
+}
+div#PciPayment div.float-left-payment{
+    float:left;
+    width:554px;
+	margin-right:30px;
+	border:1px solid #f6aa41;
+}
+div#PciPayment .float-right-payment{
+    float:left;
+    width:230px;
+}
+div#PciPayment .divider-row,
+div#PciPayment .text-right{
+	padding:0 0 18px 10px;
+	display:block;
+	clear:both;
+	margin-bottom:10px;
+}
+div#PciPayment .divider-row{
+	margin-bottom:10px;
+}
+div#PciPayment .card-text{
+	display:block;
+	float:left;
+}
+div#PciPayment .required-txt{
+	float:left;
+	display:block;
+	text-align:right;
+}
+div#PciPayment span.Red-Txt{
+	color:#c00;
+}
+div#PciPayment div.how-pay{
+    width:225px;
+}
+div#PciPayment div.how-pay div.top{
+    background:#e7e7e7 url("../images/postoffice/howto-pay-top.gif") no-repeat left top;
+}
+div#PciPayment div.how-pay div.bottom{
+    background:url("../images/postoffice/howto-pay-bottom.gif") no-repeat left bottom;
+    height:7px;
+}
+div#PciPayment div.how-pay div.content{
+    background-color:#e5e5e5;
+    width:225px;
+    display:block;
+    padding:0;
+    margin:0;
+}
+div#PciPayment div.how-pay div.content p{
+    width:104px;
+    padding:5px 0 0 10px;
+    float:left;
+}
+div#PciPayment div.how-pay div.content p.debitcard{
+    width:144px;
+}
+div#PciPayment div.how-pay div.content p.howtoPay{
+	width:140px;
+	}
+div#PciPayment div.how-pay div.top h3{
+    padding:9px 10px 10px 9px;
+    margin:0 0 3px;
+    font-size:125%;
+    color:#BB0032;
+	border:none;
+	}
+div#PciPayment div.how-pay div.content img{
+    float:left;
+	margin:5px 0 4px 10px;
+}
+div#PciPayment div.how-pay div.content img.mastercardthumbnail{
+	margin:5px 0 4px 4px;
+}
+div#PciPayment .clear-left{
+	clear:left;
+}
+div#PciPayment label.label-txt{
+	text-align:left;
+	vertical-align:middle;
+	line-height:13px;
+	width:250px;
+}
+div#PciPayment label.payment-method{
+	margin-left:6px;
+	padding:0;
+}
+div#PciPayment p.payhead{
+	padding:0 5px;
+}
+div#PciPayment p.pobilling{
+	padding-left:10px;
+}
+div#PciPayment .input-col input{
+	width:207px;
+}
+div#PciPayment .input-col input.cardField{
+	width:101px;
+	margin-right:10px;
+}
+div#PciPayment .payment-option{
+	width:30px;
+	margin-right:5px;
+}
+div#PciPayment .width500px{
+	width:514px;
+	margin-left:10px;
+}
+div#PciPayment .payment-month{
+	width:105px;
+}
+div#PciPayment .payment-year{
+	width:103px;
+}
+div#PciPayment div.billing-details input{
+	width:211px;
+}
+div#PciPayment .PaymentHead {
+	border-bottom:1px solid #CCC;
+	clear:both;
+	width:805px;
+	margin-bottom:15px;
+}
+div#PciPayment .PaymentSubhead{
+	clear:both;
+	width:554px;
+}
+div#PciPayment .margin-p{
+	margin-top:5px;
+}
+div#PciPayment input.no-border{
+	border:none !important;
+}
+div#PciPayment .border-seprate{
+	width:325px !important;
+}
+div#PciPayment div.PaymentHead h1{
+	font:400 180% Verdana,Arial,Helvetica,Sans-Serif;
+	display:block;
+	width:450px;
+	float:left;
+	color:#BB0032;
+	margin:0;
+	padding:0 0 0 10px;
+}
+div#PciPayment div.PaymentHead .pad-lock{
+	display:block;
+	float:right;
+	padding-right:5px;
+}
+div#PciPayment div.PaymentHead .pad-lock img{
+	vertical-align:middle;
+	margin:0 5px 3px 0;
+}
+div#PciPayment .divider{
+	border-bottom:1px solid #ccc;
+	height:2px;
+	width:553px;
+	margin-bottom:10px;
+	background:none;
+}
+div#PciPayment div.secureborder h2,
+div#PciPayment .secureborder{
+	padding:10px 0 5px 5px;
+}
+div#PciPayment .vertical-top{
+	vertical-align:top;
+}
+div#PciPayment .vertical-bottom{
+	vertical-align:bottom;
+}
+div#PciPayment .thankyou-border{
+	width:570px !important;
+}
+div#PciPayment .tab-bottom {
+	display:block;
+}
+div#PciPayment .box-border{
+	float:left;
+	padding:0;
+}
+div#PciPayment .vertical-middle{
+	vertical-align:middle;
+	margin-right:5px;
+}
+div#PciPayment .form{
+	width:936px;
+}
+div#PciPayment .thankyou-box{
+	width:224px;
+	float:right;
+}
+div#PciPayment div.secure-page .text-content h3{
+	font:700 100% Verdana,Arial,Helvetica,Sans-Serif;
+	border-bottom:1px solid #ccc;
+	color:#006F51;
+	padding:15px 0 15px 10px;
+	margin:0 0 20px;
+}
+div#PciPayment input.findoutmorebutton{
+	vertical-align:middle;
+	margin-left:245px;
+}
+div#PciPayment .Userguide-button{
+	margin:8px 0 15px;
+	}
+
+div#PciPayment .dividerspace{
+	border-bottom:1px solid #ccc;
+	height:1px;
+	width:478px;
+	clear:both;
+	padding-top:20px;
+}
+div#PciPayment .clear-row{
+	clear:both;
+	padding-top:7px;
+}
+div#PciPayment .max-left{
+	width:220px;
+}
+div#PciPayment .min-right{
+	clear:none;
+	width:213px;
+}
+div#PciPayment span.continueright input{
+	float:right !important;
+	margin-top:10px;
+}
+div#PciPayment .btnright-continue {
+	display:block;
+	float:left;
+	padding-left:38px;
+}
+div#PciPayment table.confirmation{
+	width:440px;
+	border:none;
+	float:left;
+}
+div#PciPayment table.confirmation tr td,
+div#PciPayment table.confirmation tr th{
+	width:260px;
+	text-align:left;
+	padding:2px 2px 2px 4px;
+	font-weight:400;
+}
+div#PciPayment table.confirmation tr td.address{
+	width:100px;
+}
+div#PciPayment table.confirmation tr th.margin-top,
+div#PciPayment table.confirmation tr td.margin-top{
+	padding-top:20px;
+}
+div#PciPayment select,
+div#PciPayment input{
+	font-size:1.1em;
+}
+div#PciPayment .confirm-card{
+	padding-top:10px;
+}
+div#PciPayment .processbar{
+	margin:100px auto;
+	text-align:center;
+	width:975px;
+}
+div#PciPayment .processbar img{
+	padding-top:5px;
+}
+div#PciPayment .input-col{
+	padding-left:6px;
+}
+div#PciPayment input.terms{
+	margin-left:10px;
+}
+div#PciPayment fieldset.paymentmethod-fieldset .Cleared-Row{
+	padding-left:5px;
+}
+#right_top{
+    text-align:right;
+    margin:0;
+    position:relative;
+    top:1px;
+	padding: 10px 30px 0 0
+}
+div#PciPayment p.paying{
+	width:200px !important;
+}
+div#PciPayment .left-text-content{
+	border:1px solid #F6AA41;padding-bottom:15px;
+}
+div#PciPayment .left-text{
+	border:1px solid #F6AA41;padding-bottom:15px;
+}
+div#PciPayment .processbar{
+	margin:30px auto;
+	width:570px;
+	text-align:center;
+	height:300px;
+	padding-top:150px;
+}
+div#PciPayment .processbar p{
+	font:100% Verdana, arial,helvetica,sans-serif;
+	padding:0;
+	margin:0 0 5px;
+}
+div#PciPayment p.warning{
+	padding-left:5px;
+}
+div#PciPayment div.noboder{
+	border:none !important;
+	width:560px !important;
+}
+div#PciPayment div.outerborder{
+	border:1px solid #f6aa41;
+	margin-left:5px;
+}
+div#PciPayment h3.PoShopParagraph{
+	border:none;
+	font:400 100% Verdana,Arial,Helvetica,Sans-Serif;
+	color:#000;
+	padding:0 0 10px 10px;
+}
+div#PciPayment div.outerborder div.buttondiv{
+	padding-bottom:10px;
+}
+div#PciPayment div.outerborder div.buttondiv .left-button img{
+	width:57px !important;
+}
+div#PciPayment div.poshophowtopay{
+	margin-top:74px;
+}
+div#PciPayment div.text-right{
+	display:none;
+}
+/* New PCI PO payment css end */
+
+
+/* New Travel Money Card css start */
+div#TravelMoney{
+    font:400 100% Verdana,Arial,Helvetica,Sans-Serif;
+}
+div#TravelMoney .PaymentHead {
+	border-bottom:1px solid #CCC;
+	clear:both;
+	width:700px;
+	margin-bottom:15px;
+}
+div#TravelMoney div.PaymentHead h1{
+	font:400 180% Verdana,Arial,Helvetica,Sans-Serif;
+	display:block;
+	width:450px;
+	float:left;
+	color:#B40030;
+	margin:0;
+	padding:0 0 0 10px;
+}
+div#TravelMoney div.PaymentHead .pad-lock{
+	display:block;
+	float:right;
+	padding-right:5px;
+}
+div#TravelMoney div.PaymentHead .pad-lock img{
+	vertical-align:middle;
+	margin:0 5px 3px 0;
+}
+div#TravelMoney h2{
+	padding:15px 0 10px 10px;
+	margin:0;
+    font:700 140% Verdana,Arial,Helvetica,Sans-Serif;
+	color:#B40030;
+}
+div#TravelMoney .step-indicator img{
+	float:left;
+}
+div#TravelMoney h2.clear-both{
+	clear:left;
+	padding-top:0;
+}
+div#TravelMoney .step-indicator{
+	margin-left:5px;
+}
+div#TravelMoney p.inner-pad{
+	padding-left:10px;
+}
+div#TravelMoney .app-bot {
+	float:left;
+	margin:15px 0 9px;
+	padding:0 0 9px;
+	background:none;
+}
+div#TravelMoney .app-top{
+	background:none;
+}
+div#TravelMoney .form-Txt-bold,
+div#TravelMoney .form-Txt-left,
+div#TravelMoney .form-Txt,
+div#TravelMoney #registration .form-Txt {
+	padding:4px 10px 12px 2px;
+	text-align:right;
+	width:150px;
+}
+div#TravelMoney .birthdatenew,
+div#TravelMoney .birthdate{
+	width:150px;
+	padding-right:5px !important;
+}
+div#TravelMoney .fields-section{
+	margin-top:7px;
+}
+div#TravelMoney .Text-Button-Left p{
+	float:left;
+	width:385px !important;
+}
+div#TravelMoney .Text-Button-Left div {
+	float:left;
+	width:87px;
+}
+div#TravelMoney .Text-Button-Left div input{
+	margin:-5px 0 0;
+	padding:0;
+	position:relative;
+	left:12px;
+}
+div#TravelMoney .phonesection{
+	margin-top:30px;
+}
+div#TravelMoney input.homePhone-txt{
+	width:141px !important;
+}
+div#TravelMoney .select-day,
+div#TravelMoney #registration .select-day{
+	width:67px;
+}
+div#TravelMoney .select-month,
+div#TravelMoney #registration .select-month {
+	width:63px;
+}
+div#TravelMoney .select-year,
+div#TravelMoney #registration .select-year{
+	width:67px;
+}
+div#TravelMoney div.offerdetails-link{
+	padding:13px 0 0 4px;
+}
+div#TravelMoney .divider-space{
+	margin:1px 0 8px;
+}
+div#TravelMoney .divider-medspace{
+	margin:4px 0 8px;
+}
+div#TravelMoney .buttonmain{
+	clear:both;
+	width:528px;
+	padding-top:12px;
+}
+div#TravelMoney div#order-summary .buttonmain{
+	width:529px;
+	margin-bottom:10px
+}
+div#TravelMoney .buttonmain .btn-left{
+	float:left;
+}
+div#TravelMoney .buttonmain .btn-right{
+	float:right;
+}
+div#TravelMoney .select-deliverycountry{
+	width:170px;
+	margin-top:5px;
+}
+div#TravelMoney p.address-lookup{
+	padding-left:160px;
+}
+div#TravelMoney .yellow-label{
+	padding:6px 10px 10px 2px !important;
+}
+div#TravelMoney .findaddress{
+	margin:0 1px 3px;
+	padding:0;
+}
+div#TravelMoney .select-address{
+	margin:20px 0;
+}
+div#TravelMoney .select-address select{
+	width:210px;
+}
+div#TravelMoney .select-address label{
+	padding-top:4px;
+}
+div#TravelMoney .select-address .address-select{
+	margin:-6px 0 0 !important;
+	vertical-align:middle;
+}
+div#TravelMoney input.input-select,
+div#TravelMoney input.address-select{
+	margin:-6px 0 0 !important;
+	vertical-align:middle;
+}
+div#TravelMoney div.max-label input{
+	width:200px;
+}
+div#TravelMoney .fieldset-date span.birthdates{
+	width:145px;
+	margin-left:5px;
+	padding-left:7px;
+}
+div#TravelMoney div.find .select-country{
+	margin-top:5px;
+}
+div#TravelMoney .app-content h3{
+	color:#BB0032;
+	font-weight:700;
+	padding-bottom:10px;
+}
+div#TravelMoney .app-content h3.card-money{
+	color:#BB0032;
+	padding:0 0 10px;
+	font-weight:700;
+}
+div#TravelMoney div#kyc .form-Txt-bold,
+div#TravelMoney div#kyc .form-Txt-left,
+div#TravelMoney div#kyc .form-Txt,
+div#TravelMoney div#kyc #registration .form-Txt {
+	padding:4px 10px 12px 12px;
+	text-align:right;
+	width:140px;
+}
+div#TravelMoney .divider-maxspace{
+	margin:50px 0 8px;
+}
+div#TravelMoney .enterOtherName{
+	padding:0;
+}
+div#TravelMoney .Text-Button-Left p.consent-check{
+	width:315px !important;
+}
+div#TravelMoney  input.consent-chk{
+	margin:0 0 0 -2px;
+}
+div#TravelMoney .Text-Button-Left img.noconsent{
+	margin:0;
+	padding:0;
+}
+div#TravelMoney .app-content {
+	width:522px;
+	border:1px solid #f6aa41;
+}
+div#TravelMoney div.app-bot{
+	margin-left:10px;
+}
+div#TravelMoney div#order-summary h3{
+	color:#9E1D22;
+	font-size:120%;
+	padding:9px 0 12px 10px;
+	border-bottom:1px solid #ccc;
+	clear:both;
+	font-weight:700;
+}
+div#TravelMoney div#order-summary .default{
+	width:542px;
+	border:1px solid #f6aa41;
+}
+div#TravelMoney div#order-summary table.ordersummary{
+	width:542px;
+	border-collapse:collapse;
+	margin-top:1px;
+}
+div#TravelMoney div#order-summary table.ordersummary thead tr th{
+	background:url('../images/postoffice/cssImages/table-header-bg.gif') repeat-x left top;
+	font-weight:400;
+	vertical-align:middle;
+	height:29px;
+	padding:0 10px;
+}
+div#TravelMoney div#order-summary table.ordersummary tbody tr td{
+	padding:10px;
+	font-weight:700;
+	border-bottom:1px solid #ccc;
+}
+div#TravelMoney table.ordersummary tbody tr td.change-item img{
+	position:relative;
+	top:-7px;
+	left:13px;
+}
+div#TravelMoney table.itemsummary{
+	width:200px;
+	float:right;
+	margin-bottom:10px;
+}
+div#TravelMoney table.itemsummary tbody tr td{
+	padding:10px 0 0;
+}
+
+div#TravelMoney table.itemsummary tbody tr.total td{
+	border-bottom:1px solid #ccc;
+	padding-bottom:10px;
+}
+div#TravelMoney table.deliverydetails{
+	width:298px;
+	margin-bottom:10px;
+}
+div#TravelMoney table.deliverydetails tbody tr td{
+	padding:10px 0 0 10px;
+	line-height:25px;
+	
+}
+div#TravelMoney table.deliverydetails tbody tr td.value{
+	font-weight:700;
+}
+div#TravelMoney div.changedetails{
+	text-align:right;
+	padding-right:8px;
+}
+div#TravelMoney div.text-details{
+	padding:20px 10px 0 
+}
+div#TravelMoney .text-details p{
+	margin:0;
+	padding:0 0 10px;
+}
+div#TravelMoney .back-btn{
+	padding-left:10px;
+}
+div#TravelMoney h3.small-header{
+	padding:0 0 3px 10px;
+	font-weight:700;
+	color:#B40030;
+}
+div#TravelMoney .block-area{
+	width:544px;
+	padding-left:10px;
+}
+div#TravelMoney .delivery-details{
+	padding:20px 10px 10px;
+}
+div#TravelMoney .delivery-details .col-left{
+	display:block;
+	float:left;
+	padding:0 3px 10px 0;
+}
+div#TravelMoney .delivery-details .col-right{
+	display:block;
+	font-weight:700;
+	padding:0 0 10px;
+}
+div#TravelMoney .delivery-details p{
+	padding:0 0 10px;
+}
+div#TravelMoney .print-div{
+	padding:0 8px;
+}
+div#TravelMoney .print-div img{
+	vertical-align:middle;
+}
+div#TravelMoney .print-div a.printpage{
+	float:left;
+}
+div#TravelMoney .print-div img.pohome{
+	float:right;
+	margin:-5px 0 10px 0;
+}
+div#TravelMoney .tableborder{
+	border-bottom:1px solid #ccc;
+}
+div#TravelMoney div.need-help{
+	width:177px;
+	float:right;
+	position:relative;
+	top:0;
+	right:186px;
+}
+div#TravelMoney div.need-help .top{
+	width:177px;
+	background:#e7e7e7 url('../images/needhelp-top.gif') no-repeat left top;
+}
+div#TravelMoney div.need-help .bottom{
+	width:177px;
+	background:url('../images/needhelp-bottom.gif') no-repeat left top;
+	height:5px;
+}
+div#TravelMoney div.need-help .need-content{
+	border-left:1px solid #e7e7e7;
+	border-right:1px solid #e7e7e7;
+	padding:15px;
+}
+div#TravelMoney div#order-summary div.need-help h3{
+	border:none;
+	padding:6px 15px 7px;
+	margin:0;
+}
+div#TravelMoney div#order-summary div.need-help h4{
+	padding:10px 0;
+	font-weight:700;
+}
+div#TravelMoney div.need-help .need-content p{
+	margin:0;
+	padding:0;
+}
+div#TravelMoney .float-help{
+	float:left;
+}
+div#TravelMoney h2.kyc-header{
+	padding-bottom:0;
+}
+div#TravelMoney .highlight-inner label{
+	width:140px;
+}
+div#TravelMoney div.clear-both{
+	clear:both;
+}
+div#TravelMoney div.move-address fieldset{
+	margin-top:10px;
+}
+div#TravelMoney select.alias{
+	margin-top:3px;
+}
+div#TravelMoney li.ref-Text{
+	font-weight:400;
+	list-style-position:outside;
+	width:160px;
+	list-style-type:none;
+}
+div#TravelMoney li.big-Text{
+	font-weight:400;
+	display:inline;
+}
+
+/* New Travel Money Card css end */
+/* New Phone Card css start */
+
+#Phonecard h3{
+    font-weight:700;
+	color:#006f51;
+	padding-bottom:10px;
+}
+
+div#Phonecard{
+    font:400 100% Verdana,Arial,Helvetica,Sans-Serif;
+}
+div#Phonecard .PaymentHead {
+	border-bottom:1px solid #CCC;
+	clear:both;
+	width:700px;
+	margin-bottom:15px;
+}
+div#Phonecard div.PaymentHead h1{
+	font:400 180% Verdana,Arial,Helvetica,Sans-Serif;
+	display:block;
+	width:450px;
+	float:left;
+	color:#016e4e;
+	margin:0;
+	padding:0 0 0 10px;
+}
+div#Phonecard div.PaymentHead .pad-lock{
+	display:block;
+	float:right;
+	padding-right:5px;
+}
+div#Phonecard div.PaymentHead .pad-lock img{
+	vertical-align:middle;
+	margin:0 5px 3px 0;
+}
+div#Phonecard h2{
+	padding:15px 0 10px 10px;
+	margin:0;
+    font:700 140% Verdana,Arial,Helvetica,Sans-Serif;
+	color:#006f51;
+}
+
+div#Phonecard .step-indicator{
+	margin-left:6px;
+}
+div#Phonecard .step-indicator img{
+	float:left;
+}
+div#Phonecard h2.clear-both{
+	clear:left;
+	padding-top:0;
+}
+div#Phonecard p.inner-pad{
+	padding:0 0 10px 10px;
+}
+div#Phonecard .app-bot {
+	float:left;
+	margin:15px 0 9px;
+	padding:0 0 9px;
+	background:none;
+}
+
+div#Phonecard .app-content{
+	border:1px solid #96c03a;
+}
+div#Phonecard .form-Txt-bold,
+div#Phonecard .form-Txt-left,
+div#Phonecard .form-Txt,
+div#Phonecard #registration .form-Txt {
+	padding:4px 10px 12px 2px;
+	text-align:right;
+	width:150px;
+}
+div#Phonecard .radio-pair{margin-top:10px;}
+
+div#Phonecard .birthdatenew,
+div#Phonecard .birthdate{
+	width:150px;
+	padding-right:10px !important;
+}
+div#Phonecard .fields-section{
+	margin-top:7px;
+}
+div#Phonecard .Text-Button-Left p{
+	float:left;
+	width:385px !important;
+}
+div#Phonecard .Text-Button-Left div {
+	float:left;
+	width:87px;
+}
+div#Phonecard .Text-Button-Left div input{
+	margin:-5px 0 0;
+	padding:0;
+	position:relative;
+	left:12px;
+}
+div#Phonecard .phonesection{
+	margin-top:30px;
+}
+div#Phonecard input.homePhone-txt{
+	width:140px !important;
+}
+div#Phonecard .select-day,
+div#Phonecard #registration .select-day{
+	width:67px;
+}
+div#Phonecard .select-month,
+div#Phonecard #registration .select-month {
+	width:63px;
+}
+div#Phonecard .select-year,
+div#Phonecard #registration .select-year{
+	width:67px;
+}
+div#Phonecard div.offerdetails-link{
+	padding:13px 0 0 4px;
+}
+div#Phonecard .divider-space{
+	margin:1px 0 8px;
+}
+div#Phonecard .divider-medspace{
+	margin:4px 0 8px;
+}
+div#Phonecard .buttonmain{
+	clear:both;
+	width:528px;
+	padding:12px 15px 15px 0;
+}
+div#Phonecard .buttonmain .btn-left{
+	float:left;
+}
+div#Phonecard .buttonmain .btn-right{
+	float:right;
+}
+div#Phonecard .select-deliverycountry{
+	width:170px;
+	margin-top:5px;
+}
+div#Phonecard p.address-lookup{
+	padding-left:160px;
+}
+div#Phonecard .app-content {
+	width:522px;
+}
+div#Phonecard div.app-bot{
+	margin-left:10px;
+}
+div#Phonecard div#order-summary h3{
+	color:#016e4e;
+	font-size:120%;
+	padding:9px 0 12px 10px;
+	border-bottom:1px solid #ccc;
+	clear:both;
+}
+div#Phonecard .yellow-label{
+	padding:6px 10px 10px 2px !important;
+}
+div#Phonecard .findaddress{
+	margin:0 1px 3px;
+	padding:0;
+}
+div#Phonecard .select-address{
+	margin:20px 0;
+}
+div#Phonecard .select-address select{
+	width:210px;
+}
+div#Phonecard .select-address label{
+	padding-top:10px;
+	border:1px solid red;
+}
+div#Phonecard .select-address .address-select{
+	margin:-6px 0 0 !important;
+	vertical-align:middle;
+}
+div#Phonecard input.input-select,
+div#Phonecard input.address-select{
+	margin:-6px 0 0 !important;
+	vertical-align:middle;
+}
+div#Phonecard div#order-summary .default{
+	width:542px;
+	border:1px solid #96C03A;
+}
+div#Phonecard div#order-summary table.ordersummary{
+	width:542px;
+	border-collapse:collapse;
+	margin-top:1px;
+}
+div#Phonecard div#order-summary table.ordersummary thead tr th{
+	background:url('../images/postoffice/cssImages/table-header-bg.gif') repeat-x left top;
+	font-weight:400;
+	vertical-align:middle;
+	height:29px;
+	padding:0 10px;
+}
+div#Phonecard div#order-summary .buttonmain{
+	width:529px;
+	margin-bottom:10px;
+}
+div#Phonecard div#order-summary .buttonmain .btn-right{
+	margin-right:-2px;
+}
+div#Phonecard div#order-summary table.ordersummary tbody tr td{
+	padding:10px;
+	font-weight:700;
+	border-bottom:1px solid #ccc;
+}
+div#Phonecard table.ordersummary tbody tr td.change-item img{
+	position:relative;
+	top:-7px;
+	left:13px;
+}
+div#Phonecard table.itemsummary{
+	width:200px;
+	float:right;
+	margin-bottom:10px;
+}
+div#Phonecard table.itemsummary tbody tr td{
+	padding:10px 0 0;
+}
+
+div#Phonecard table.itemsummary tbody tr.total td{
+	border-bottom:1px solid #ccc;
+	padding-bottom:10px;
+}
+div#Phonecard table.deliverydetails{
+	width:360px;
+	margin-bottom:10px;
+}
+div#Phonecard table.deliverydetails tbody tr td{
+	padding:10px 0 0 10px;
+	line-height:25px;
+	
+}
+div#Phonecard table.deliverydetails tbody tr td.value{
+	font-weight:700;
+}
+div#Phonecard div.changedetails{
+	text-align:right;
+	padding-right:8px;
+}
+div#Phonecard div.changedetails input{
+	padding:0 2px 0 0;
+	margin-right:-2px;
+}
+div#Phonecard div.text-details{
+	padding:20px 10px 0 
+}
+div#Phonecard .text-details p{
+	margin:0;
+	padding:0 0 10px;
+}
+div#Phonecard .back-btn{
+	padding-left:10px;
+}
+div#Phonecard h3.small-header{
+	padding:0 0 10px 10px;
+	font-weight:700;
+}
+div#Phonecard .block-area{
+	width:544px;
+	padding-left:10px;
+}
+div#Phonecard .delivery-details{
+	padding:20px 10px 10px;
+}
+div#Phonecard .delivery-details .col-left{
+	display:block;
+	float:left;
+	padding:0 3px 10px 0;
+}
+div#Phonecard .delivery-details .col-right{
+	display:block;
+	font-weight:700;
+	padding:0 0 10px;
+}
+div#Phonecard .delivery-details p{
+	padding:0 0 10px;
+}
+div#Phonecard .print-div{
+	padding:0 8px;
+}
+div#Phonecard .print-div img{
+	vertical-align:middle;
+}
+div#Phonecard .print-div a.printpage{
+	float:left;
+}
+div#Phonecard .print-div img.pohome{
+	float:right;
+	margin:-5px 0 10px 0;
+}
+div#Phonecard .tableborder{
+	border-bottom:1px solid #ccc;
+}
+div#Phonecard div.need-help{
+	width:177px;
+	float:right;
+	position:relative;
+	top:0;
+	right:186px;
+}
+div#Phonecard div.need-help .top{
+	width:177px;
+	background:#e7e7e7 url('../images/needhelp-top.gif') no-repeat left top;
+}
+div#Phonecard div.need-help .bottom{
+	width:177px;
+	background:url('../images/needhelp-bottom.gif') no-repeat left top;
+	height:5px;
+}
+div#Phonecard div.need-help .need-content{
+	border-left:1px solid #e7e7e7;
+	border-right:1px solid #e7e7e7;
+	padding:15px;
+}
+div#Phonecard div#order-summary div.need-help h3{
+	border:none;
+	padding:6px 15px 7px;
+	margin:0;
+	color:#006f51;
+}
+div#Phonecard div#order-summary div.need-help h4{
+	padding:10px 0;
+	font-weight:700;
+}
+div#Phonecard div.need-help .need-content p{
+	margin:0;
+	padding:0;
+}
+
+div#Phonecard .float-help{
+	float:left;
+}
+div#Phonecard h2.kyc-header{
+	padding-bottom:0;
+}
+div#Phonecard .component-date {
+	margin-left:0;
+}
+div#Phonecard .delivery-email{
+	padding-top:10px;
+}
+div#Phonecard .yellow-label label{
+	text-align:right !important;
+	margin-top:5px;
+}
+div#Phonecard .divider-solid{
+	height:2px;
+	border-bottom:1px solid #ccc;
+	clear:both;
+	margin-top:18px;
+}
+div#Phonecard .howtouse{
+	text-align:right;
+	margin-right:8px;
+}
+#right_top{
+    text-align:right;
+    margin:0;
+    position:relative;
+    top:1px;
+	padding: 10px 30px 0 0
+}
+div#Phonecard .float-help{
+	float:left;
+}
+div#Phonecard h2.kyc-header{
+	padding-bottom:0;
+}
+div#Phonecard .highlight-inner label{
+	width:140px;
+}
+div#Phonecard div.clear-both{
+	clear:both;
+}
+div#Phonecard div.move-address fieldset{
+	margin-top:10px;
+}
+div#Phonecard select.alias{
+	margin-top:3px;
+}
+div#TravelMoney input.homePhone-txtnew{
+	width:137px !important;
+}
+div#Phonecard input.homePhone-txtnew{
+	width:136px !important;
+}
+div#Phonecard li.ref-Text{
+	font-weight:400;
+	list-style-position:outside;
+	width:150px;
+	list-style-type:none;
+}
+div#Phonecard li.big-Text{
+	font-weight:400;
+	display:inline;
+}
+/* New Phone Card css start */
+div#PciPayment .text-left{
+	border:1px solid #96C03A;
+}
+div#PciPayment div.text-left div.buttondiv{
+	padding-bottom:40px;
+	width:550px;
+}
+div#PciPayment div.form-noPrepay p{padding:0 5px;}
+
+div#PciPayment .paymentmethod-fieldset{
+	padding:10px 10px 10px 0;
+}
+div#PciPayment .paymentmethod-fieldset p{
+	padding:10px;
+}
+div#PciPayment .noPrepay {
+	padding-top:70px;
+}
+div#TravelMoney div#order-summary div.buttonmain,
+div#Phonecard div#order-summary div.buttonmain{
+	width:532px !important;
+}
+div#order-summary div.default{
+	margin-left:10px;
+}
+div#TravelMoney div#change-details,
+div#TravelMoney div#kyc{
+	margin-left:-10px;
+}
+div#Content-Region{
+	position:relative;
+}
+div#Content-Right-Nav{
+	position:absolute;
+}
+div#Content-Right-Nav a img{
+	left:-120px;
+	position:absolute;
+	top:95px;
+}
+div#Phonecard div.summary-p5,
+div#Phonecard div.summary-p10,
+div#Phonecard div.summary-p20{
+	width:164px;
+	height:auto;
+	/*height:101px;*/
+	margin:10px 20px 20px;
+	padding:22px 0 0 50px;	
+	background:url(../images/postoffice/backgrounds/bg-summary-p5.gif) no-repeat;
+	font-family:Arial, Helvetica, sans-serif;
+}
+div#Phonecard  div.summary-p5 .flexibleBlock{
+	border-left:#ab75b3 solid 1px;
+	border-right:#ab75b3 solid 1px;
+	position:relative;
+	margin:0 0 0 -1px;
+	top:2px;
+	height:101px;
+}
+div#Phonecard  div.summary-p5 .imageCoverBase{
+	position:relative;
+	left:-1px;
+	float:left;
+	background:url(../images/postoffice/backgrounds/bottom-bl.gif) no-repeat;
+	height:2px;
+	width:165px;
+}
+div#Phonecard div.summary-p10,
+div#Phonecard div.summary-p10{
+	background-image:url(../images/postoffice/backgrounds/bg-summary-p10.gif);
+}
+div#Phonecard div.summary-p10 .flexibleBlock{
+	border-left:#faa21c solid 1px;
+	border-right:#faa21c solid 1px;
+	margin:0 0 0 -1px;
+	position:relative;
+	top:2px;
+	height:101px;
+}
+div#Phonecard div.summary-p10 .imageCoverBase{
+	position:relative;
+	left:-1px;
+	float:left;
+	background:url(../images/postoffice/backgrounds/bottom-or.gif) no-repeat;
+	height:2px;
+	width:165px;
+}
+div#Phonecard div.summary-p20,
+div#Phonecard div.summary-p20{
+	background-image:url(../images/postoffice/backgrounds/bg-summary-p20.gif);
+}
+div#Phonecard div.summary-p20 .flexibleBlock{
+	border-left:#bdd63e solid 1px;
+	border-right:#bdd63e solid 1px;
+	margin:0 0 0 -1px;
+	position:relative;
+	top:2px;
+	height:101px;
+}
+div#Phonecard div.summary-p20 .imageCoverBase{
+	position:relative;
+	left:-1px;
+	float:left;
+	background:url(../images/postoffice/backgrounds/bottom-gr.gif) no-repeat;
+	height:2px;
+	width:165px;
+}
+div#Phonecard div.summary-p5 ul,
+div#Phonecard div.summary-p10 ul,
+div#Phonecard div.summary-p20 ul{
+	list-style:none;
+	padding:35px 4px 0 14px;
+}
+div#Phonecard div.summary-p5 ul,
+div#Phonecard div.summary-p10 ul,
+div#Phonecard div.summary-p20 ul{
+	list-style:none;
+	padding:35px 1px 0 3px;
+}
+div#Phonecard div.summary-p5 ul li,
+div#Phonecard div.summary-p10 ul li,
+div#Phonecard div.summary-p20 ul li{
+	background:none;
+}
+div#Phonecard div.summary-p5 ul li.small-Text,
+div#Phonecard div.summary-p10 ul li.small-Text,
+div#Phonecard div.summary-p20 ul li.small-Text,
+div#Phonecard div.summary-p5 ul li.small-Text,
+div#Phonecard div.summary-p10 ul li.small-Text,
+div#Phonecard div.summary-p20 ul li.small-Text{
+font-size:80%;}
+
+div#Phonecard div.summary-p5 ul li.big-Text,
+div#Phonecard div.summary-p10 ul li.big-Text,
+div#Phonecard div.summary-p20 ul li.big-Text,
+div#Phonecard div.summary-p5 ul li.big-Text,
+div#Phonecard div.summary-p10 ul li.big-Text,
+div#Phonecard div.app-bot .summary-p20 ul li.big-Text{
+font-size:110%;margin:0 0 0 6px;
+}
+
+div#Phonecard div.summary-p5 ul li.ref-Text,
+div#Phonecard div.summary-p10 ul li.ref-Text,
+div#Phonecard div.summary-p20 ul li.ref-Text{
+	margin:0;
+	padding:0 0 5px 5px;
+	color:#737373;
+}
+
+#Print-Template {
+	font-size:100% !important;
+}
