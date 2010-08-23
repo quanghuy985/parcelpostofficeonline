@@ -1,4 +1,4 @@
-<<<<<<< .mine
+
  /* Post Office generic stylesheet for all browsers */
 /* If you need styles to be added or changed, please ask your eBusiness PM about the process. */
 /* Any changes made to this file by other users will be overwritten the next time the file is released. */
@@ -3413,8 +3413,7 @@ div#TravelInsu .quotestone-width label {
 div#TravelInsu .quotestone-width input {
         float:left;
         margin-right:5px;
-        margin-top:expression('-3px'); /* for IE 5, 6 and 7 only */
-        margin-left:expression('-3px'); /* for IE 5, 6 and 7 only */
+        	margin-top: expression('-3px');
 }
 .quotestone-right {
     float:right;
@@ -3436,10 +3435,7 @@ div#TravelInsu .quotestone-width input {
 .quotestone-left input, .quotestone-right input {
     float:left;
     margin-right:5px;
-    margin-top:0;
-    margin-left:1px;
-    margin-top:expression('-3px'); /* for IE 5, 6 and 7 only */
-    margin-left:expression('-3px'); /* for IE 5, 6 and 7 only */
+    margin-top:expression('-3px');
 }
 .quotestone-right input.Float-Right {
     margin-right:0;

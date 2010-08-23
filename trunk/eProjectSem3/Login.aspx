@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage.master" CodeFile="Login.aspx.cs" Inherits="eProjectSem3_eProjectSem3_Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
    
-        <table style="width: 40%; height: 185px;">
+        <table style="width: 73%; height: 185px;">
             <tr>
                 <td align="center">
                     &nbsp;</td>
@@ -21,7 +21,7 @@
                 <td align="right" colspan="2">
                     <asp:Label ID="lbUserName" runat="server" Text="User Name:"></asp:Label>
                 </td>
-                <td align="center">
+                <td align="center" style="width: 268435616px">
                     <asp:TextBox ID="txtUserName" runat="server" Width="200px">User Name</asp:TextBox>
                 </td>
             </tr>
@@ -29,7 +29,7 @@
                 <td align="right" colspan="2">
                     <asp:Label ID="lbPassword" runat="server" Text="Password:"></asp:Label>
                 </td>
-                <td align="center">
+                <td align="center" style="width: 268435616px">
                     <asp:TextBox ID="txtPassword" runat="server" style="margin-left: 4px" 
                         Width="200px" TextMode="Password"></asp:TextBox>
                 </td>
