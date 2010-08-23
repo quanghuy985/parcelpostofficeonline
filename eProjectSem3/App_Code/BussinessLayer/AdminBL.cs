@@ -11,12 +11,12 @@ using System.Data.SqlClient;
 public class AdminBL
 {
     DBhelper Da = new DBhelper();
-	public AdminBL()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public AdminBL()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
     public int Login(String User, String Pass)
     {
         List<SqlParameter> paramList = new List<SqlParameter>();
@@ -29,7 +29,7 @@ public class AdminBL
         param.Value = Pass;
         paramList.Add(param);
         DataTable dt;
-        dt= Da.ExecuteQuerry("pc_AdminLogin", paramList);
+        dt = Da.ExecuteQuerry("pc_AdminLogin", paramList);
         if (dt.Rows.Count > 0)
         {
             return 1;
@@ -37,6 +37,24 @@ public class AdminBL
         else
         {
             return 0;
+        }
+    }
+    public bool isAdmin(string user)
+    {
+        List<SqlParameter> list = new List<SqlParameter>();
+        SqlParameter paraUser = new SqlParameter("@adminUser", SqlDbType.NVarChar);
+        paraUser.Value = user;
+        list.Add(paraUser);
+
+        DataTable dt = new DataTable();
+        dt = Da.ExecuteQuerry("sp_checkAdmin", list);
+        if (dt.Rows.Count != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

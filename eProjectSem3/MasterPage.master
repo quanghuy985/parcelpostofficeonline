@@ -1,4 +1,4 @@
-ï»¿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -6,18 +6,31 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <meta http-equiv="Content-Style-Type" content="text/css" />    
-        <meta name="description" content="The Post OfficeÂ® for your travel insurance, foreign currency exchange, savings, insurance and postal services"/>
+        <meta name="description" content="The Post Office® for your travel insurance, foreign currency exchange, savings, insurance and postal services"/>
         <meta name="keywords" content="post office, postoffice, travel insurance, broadband, car insurance, home, savings, post, phone, credit card, banking, instant saver, foreign currency exchange, passports, licence applications, po, uk, business services, letters &amp;amp; parcels, annual"/>
+<<<<<<< .mine
+        <meta name="Title" content="Post Office® - For travel insurance, foreign currency, savings and more&#8230;"/>
+=======
         <meta name="Title" content="Post OfficeÂ® - For travel insurance, foreign currency, savings and more&#8230;"/>
+>>>>>>> .r50
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <title>
+<<<<<<< .mine
+				Post OPost Office® - For travel insurance, foreign currency, savings and more&#8230;
+=======
 				Post OfficeÂ® - For travel insurance, foreign currency, savings and more&#8230;
+>>>>>>> .r50
 </title>
 				<link rel="stylesheet" type="text/css" href='css/po/default.css'/>
 				<link rel="stylesheet" type="text/css" href='css/po/ie_6_default.css'/>
     <script type="text/javascript" language="Javascript" src="js/po_browser.js"></script>   
-    <link rel="shortcut icon" href="icons/po/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="icons/po/favicon.ico" type="image/x-icon" />
+   
+        <style type="text/css">
+            .style1
+            {
+                width: 81px;
+            }
+        </style>
     </head>
 <body>
 		<form id="form1" runat="server">
@@ -92,9 +105,13 @@
                     <div id="rolloverTabs">
                             <div id="dropbox1">
                         <div class="bg">
+<<<<<<< .mine
+                            <p>For your Post Office® savings, a fixed rate mortgage or credit card, choose Post Office® Finance. Need Travel Money? We deliver 0% commission Foreign Currency to your home.</p>
+=======
                             <p>For your Post OfficeÂ® savings, a fixed rate mortgage or credit card, choose Post 
                                 OfficeÂ® Finance. Need Travel Money? We deliver 0% commission Foreign Currency to 
                                 your home.</p>
+>>>>>>> .r50
                                         <ul class="left">
                                             <li>
                                                             <a href="jump1@catId=19300206&mediaId=19300232">Savings &amp; investments</a>
@@ -121,8 +138,12 @@
                         </div>
                             <div id="dropbox2">
                         <div class="bg">
+<<<<<<< .mine
+                            <p>From travel insurance that can start immediately, to car insurance, life, home, and van insurance, Post Office® Insurance has got it covered. </p>
+=======
                             <p>From travel insurance that can start immediately, to car insurance, life, home, 
                                 and van insurance, Post OfficeÂ® Insurance has got it covered. </p>
+>>>>>>> .r50
                                         <ul class="left">
                                             <li>
                                                             <a href="jump1@catId=98200761&mediaId=19300223">Insurance</a>
@@ -135,14 +156,22 @@
                                             </li>
                                         </ul>
                             </div>
+<<<<<<< .mine
+                                        <p class="promo-blue_ins"><a href="content1@catId=95400765&mediaId=61000695">Life insurance</a> - Cover from as little as £5 a month<sup>1</sup></p>
+=======
                                         <p class="promo-blue_ins"><a href="content1@catId=95400765&mediaId=61000695">Life 
                                             insurance</a> - Cover from as little as Â£5 a month<sup>1</sup></p>
+>>>>>>> .r50
                         </div>
                             <div id="dropbox3">
                         <div class="bg">
+<<<<<<< .mine
+                            <p>Super-fast Broadband and Home Phone with line rental included from the Post Office®. Free connection and free phone calls included. Free wireless router with some plans.</p>
+=======
                             <p>Super-fast Broadband and Home Phone with line rental included from the Post 
                                 OfficeÂ®. Free connection and free phone calls included. Free wireless router 
                                 with some plans.</p>
+>>>>>>> .r50
                                         <ul class="left">
                                             <li>
                                                             <a href="jump1@catId=36600674&mediaId=68600711">Home Phone &amp; Broadband</a>
@@ -157,9 +186,13 @@
                         </div>
                             <div id="dropbox4">
                         <div class="bg">
+<<<<<<< .mine
+                            <p>Need travel insurance for a single trip or for annual multi-trip cover? Or travel money for delivery to you? It's the Post Office® for everything travel. Your passport too! </p>
+=======
                             <p>Need travel insurance for a single trip or for annual multi-trip cover? Or travel 
                                 money for delivery to you? It's the Post OfficeÂ® for everything travel. Your 
                                 passport too! </p>
+>>>>>>> .r50
                                         <ul class="left">
                                             <li>
                                                             <a href="jump1@catId=62900708&mediaId=63300708">Travel insurance</a>
@@ -215,18 +248,38 @@
                                         <ul class="left">
                                             <li>
                                                             <a href="jump1@catId=62900710&mediaId=63400715">Passport &amp; identity</a>
-                                            </li>
-                                            <li>
-                                                            <a href="jump1@catId=62900710&mediaId=19100187">Licences &amp; car tax</a>
-                                            </li>
-                                            <li>
-                                                            <a href="jump1@catId=62900710&mediaId=94800755">Counter money services</a>
-                                            </li>
-                                        </ul>
+                                            
+                                    
+                                    </li>
+                                    <li><a href="jump1@catId=62900710&mediaId=19100187">Licences &amp; car tax</a> </li>
+                                    <li><a href="jump1@catId=62900710&mediaId=94800755">Counter money services</a> </li>
+                                </ul>
                             </div>
+<<<<<<< .mine
+                            <p class="promo-purple">
+                                <a href="content1@catId=94800755&mediaId=103400786">Gift Card</a> shop in over 17,000
+                                outlets across the UK</p>
+=======
                                         <p class="promo-purple"><a href="content1@catId=94800755&mediaId=103400786">Gift 
                                             Card</a> shop in over 17,000 outlets across the UK</p>
+>>>>>>> .r50
                         </div>
+<<<<<<< .mine
+                        <div id="dropbox7">
+                            <div class="bg">
+                                <p>
+                                    Move a lot of cash? Post Office® can help. Secure cash collection, business insurance
+                                    and more -&nbsp;the Post Office® means business.
+                                </p>
+                                <ul class="left">
+                                    <li><a href="jump1@catId=62900713&mediaId=98700753">Business mailing</a> </li>
+                                    <li><a href="jump1@catId=62900713&mediaId=94800754">Business financial services</a>
+                                    </li>
+                                    <li><a href="jump1@catId=62900713&mediaId=94800765">Travel services</a> </li>
+                                    <li><a href="jump1@catId=62900713&mediaId=94800773">Services &amp; info</a> </li>
+                                    <li><a href="jump1@catId=62900713&mediaId=102000757">Business insurance</a> </li>
+                                </ul>
+=======
                             <div id="dropbox7">
                         <div class="bg">
                             <p>Move a lot of cash? Post OfficeÂ® can help. Secure cash collection, business 
@@ -248,11 +301,130 @@
                                                             <a href="jump1@catId=62900713&mediaId=102000757">Business insurance</a>
                                             </li>
                                         </ul>
+>>>>>>> .r50
                             </div>
+<<<<<<< .mine
+                            <p class="promo-grey">
+                                <a href="portal/rm/jump2@catId=400046&mediaId=26800663">Online Postage</a> - Buy
+                                - Buy and print your stamps online</p>
+=======
                                         <p class="promo-grey"><a href="portal/rm/jump2@catId=400046&mediaId=26800663">Online 
                                             Postage</a> - Buy and print your stamps online</p>
+>>>>>>> .r50
                         </div>
                     </div>
+<<<<<<< .mine
+
+                    <script type="text/javascript" src="js/po_rollover.js"></script>
+
+                </div>
+            </div>
+            <a id="skipmainnav"></a>
+        </div>
+        <div id="Full-Content-Region">
+            <div id="Category-Left">
+                <a name="skipmainnav"></a>
+                <div id="div">
+                    <div id="Category-layer-left">
+                        <div id="Category-Main">
+                            <div id="Category-Panel">
+                                <div class="category-bottom">
+                                    <div class="category-top">
+                                        <div class="category-splash">
+                                            <div class="category-inner">
+                                                <div class="category-content">
+                                                    <h3>
+                                                        <asp:LinkButton ID="lbtDiscount1" runat="server" OnClick="lbtDiscount1_Click">
+                                                            <asp:Label ID="lbDiscount1" runat="server" Text=""></asp:Label></asp:LinkButton>
+                                                        <asp:Label ID="lbDiscountID1" runat="server" Text="" Visible="false"></asp:Label>
+                                                    </h3>
+                                                    <asp:Image ID="ImageDiscount1" runat="server" Height="103px" Width="175px" />
+                                                    <table>
+                                                        <tr>
+                                                            <td class="style1">
+                                                                <asp:Label ID="Label1" runat="server" Text="Discount" ForeColor="#FF3300" Font-Bold="True"
+                                                                    Font-Italic="True" Font-Size="Medium"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbPrice1" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Medium"
+                                                                    Font-Underline="True" ForeColor="#0033CC"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="category-content">
+                                                    <div class="category-divider">
+                                                    </div>
+                                                    <h3>
+                                                        <asp:LinkButton ID="lbtDiscount2" runat="server" OnClick="lbtDiscount2_Click">
+                                                            <asp:Label ID="lbDiscount2" runat="server" Text=""></asp:Label></asp:LinkButton>
+                                                        <asp:Label ID="lbDiscountID2" runat="server" Text="" Visible="false"></asp:Label>
+                                                    </h3>
+                                                    <asp:Image ID="ImageDiscount2" runat="server" Height="103px" Width="175px" />
+                                                    <table>
+                                                        <tr>
+                                                            <td class="style1">
+                                                                <asp:Label ID="Label2" runat="server" Text="Discount" ForeColor="#FF3300" Font-Bold="True"
+                                                                    Font-Italic="True" Font-Size="Medium"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbPrice2" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Medium"
+                                                                    Font-Underline="True" ForeColor="#0033CC"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="category-content">
+                                                    <div class="category-divider">
+                                                    </div>
+                                                    <h3>
+                                                        <asp:LinkButton ID="lbtAdvertising1" runat="server" OnClick="lbtAdvertising1_Click">
+                                                            <asp:Label ID="lbAdvertising1" runat="server" Text=""></asp:Label></asp:LinkButton>
+                                                        <asp:Label ID="lbAdvertisingURL1" runat="server" Text="" Visible="false"></asp:Label>
+                                                    </h3>
+                                                    <asp:Image ID="ImageAdvertising1" runat="server" Height="103px" Width="175px" 
+                                                        ImageUrl="images/advertising.jpg" />
+                                                    <table>
+                                                        <tr>
+                                                            <td class="style1">
+                                                                <asp:Label ID="Label3" runat="server" Text="Contact :" ForeColor="#FF3300" Font-Bold="True"
+                                                                    Font-Italic="True" Font-Size="Small"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbContact1" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Medium"
+                                                                    Font-Underline="True" ForeColor="#0033CC"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="category-content">
+                                                    <div class="category-divider">
+                                                    </div>
+                                                    <h3>
+                                                        <asp:LinkButton ID="lbtAdvertising2" runat="server" OnClick="lbtAdvertising2_Click">
+                                                            <asp:Label ID="lbAdvertising2" runat="server" Text=""></asp:Label></asp:LinkButton>
+                                                        <asp:Label ID="lbAdvertisingURL2" runat="server" Text="" Visible="false"></asp:Label>
+                                                    </h3>
+                                                    <asp:Image ID="ImageAdvertising2" runat="server" Height="103px" Width="175px" 
+                                                        ImageUrl="images/advertising.jpg" />
+                                                    <table>
+                                                        <tr>
+                                                            <td class="style1">
+                                                                <asp:Label ID="Label4" runat="server" Text="Contact :" ForeColor="#FF3300" Font-Bold="True"
+                                                                    Font-Italic="True" Font-Size="Small"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbContact2" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Medium"
+                                                                    Font-Underline="True" ForeColor="#0033CC"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+=======
 <script type="text/javascript" src="js/po_rollover.js"></script>
 </div>
 				</div>
@@ -280,7 +452,21 @@
                                 <li> <a href="content1@catId=19100176&amp;mediaId=19100227">Special DeliveryT</a> </li>
                                 <li> <a href="content1@catId=19100176&amp;mediaId=19100220">Recorded Signed ForT</a> </li>
                               </ul>
+>>>>>>> .r50
                             </div>
+<<<<<<< .mine
+                        </div>
+                    </div>
+                    <div id="Category-layer-main">
+                        <!-- START AUTONOMY SEARCH -->
+                        <!-- AUTONAME:NAVTITLE Letters & parcels  -->
+                        <div class="red red-Circle">
+                        </div>
+                        <div id="Category-Layer-bottom">
+                            <div id="Foot-Note">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+=======
                             <div class="category-content">
                               <div class="category-divider"> </div>
                               <h3> <a href="jump1@catId=19100175&amp;mediaId=63800711">Receiving letters &amp; parcels</a> </h3>
@@ -295,7 +481,10 @@
                                 <li> <a href="content1@catId=63800711&amp;mediaId=19100260">Additional charges</a> </li>
                                 <li> <a href="content1@catId=63800711&amp;mediaId=19100258">Wrongly delivered mail</a> </li>
                               </ul>
+>>>>>>> .r50
                             </div>
+<<<<<<< .mine
+=======
                             <div class="category-content">
                               <div class="category-divider"> </div>
                               <h3> <a href="jump1@catId=19100175&amp;mediaId=19100179">Overseas letters &amp; parcels</a> </h3>
@@ -341,38 +530,36 @@
                               </ul>
                             </div>
                           </div>
+>>>>>>> .r50
                         </div>
-                      </div>
+                        <!-- END AUTONOMY SEARCH -->
                     </div>
-                  </div>
                 </div>
-              </div>
-		      <div id="Category-layer-main">
-                <!-- START AUTONOMY SEARCH -->
-                <!-- AUTONAME:NAVTITLE Letters & parcels  -->
-                <div class="red red-Circle">
-                </div>
-		        <div id="Category-Layer-bottom">
-		          <div id="Foot-Note">
-                    <p id="footnote">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        </asp:ContentPlaceHolder>
-                      </p>
-	              </div>
-	            </div>
-		        <!-- END AUTONOMY SEARCH -->
-              </div>
-	        </div>
-		    <!-- END AUTONOMY SEARCH -->
-          </div>
-		</div>
-	    <div id="Footer">
-<div class="textHidden">
-  <p><a href="#footernav">Skip navigation</a></p>
-</div>
-                <ul>
+                <!-- END AUTONOMY SEARCH -->
+            </div>
+        </div>
+        <div id="Footer">
+            <div class="textHidden">
+                <p>
+                    <a href="#footernav">Skip navigation</a></p>
+            </div>
+            <ul>
                 <li class="header"></li>
             </ul>
+<<<<<<< .mine
+            <p>
+                &copy;Post Office Limited 2010. All Rights Reserved</p>
+            <div class="Clearer">
+            </div>
+            <noscript>
+                <div>
+                    <img src="../s.analytics.yahoo.com/p.pl@a=10001676460596&js=no" width="1" height="1"
+                        alt="" /></div>
+            </noscript>
+        </div>
+    </div>
+    </form>
+=======
                 <p>Â©Post Office Limited 2010. All Rights Reserved</p>
                 <div class="Clearer"></div>
 
@@ -384,5 +571,6 @@
 	    </div>
 	</div>
         </form>
+>>>>>>> .r50
 </body>
-              </html>
+</html>

@@ -11,15 +11,15 @@ using System.Data;
 public class ParcelPostBO
 {
     DBhelper helper = new DBhelper();
-	public ParcelPostBO()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public ParcelPostBO()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
     public DataTable GetServiceDetailParcelPostFromLocation(string parcelFrom, string parcelTo)
     {
-        
+
         List<SqlParameter> list = new List<SqlParameter>();
         SqlParameter paraFrom = new SqlParameter("@parcelFrom", SqlDbType.NVarChar);
         SqlParameter paraTo = new SqlParameter("@parcelTo", SqlDbType.NVarChar);
@@ -33,7 +33,7 @@ public class ParcelPostBO
     public DataTable GetFeeFromParcelName(string parcelName)
     {
         List<SqlParameter> list = new List<SqlParameter>();
-        SqlParameter paraParcelName= new SqlParameter("@parcelName", SqlDbType.NVarChar);
+        SqlParameter paraParcelName = new SqlParameter("@parcelName", SqlDbType.NVarChar);
         paraParcelName.Value = parcelName;
         list.Add(paraParcelName);
         return helper.ExecuteQuerry("sp_CalculateFee", list);
@@ -56,12 +56,12 @@ public class ParcelPostBO
         SqlParameter paraParcelName = new SqlParameter("@parcelName", SqlDbType.NVarChar);
         paraParcelName.Value = parcelName;
         list.Add(paraParcelName);
-        return helper.ExecuteQuerry("sp_getParcelPostIDbyParcelName",list);
+        return helper.ExecuteQuerry("sp_getParcelPostIDbyParcelName", list);
     }
     public int InsertOrder(string custName)
     {
         List<SqlParameter> list = new List<SqlParameter>();
-        SqlParameter paraCustName = new SqlParameter("@custName",SqlDbType.NVarChar);
+        SqlParameter paraCustName = new SqlParameter("@custName", SqlDbType.NVarChar);
         paraCustName.Value = custName;
         list.Add(paraCustName);
         helper.ExecuteQuerry("InsertOrder", list);
@@ -72,53 +72,60 @@ public class ParcelPostBO
         return Convert.ToInt32(dt.Rows[0].ItemArray[0].ToString());
 
     }
-    public int InsertOrderDetail(string custName, int serviceDetailID, int parcelPostID, string parcelFromAddress, string parcelFromDistrict, string parcelFromCity, string parcelToAddress, string parcelToDistrict, string parcelToCity, decimal parcelWeight, decimal parcelAdditionalFee, decimal totalAmount)
+    public int InsertOrderDetail(string custName, int serviceDetailID, int parcelPostID, string parcelFromAddress, string parcelFromDistrict, string parcelFromCity, string parcelToAddress, string parcelToDistrict, string parcelToCity, decimal parcelWeight, decimal parcelAdditionalFee, decimal totalAmount, int discountID, decimal discountPrice)
     {
-        
-            DateTime dateOrder = DateTime.Today;
-            int orderID = this.InsertOrder(custName);
-            List<SqlParameter> list = new List<SqlParameter>();
-            SqlParameter paraOrderID = new SqlParameter("@orderID", SqlDbType.Int);
-            paraOrderID.Value = orderID;
-            list.Add(paraOrderID);
-            SqlParameter paraServiceDetailID = new SqlParameter("@serviceDetailID", SqlDbType.Int);
-            paraServiceDetailID.Value = serviceDetailID;
-            list.Add(paraServiceDetailID);
-            SqlParameter paraParcelPostID = new SqlParameter("@parcelPostID", SqlDbType.Int);
-            paraParcelPostID.Value = parcelPostID;
-            list.Add(paraParcelPostID);
-            SqlParameter paraParcelFromAddress = new SqlParameter("@parcelFromAddress", SqlDbType.NVarChar);
-            paraParcelFromAddress.Value = parcelFromAddress;
-            list.Add(paraParcelFromAddress);
-            SqlParameter paraParcelFromDistrict = new SqlParameter("@parcelFromDistrict", SqlDbType.NVarChar);
-            paraParcelFromDistrict.Value = parcelFromDistrict;
-            list.Add(paraParcelFromDistrict);
-            SqlParameter paraParcelFromCity = new SqlParameter("@parcelFromCity", SqlDbType.NVarChar);
-            paraParcelFromCity.Value = parcelFromCity;
-            list.Add(paraParcelFromCity);
-            SqlParameter paraParcelToAddress = new SqlParameter("@parcelToAddress", SqlDbType.NVarChar);
-            paraParcelToAddress.Value = parcelToAddress;
-            list.Add(paraParcelToAddress);
-            SqlParameter paraParcelToDistrict = new SqlParameter("@parcelToDistrict", SqlDbType.NVarChar);
-            paraParcelToDistrict.Value = parcelToDistrict;
-            list.Add(paraParcelToDistrict);
-            SqlParameter paraParcelToCity = new SqlParameter("@parcelToCity", SqlDbType.NVarChar);
-            paraParcelToCity.Value = parcelToCity;
-            list.Add(paraParcelToCity);
-            SqlParameter paraWeight = new SqlParameter("@parcelWeight", SqlDbType.Decimal);
-            paraWeight.Value = parcelWeight;
-            list.Add(paraWeight);
-            SqlParameter paraAdditionalFee = new SqlParameter("@parcelAdditionalFee", SqlDbType.Decimal);
-            paraAdditionalFee.Value = parcelAdditionalFee;
-            list.Add(paraAdditionalFee);
-            SqlParameter paraTotalAmount = new SqlParameter("@parcelTotalAmount", SqlDbType.Decimal);
-            paraTotalAmount.Value = totalAmount;
-            list.Add(paraTotalAmount);
-            SqlParameter paraDateOrder = new SqlParameter("@parcelDateOrder", SqlDbType.DateTime);
-            paraDateOrder.Value = dateOrder;
-            list.Add(paraDateOrder);
-         
-            helper.ExecuteQuerry("InserOrderDetail", list);
-            return orderID;
+
+        DateTime dateOrder = DateTime.Today;
+        int orderID = this.InsertOrder(custName);
+        List<SqlParameter> list = new List<SqlParameter>();
+        SqlParameter paraOrderID = new SqlParameter("@orderID", SqlDbType.Int);
+        paraOrderID.Value = orderID;
+        list.Add(paraOrderID);
+        SqlParameter paraServiceDetailID = new SqlParameter("@serviceDetailID", SqlDbType.Int);
+        paraServiceDetailID.Value = serviceDetailID;
+        list.Add(paraServiceDetailID);
+        SqlParameter paraParcelPostID = new SqlParameter("@parcelPostID", SqlDbType.Int);
+        paraParcelPostID.Value = parcelPostID;
+        list.Add(paraParcelPostID);
+        SqlParameter paraParcelFromAddress = new SqlParameter("@parcelFromAddress", SqlDbType.NVarChar);
+        paraParcelFromAddress.Value = parcelFromAddress;
+        list.Add(paraParcelFromAddress);
+        SqlParameter paraParcelFromDistrict = new SqlParameter("@parcelFromDistrict", SqlDbType.NVarChar);
+        paraParcelFromDistrict.Value = parcelFromDistrict;
+        list.Add(paraParcelFromDistrict);
+        SqlParameter paraParcelFromCity = new SqlParameter("@parcelFromCity", SqlDbType.NVarChar);
+        paraParcelFromCity.Value = parcelFromCity;
+        list.Add(paraParcelFromCity);
+        SqlParameter paraParcelToAddress = new SqlParameter("@parcelToAddress", SqlDbType.NVarChar);
+        paraParcelToAddress.Value = parcelToAddress;
+        list.Add(paraParcelToAddress);
+        SqlParameter paraParcelToDistrict = new SqlParameter("@parcelToDistrict", SqlDbType.NVarChar);
+        paraParcelToDistrict.Value = parcelToDistrict;
+        list.Add(paraParcelToDistrict);
+        SqlParameter paraParcelToCity = new SqlParameter("@parcelToCity", SqlDbType.NVarChar);
+        paraParcelToCity.Value = parcelToCity;
+        list.Add(paraParcelToCity);
+        SqlParameter paraWeight = new SqlParameter("@parcelWeight", SqlDbType.Decimal);
+        paraWeight.Value = parcelWeight;
+        list.Add(paraWeight);
+        SqlParameter paraAdditionalFee = new SqlParameter("@parcelAdditionalFee", SqlDbType.Decimal);
+        paraAdditionalFee.Value = parcelAdditionalFee;
+        list.Add(paraAdditionalFee);
+        SqlParameter paraTotalAmount = new SqlParameter("@parcelTotalAmount", SqlDbType.Decimal);
+        paraTotalAmount.Value = totalAmount;
+        list.Add(paraTotalAmount);
+        SqlParameter paraDateOrder = new SqlParameter("@parcelDateOrder", SqlDbType.DateTime);
+        paraDateOrder.Value = dateOrder;
+        list.Add(paraDateOrder);
+        SqlParameter paraDiscountID = new SqlParameter("@discountID", SqlDbType.Int);
+        paraDiscountID.Value = discountID;
+        list.Add(paraDiscountID);
+        SqlParameter paraDiscountPrice = new SqlParameter("@discountPrice", SqlDbType.Decimal);
+        paraDiscountPrice.Value = discountPrice;
+        list.Add(paraDiscountPrice);
+
+        helper.ExecuteQuerry("InserOrderDetail", list);
+        return orderID;
     }
+  
 }

@@ -20,4 +20,8 @@ public partial class ParcelPostOfficeServiceDetail : System.Web.UI.Page
         //rptSericeDetail.DataSource = dt;
         //rptSericeDetail.DataBind();
     }
+    public void More(object sender, CommandEventArgs e)
+    {
+        Response.Redirect("ParcelPostOfficeFunction.aspx?id=" + e.CommandArgument.ToString());
+    }
 }

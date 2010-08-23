@@ -4,10 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data.SqlClient;
+using System.Data;
 public partial class Adminstrator_Default : System.Web.UI.Page
 {
     AdminBL AB = new AdminBL();
+    EmployeeManageBL employee = new EmployeeManageBL();
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -15,14 +17,31 @@ public partial class Adminstrator_Default : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        if (AB.Login(txtUserName.Text, txtPassword.Text) > 0)
+        DataTable dt = new DataTable();
+        dt = employee.isEmployee(txtUserName.Text,txtPassword.Text);
+        
+        //if (AB.Login(txtUserName.Text, txtPassword.Text) > 0)
+        //{
+        //    Session["User"] = txtUserName.Text;
+        //    Response.Redirect("Home.aspx");
+        //}
+        //else 
+        if (dt.Rows.Count != 0)
         {
-            Session["User"] = txtUserName.Text;
-            Response.Redirect("FeedBackManage.aspx");
+            bool x = Convert.ToBoolean(dt.Rows[0].ItemArray[8].ToString());
+            if (x)
+            {
+                Session["User"] = txtUserName.Text;
+                Response.Redirect("Home.aspx");
+            }
+            else
+            {
+                lbError.Text = "Your Account have been locked! please contact your admin";
+            }
         }
         else
         {
-            Label1.Text = "Loi Roi day cu a";
+            lbError.Text = "Invalid Username or Password! please contact your admin to get password";
         }
 
     }
