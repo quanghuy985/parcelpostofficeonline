@@ -13,7 +13,7 @@ using System.Xml.Linq;
 
 public partial class MagazineCart : System.Web.UI.Page
 {
-    ArrayList cart;
+    ArrayList cart; 
     int month;
     MagazineBL mgb = new MagazineBL();
     private DataTable dta;
@@ -23,12 +23,14 @@ public partial class MagazineCart : System.Web.UI.Page
         DropDownList1.DataSource = dta;
         DropDownList1.DataTextField = "serviceDetailName";
         DropDownList1.DataValueField = "serviceDetailID";
+        Label5.Text = Session["User"].ToString();
         DropDownList1.DataBind();
         if (!IsPostBack)
         {
             bindGrid();
         }
-
+       
+     
     }
     public void deleteCart(object sender, CommandEventArgs e)
     {
@@ -52,6 +54,7 @@ public partial class MagazineCart : System.Web.UI.Page
         MagazineBL mgb = new MagazineBL();
         mgb.insert_Order_detail(Session["User"].ToString(), cart, txtadress.Text, Convert.ToInt32(DropDownList1.SelectedValue.ToString()));
     }
+   
     private void bindGrid()
     {
         cart = (ArrayList)Session["ShoppingCart"];
@@ -63,17 +66,18 @@ public partial class MagazineCart : System.Web.UI.Page
             return;
         }
         else
+        {
             n = cart.Count;
 
-        MagazineEN[] bk = new MagazineEN[n];
-        for (int i = 0; i < n; i++)
-        {
-            bk[i] = (MagazineEN)cart[i];
-            // sum += bk[i].tranfees;
+            MagazineEN[] bk = new MagazineEN[n];
+            for (int i = 0; i < n; i++)
+            {
+                bk[i] = (MagazineEN)cart[i];
+                // sum += bk[i].tranfees;
+            }
+            rpt_mg_cart.DataSource = bk;
+            rpt_mg_cart.DataBind();
         }
-        rpt_mg_cart.DataSource = bk;
-        rpt_mg_cart.DataBind();
-
         //  lblSum.Text = sum.ToString() + " .VND";
     }
     protected void Button1_Click(object sender, EventArgs e)

@@ -1,199 +1,322 @@
-﻿
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<HTML>
-<HEAD>
-	<?
-	$keywords = "DHTML Suite for applications,DHTML Calendar,Javascript calendar,calendar";
-	@include($_SERVER['DOCUMENT_ROOT']."/config/metatags.inc");
-	?>	
-	<title>Demo 1: Calendar</title>
-	<link rel="stylesheet" href="css/demos.css" media="screen" type="text/css">
-	<style type="text/css">
-	/* CSS for the demo. CSS needed for the scripts are loaded dynamically by the scripts */
-
-	
-	#mainContainer{
-		width:600px;
-		margin:0 auto;
-		margin-top:10px;
-		border:1px double #000;
-		padding:3px;
-
-	}
-	#calendarDiv,#calendarDiv2{
-		width:240px;
-		height:240px;
-		float:left;
-	}
-	.clear{
-		clear:both;
-	}
-	</style>	
-	<script type="text/javascript" src="js/separateFiles/dhtmlSuite-common.js"></script>
-	<script type="text/javascript">
-	DHTMLSuite.include("calendar");
-	function calendarMonthChange(inputArray)
-	{
-		var calendarRef = inputArray.calendarRef;
-		
-		var month = inputArray.month;
-		var year = inputArray.year;
-		month++;
-		if(month>12){
-			month=1;
-			year++;
-		}
-		
-		var objectToChange = false;
-		switch(calendarRef.id)
-		{
-			case "calendar1":
-				objectToChange = myCalendar2;
-				break;
-			case "calendar2":	
-				objectToChange = myCalendar3;
-				break;
-			case "calendar3":
-				month-=3;
-				if(month<1){
-					month=12 + month;
-					year--;	
-				}
-				objectToChange = myCalendar;
-				break;
-		}
-		objectToChange.setDisplayedMonth(month);
-		objectToChange.setDisplayedYear(year);
-	}
-	</script>
-
-</head>
-<body>
-	<div id="header">
-		<img src="../images/logo.png">
-	</div>	
-	<p>This calendar widget can be used by either including dhtml-suite-for-applications.js or by including only dhtmlSuite-common.js and by using the
-	<a href="/index.html?dhtml-suite-page=dhtmlSuite-include">DHTMLSuite.include()</a> function, i.e. DHTMLSuite.include("calendar")</p>
-	<h2>3 connected calendars </h2>
-	<div id="calendarDiv"></div>
-
-	<div id="calendarDiv2"></div>
-	<div id="calendarDiv3"></div>
-	
-	<script type="text/javascript">
-	
-	var myCalendarModel = new DHTMLSuite.calendarModel({ initialYear:2004,initialMonth:5,initialDay:20 });
-	myCalendarModel.setLanguageCode('no');
-	var myCalendar = new DHTMLSuite.calendar({ id:'calendar1', callbackFunctionOnMonthChange:'calendarMonthChange',displayCloseButton:false,numberOfRowsInYearDropDown:12 } );
-	myCalendar.setCalendarModelReference(myCalendarModel);
-	myCalendar.setTargetReference('calendarDiv');
-	myCalendar.display()
-	
-	
-	var myCalendarModel2 = new DHTMLSuite.calendarModel({ initialYear:2004,initialMonth:6,initialDay:11 });
-	myCalendarModel2.setWeekStartsOnMonday(false);
-	myCalendarModel2.setLanguageCode('en');
-	var myCalendar2 = new DHTMLSuite.calendar({ id:'calendar2', callbackFunctionOnMonthChange:'calendarMonthChange',displayCloseButton:false });
-	myCalendar2.setCalendarModelReference(myCalendarModel2);
-	myCalendar2.setTargetReference('calendarDiv2');
-	myCalendar2.display();
-	
-	var myCalendarModel3 = new DHTMLSuite.calendarModel({ initialYear:2004,initialMonth:7,initialDay:15 });
-	myCalendarModel3.setLanguageCode('en');
-	var myCalendar3 = new DHTMLSuite.calendar({ id:'calendar3', callbackFunctionOnMonthChange:'calendarMonthChange',displayCloseButton:false });
-	myCalendar3.setCalendarModelReference(myCalendarModel3);
-	myCalendar3.setTargetReference('calendarDiv3');
-	myCalendar3.display();
-	
-	</script>
-	
-	<div class="clear"></div>
-	<!-- A DATE PICKER FOR FORMS -->
-	
-	<h2>A date picker for form</h2>
-	<script type="text/javascript">
-	var calendarObjForForm = new DHTMLSuite.calendar({minuteDropDownInterval:10,numberOfRowsInHourDropDown:5,callbackFunctionOnDayClick:'getDateFromCalendar',isDragable:true,displayTimeBar:true}); 
-	calendarObjForForm.setCallbackFunctionOnClose('myOtherFunction');
-	
-	function myOtherFunction()
-	{
-		
-		
-	}
-	function pickDate(buttonObj,inputObject)
-	{
-		calendarObjForForm.setCalendarPositionByHTMLElement(inputObject,0,inputObject.offsetHeight+2);	// Position the calendar right below the form input
-		calendarObjForForm.setInitialDateFromInput(inputObject,'yyyy-mm-dd hh:ii');	// Specify that the calendar should set it's initial date from the value of the input field.
-		calendarObjForForm.addHtmlElementReference('myDate',inputObject);	// Adding a reference to this element so that I can pick it up in the getDateFromCalendar below(myInput is a unique key)
-		if(calendarObjForForm.isVisible()){
-			calendarObjForForm.hide();
-		}else{
-			calendarObjForForm.resetViewDisplayedMonth();	// This line resets the view back to the inital display, i.e. it displays the inital month and not the month it displayed the last time it was open.
-			calendarObjForForm.display();
-		}		
-	}	
-	/* inputArray is an associative array with the properties
-	year
-	month
-	day
-	hour
-	minute
-	calendarRef - Reference to the DHTMLSuite.calendar object.
-	*/
-	function getDateFromCalendar(inputArray)
-	{
-		var references = calendarObjForForm.getHtmlElementReferences(); // Get back reference to form field.
-		references.myDate.value = inputArray.year + '-' + inputArray.month + '-' + inputArray.day + ' ' + inputArray.hour + ':' + inputArray.minute;
-		calendarObjForForm.hide();	
-		
-	}	
-	</script>
-
-	<div id="calendarForForm">
-		<form name="myForm">
-		<table>
-			<tr>
-				<td>Select a date:</td>
-				<td><input type="text" name="myDate" value="2004-12-24 12:00" onclick=""></td>
-				<td><input type="button" value="Pick date" onclick="pickDate(this,document.forms[0].myDate);"></td>
-			</tr>
-
-			<tr>
-				<td>Select a date:</td>
-				<td><input type="text" name="myDate2" value="2004-12-24 12:00" onclick=""></td>
-				<td><input type="button" value="Pick date" onclick="pickDate(this,document.forms[0].myDate2);"></td>
-			</tr>
-			<tr>
-				<td colspan="3"><select style="width:300px"><option value="">This calendar covers select boxes</option><option value="">This calendar covers select boxes</option></select>
-
-			</td>
-		</table>
-		</form>
-	</div>
-	
-	<h2>A calendar where you only can select dates in 2004</h2>
-	<div id="calendarDiv4"></div>
-	<p>This is done by adding invalid date ranges: </p>
-	<pre>
-
-	myCalendarModel5.addInvalidDateRange(false,{year: 2003,month:12,day:31});
-	myCalendarModel5.addInvalidDateRange({year: 2005,month:1,day:1},false);
-	</pre>
-	<script type="text/javascript">
-	
-	var myCalendarModel5 = new DHTMLSuite.calendarModel({ initialYear:2004,initialMonth:5,initialDay:20 });
-	myCalendarModel5.addInvalidDateRange(false,{year: 2003,month:12,day:31});
-	myCalendarModel5.addInvalidDateRange({year: 2005,month:1,day:1},false);
-	myCalendarModel5.setLanguageCode('en');
-	var myCalendar5 = new DHTMLSuite.calendar({ id:'calendar4',displayCloseButton:false,numberOfRowsInYearDropDown:12 } );
-	myCalendar5.setCalendarModelReference(myCalendarModel5);
-	myCalendar5.setTargetReference('calendarDiv4');
-	myCalendar5.display();
-	</script>
-		
-
-<?
-@include($_SERVER['DOCUMENT_ROOT']."/config/kontera.php");
-?>	
-</body>
-</html>
+﻿<div style="vertical-align: middle; width: 100%">
+                                    <table>
+                                        <tr>
+                                            <td style="width: 100px">
+                                            </td>
+                                            <td>
+                                                <asp:Panel ID="pnFrom" runat="server" GroupingText="From" Width="100%" BorderWidth="0px"
+                                                    Font-Bold="False" BackColor="#CC0000" Font-Strikeout="False">
+                                                    <table style="width: 100%">
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbFrom" Text="City :" runat="server"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:DropDownList ID="ddlCity" runat="server" Width="100%" AppendDataBoundItems="true">
+                                                                    <asp:ListItem>--- Please select city ---</asp:ListItem>
+                                                                </asp:DropDownList>
+                                                            </td>
+                                                            <td style="width: 40%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <asp:Label ID="lbDistrict" runat="server" Text="District :"></asp:Label>
+                                                            </td>
+                                                            <td align="left">
+                                                                <asp:DropDownList ID="ddlDistrict" runat="server" Width="100%">
+                                                                </asp:DropDownList>
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <asp:Label ID="lbAddress" runat="server" Text="Address :"></asp:Label>
+                                                            </td>
+                                                            <td align="left">
+                                                                <asp:TextBox ID="txtAddress" Width="100%" runat="server"></asp:TextBox>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbErrorAddress" runat="server" ForeColor="#FF3300" Text="*"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <asp:Label ID="lbSendto" runat="server" Text="Send To :"></asp:Label>
+                                                            </td>
+                                                            <td align="left">
+                                                                <asp:CheckBox ID="cbSendTo" Text="Foreign Country" runat="server" />
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </asp:Panel>
+                                            </td>
+                                            <td style="width: 88px">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style1" style="width: 19px">
+                                            </td>
+                                            <td class="style2">
+                                                <asp:Panel ID="pnSendtoforeign" runat="server" GroupingText="Foreign Address" 
+                                                    BackColor="#CC0000">
+                                                    <table style="width: 100%">
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbAddressForeign" runat="server" Text="Address :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:TextBox ID="txtAddressForeign" runat="server" Width="100%"></asp:TextBox>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbErrorAddressForeign" runat="server" ForeColor="#FF3300" Text="*"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </asp:Panel>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style1" style="width: 19px">
+                                            </td>
+                                            <td class="style2">
+                                                <asp:Panel ID="pnTo" runat="server" GroupingText="To" BackColor="#CC0000">
+                                                    <table style="width: 100%">
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbCityTo" runat="server" Text="City :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:DropDownList ID="ddlCityTo" runat="server" Width="100%" AppendDataBoundItems="true">
+                                                                    <asp:ListItem>--- Please select city ---</asp:ListItem>
+                                                                </asp:DropDownList>
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <asp:Label ID="lbDistrictTo" runat="server" Text="District :"></asp:Label>
+                                                            </td>
+                                                            <td align="left">
+                                                                
+                                                                 <asp:DropDownList ID="ddlDistrictTo" runat="server" Width="100%">
+                                                                </asp:DropDownList>
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <asp:Label ID="lbAddressTo" runat="server" Text="Address :"></asp:Label>
+                                                            </td>
+                                                            <td align="left">
+                                                                <asp:TextBox ID="txtAddressTo" Width="100%" runat="server"></asp:TextBox>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbErrorAddressTo" runat="server" ForeColor="#FF3300" Text="*"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </asp:Panel>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style1" style="width: 19px">
+                                            </td>
+                                            <td class="style2">
+                                                <asp:Panel ID="pnDetail" runat="server" GroupingText="Detail" 
+                                                    BackColor="#CC0000">
+                                                    <table style="width: 100%">
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbLocation" runat="server" Text="Option :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:Label ID="checkOption" runat="server" Text=""></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbFee" runat="server" Text="Fee :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:Label ID="spFee" runat="server" Text=""></asp:Label>
+                                                                &nbsp;
+                                                                <asp:Label ID="lbFeeDescription1" runat="server" Font-Size="Small" ForeColor="Black"
+                                                                    Text="usd/kg"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbWeight" runat="server" Text="Weight :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%">
+                                                                <asp:TextBox ID="txtWeight" runat="server" Width="100%"></asp:TextBox>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lbErrorWeight" runat="server" ForeColor="#FF3300" Text="Must be number"></asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbOptionSend" runat="server" Text="Kind to send :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:Label ID="lbKindToSend" runat="server" Text=""></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbAdditionalFee" runat="server" Text="Additional Fee :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:Label ID="lbAddFee" runat="server" Text=""></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" style="width: 25%">
+                                                                <asp:Label ID="lbParcel" runat="server" Text="Parcel Post ID :"></asp:Label>
+                                                            </td>
+                                                            <td align="left" style="width: 50%">
+                                                                <asp:Label ID="lbParcelPostID" runat="server" ForeColor="Black"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" style="width: 25%">
+                                                                <asp:Label ID="lbServiceDetail" runat="server" Text="Service ID :"></asp:Label>
+                                                            </td>
+                                                            <td align="left" style="width: 50%">
+                                                                <asp:Label ID="lbServiceDetailID" runat="server" ForeColor="Black"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" style="width: 25%">
+                                                                <asp:Label ID="lbUserName" runat="server" Text="Account Name:"></asp:Label>
+                                                            </td>
+                                                            <td align="left" style="width: 50%">
+                                                                <asp:Label ID="lbUser" runat="server" ForeColor="Black"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" style="width: 25%">
+                                                                <asp:Label ID="lbDiscountID" runat="server" Text="Discount ID :"></asp:Label>
+                                                            </td>
+                                                            <td align="left" style="width: 50%">
+                                                                <asp:Label ID="lbDiscountIDSession" runat="server" ForeColor="Black"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" style="width: 25%" >
+                                                                <asp:Label ID="lbDiscount" runat="server" Text="Discount Name :"></asp:Label>
+                                                            </td>
+                                                            <td align="left" style="width: 50%" >
+                                                                <asp:Label ID="lbDiscountName" runat="server" ForeColor="Black"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <asp:Label ID="lbDiscount3" runat="server" Text="Discount Price :"></asp:Label>
+                                                            </td>
+                                                            <td align="left">
+                                                                <asp:Label ID="lbDiscountPrice" runat="server" ForeColor="Black"></asp:Label>
+                                                                &nbsp;
+                                                                <asp:Label ID="lbFeeDescription2" runat="server" Font-Size="Small" 
+                                                                    ForeColor="Black" Text="usd"></asp:Label>
+                                                            </td>
+                                                            <td class="style5">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </asp:Panel>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style1" style="width: 19px">
+                                                &nbsp;
+                                            </td>
+                                            <td class="style2">
+                                                <asp:Panel ID="pnTotalAmount" runat="server" GroupingText="Total Amount" 
+                                                    BackColor="#CC0000">
+                                                    <table style="width: 100%">
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                <asp:Label ID="lbTotalAmount" runat="server" Text="Total :"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <asp:Label ID="lbTotal" runat="server" Text=""></asp:Label>
+                                                                &nbsp;
+                                                                <asp:Label ID="lbFeeDescription0" runat="server" Font-Size="Small" ForeColor="Black"
+                                                                    Text="usd"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 25%" align="left">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td style="width: 50%" align="left">
+                                                                <input type="button" id="btSubmit" runat="server" value="Submit" style="width: 65px"
+                                                                    onclick="clicker()" />
+                                                                <asp:Button ID="btBack" runat="server" Text="Back" Width="68px" />
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 10%">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td style="width: 50%">
+                                                                <asp:Label ID="lbError" runat="server" ForeColor="Black"></asp:Label>
+                                                                <p>
+                                                                    <asp:Label ID="lbOutput" runat="server" ForeColor="Black"></asp:Label></p>
+                                                            </td>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </asp:Panel>
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>

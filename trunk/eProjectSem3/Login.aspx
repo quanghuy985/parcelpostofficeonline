@@ -22,7 +22,9 @@
                     <asp:Label ID="lbUserName" runat="server" Text="User Name:"></asp:Label>
                 </td>
                 <td align="center" style="width: 268435616px">
-                    <asp:TextBox ID="txtUserName" runat="server" Width="200px">User Name</asp:TextBox>
+                    <asp:TextBox ID="txtUserName" runat="server" Width="200px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                        ControlToValidate="txtUserName" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -32,6 +34,8 @@
                 <td align="center" style="width: 268435616px">
                     <asp:TextBox ID="txtPassword" runat="server" style="margin-left: 4px" 
                         Width="200px" TextMode="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                        ControlToValidate="txtPassword" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
