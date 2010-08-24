@@ -3,6 +3,23 @@
 <%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 155px;
+        }
+        .style2
+        {
+            width: 253px;
+        }
+        .style3
+        {
+            width: 191px;
+        }
+    </style>
+</head>
    <table align="center" style="width: 100%; height: 334px;">
             <tr>
                 <td align="center">
