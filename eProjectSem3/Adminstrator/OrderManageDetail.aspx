@@ -24,8 +24,9 @@
                         Control
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <asp:LinkButton ID="lbtSelect" Text="Select" runat="server" OnCommand="lbtSelectCommand"
-                            CommandArgument='<%# DataBinder.Eval(Container.DataItem, "orderDetailID")%>'></asp:LinkButton>
+                        <a href="#" id="A1" style="font-style: italic"
+                                                   onclick="clicker(<%# DataBinder.Eval(Container.DataItem, "orderDetailID")%>)"> More</a> 
+                            
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
