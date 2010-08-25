@@ -28,9 +28,10 @@
                     <li><a href="newmanager.aspx">News Manage</a></li>
                     <li><a href="FeedBackManage.aspx">FeedBack</a></li>
                     <li><a href="MagazineManager.aspx">Magazine Manage</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#">Statistics</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="ServiceDetailManage.aspx">Service Manage</a></li>
+                    <li><a href="OrderManage.aspx">Parcel Order</a></li>
+                    <li><a href="revenue.aspx">Revenue Manage</a></li>
+                    <li><a href="Login.aspx">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -38,7 +39,7 @@
             <div id="panel">
                 <table>
                     <tr>
-                        <td style="width:200px>
+                        <td>
                             Welcome :
                             <asp:Label ID="lbUser" runat="server" Text=""></asp:Label>! Have A Nice Day...
                         </td>

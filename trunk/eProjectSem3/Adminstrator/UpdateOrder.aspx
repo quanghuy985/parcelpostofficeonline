@@ -2,8 +2,17 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dashboard - Admin Template</title>
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script>
+        var StyleFile = "theme" + document.cookie.charAt(6) + ".css";
+        document.writeln('<link rel="stylesheet" type="text/css" href="css/' + StyleFile + '">');
+    </script>
+
 
     <script src="../js/jquery-1.4.2.js" type="text/javascript"></script>
 
@@ -72,9 +81,44 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
+    <div id="container">
+        <div id="header">
+            <h2>
+                My eCommerce Admin area</h2>
+            <div id="topmenu">
+                <ul>
+                    <li><a href="revenue.aspx">Home</a></li>
+                    <li><a href="newmanager.aspx">News Manage</a></li>
+                    <li><a href="FeedBackManage.aspx">FeedBack</a></li>
+                    <li><a href="MagazineManager.aspx">Magazine Manage</a></li>
+                    <li><a href="ServiceDetailManage.aspx">Service Manage</a></li>
+                    <li><a href="OrderManage.aspx">Parcel Order</a></li>
+                    <li><a href="revenue.aspx">Revenue Manage</a></li>
+                    <li><a href="Login.aspx">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="top-panel">
+            <div id="panel">
+                <table>
+                    <tr>
+                        <td>
+                            Welcome :
+                            <asp:Label ID="lbUser" runat="server" Text=""></asp:Label>! Have A Nice Day...
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="content">
+                <form id="Form1" runat="server">
     <div>
-        <table width="100%" style="font-family: Times New Roman; font-style: italic">
+        <table style="font-family: Times New Roman; font-style: italic">
             <tr>
                 <td style="width: 150px">
                     Order Detail ID :

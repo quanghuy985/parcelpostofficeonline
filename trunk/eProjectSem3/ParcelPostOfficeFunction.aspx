@@ -702,7 +702,7 @@
                                             <asp:Label ID="lbAdvertisingURL1" runat="server" Text="" Visible="false"></asp:Label>
                                         </h3>
                                         <asp:Image ID="ImageAdvertising1" runat="server" Height="103px" 
-                                            ImageUrl="images/advertising.jpg" Width="175px" />
+                                            Width="175px" />
                                         <table>
                                             <tr>
                                                 <td class="style1">
@@ -727,7 +727,7 @@
                                             <asp:Label ID="lbAdvertisingURL2" runat="server" Text="" Visible="false"></asp:Label>
                                         </h3>
                                         <asp:Image ID="ImageAdvertising2" runat="server" Height="103px" 
-                                            ImageUrl="images/advertising.jpg" Width="175px" />
+                                          Width="175px" />
                                         <table>
                                             <tr>
                                                 <td class="style1">

@@ -3,7 +3,7 @@
 
 <asp:Content ID="cntContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-        <table style="width: 100%;">
+        <table style="width: 90%;">
             <tr>
                 <td class="style4" align="right">
                     Username :
