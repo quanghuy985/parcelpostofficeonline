@@ -53,7 +53,7 @@
         </FooterTemplate>
     </asp:Repeater>
         <asp:Button ID="btncheckout" runat="server" onclick="Button1_Click" 
-            Text="Check Out" style="width: 94px" />
+           Text="Check Out" style="width: 94px" />
         &nbsp;<asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
         <br />
         <asp:Panel ID="Panel1" runat="server" Height="166px"  Visible="False" 

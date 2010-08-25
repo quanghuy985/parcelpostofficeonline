@@ -92,4 +92,8 @@ public partial class Adminstrator_newmanager : System.Web.UI.Page
     {
 
     }
+    protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        Response.Write("return confirm('Bạn thực sự muốn xóa?')");
+    }
 }
