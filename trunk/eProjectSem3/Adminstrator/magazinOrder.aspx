@@ -84,12 +84,10 @@
                     <td> <%# DataBinder.Eval(Container.DataItem, "dateOrder")%></td></td>
                     <td> <%# DataBinder.Eval(Container.DataItem, "cusUserName")%></td></td>
                     <td> <%# DataBinder.Eval(Container.DataItem, "orderDetailStatus")%></td></td>
-                    <td> <asp:Button ID="btnUpdate" runat="server" Text="C&#7853;p nh&#7853;t" 
+                    <td> <asp:Button ID="btnUpdate" runat="server" Text="Check out" 
                             CommandArgument='<%#DataBinder.Eval(Container.DataItem, "MagazineDailyID")%>' 
-                            OnCommand="updateCart" Width="82px" />
-                    <asp:Button ID="btnDelete" runat="server" Text="Xóa" 
-                            CommandArgument='<%#DataBinder.Eval(Container.DataItem, "magazineDailyID")%>' 
-                            OnCommand="deleteCart" Width="56px" /></td>
+                            OnCommand="updateCart" Width="82px"  onclientclick="return confirm('are you sure?')"  />
+                   </td>
             </tr>
         </ItemTemplate>
         <FooterTemplate>

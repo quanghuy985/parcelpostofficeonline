@@ -28,8 +28,9 @@ public partial class Adminstrator_magazinOrder : System.Web.UI.Page
       rpt_magazine.DataBind();
     }
     public void updateCart(object sender, CommandEventArgs e)
-    { }
-    public void deleteCart(object sender, CommandEventArgs e)
-    { }
+    {
     
+    
+    }
+   
 }
