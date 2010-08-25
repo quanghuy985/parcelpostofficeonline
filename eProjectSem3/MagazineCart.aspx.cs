@@ -15,6 +15,7 @@ public partial class MagazineCart : System.Web.UI.Page
 {
     ArrayList cart; 
     int month;
+
     MagazineBL mgb = new MagazineBL();
     private DataTable dta;
     protected void Page_Load(object sender, EventArgs e)
@@ -23,11 +24,15 @@ public partial class MagazineCart : System.Web.UI.Page
         DropDownList1.DataSource = dta;
         DropDownList1.DataTextField = "serviceDetailName";
         DropDownList1.DataValueField = "serviceDetailID";
-        Label5.Text = Session["User"].ToString();
+        btncheckout.Enabled = false;
+        //Label5.Text = Session["User"].ToString();
+        
+        
         DropDownList1.DataBind();
         if (!IsPostBack)
         {
             bindGrid();
+          
         }
        
      
@@ -53,20 +58,32 @@ public partial class MagazineCart : System.Web.UI.Page
         cart = (ArrayList)Session["ShoppingCart"];
         MagazineBL mgb = new MagazineBL();
         mgb.insert_Order_detail(Session["User"].ToString(), cart, txtadress.Text, Convert.ToInt32(DropDownList1.SelectedValue.ToString()));
+        Session["ShoppingCart"] = null;
     }
    
     private void bindGrid()
     {
         cart = (ArrayList)Session["ShoppingCart"];
-        int n;
+        
+        int n;        
         if (cart == null || cart.Count == 0)
         {
-
-            //  Label1.Text = "Bạn chưa đặt vé nào";
-            return;
+            Label6.Visible = true;
+            HyperLink1.Visible = true;
+            Label7.Visible = true;
+            Label7.Visible = false;  
         }
         else
         {
+
+            if (Session["User"] == null)
+            {
+                Label7.Text = "you aren't log in";
+            }
+            else {
+                btncheckout.Enabled = true;
+                Label7.Visible = false; 
+            }
             n = cart.Count;
 
             MagazineEN[] bk = new MagazineEN[n];
