@@ -9,6 +9,13 @@ public partial class Adminstrator_MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["User"] == null)
+        {
+            
+        }
+        else
+        {
+            lbUser.Text = Session["User"].ToString();
+        }
     }
 }

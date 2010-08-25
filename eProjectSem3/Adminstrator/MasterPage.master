@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <script>
-   var StyleFile = "theme" + document.cookie.charAt(6) + ".css";
-   document.writeln('<link rel="stylesheet" type="text/css" href="css/' + StyleFile + '">');
+        var StyleFile = "theme" + document.cookie.charAt(6) + ".css";
+        document.writeln('<link rel="stylesheet" type="text/css" href="css/' + StyleFile + '">');
     </script>
 
     <!--[if IE]>
@@ -36,6 +36,18 @@
         </div>
         <div id="top-panel">
             <div id="panel">
+                <table>
+                    <tr>
+                        <td style="width:200px>
+                            Welcome :
+                            <asp:Label ID="lbUser" runat="server" Text=""></asp:Label>! Have A Nice Day...
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div id="wrapper">
