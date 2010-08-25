@@ -4,7 +4,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-   <table align="center" style="width: 100%; height: 334px;">
+    <table align="center" style="width: 100%; height: 334px;">
             <tr>
                 <td align="center">
                     Update News</td>
