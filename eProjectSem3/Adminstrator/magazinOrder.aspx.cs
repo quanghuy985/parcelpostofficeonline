@@ -19,18 +19,22 @@ public partial class Adminstrator_magazinOrder : System.Web.UI.Page
     }
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        GridView _gridView = (GridView)sender;       
+        GridView _gridView = (GridView)sender;
         int _selectedIndex = int.Parse(e.CommandArgument.ToString());
-       // txttitle.Text = _gridView.Rows[_selectedIndex].Cells[2].Text;
+        // txttitle.Text = _gridView.Rows[_selectedIndex].Cells[2].Text;
         int a = Convert.ToInt32(_gridView.Rows[_selectedIndex].Cells[1].Text);
         MagazineBL mgb = new MagazineBL();
-      rpt_magazine.DataSource=  mgb.view_order_byId(a);
-      rpt_magazine.DataBind();
+        rpt_magazine.DataSource = mgb.view_order_byId(a);
+        rpt_magazine.DataBind();
     }
     public void updateCart(object sender, CommandEventArgs e)
     {
-    
-    
+
+        MagazineBL mgb = new MagazineBL();
+        mgb.update_status(Convert.ToInt32(e.CommandArgument.ToString()));
+
     }
-   
+
+
+
 }
