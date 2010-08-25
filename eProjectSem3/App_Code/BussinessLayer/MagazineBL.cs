@@ -137,4 +137,12 @@ public class MagazineBL
         list.Add(para7);
         return dta = helper.ExecuteQuerry("pc_update_magazin", list);
     }
+
+    public void update_status(int magazineDailyID) {
+        list = new List<SqlParameter>();
+        SqlParameter para1 = new SqlParameter("@magazineDailyID", SqlDbType.Int);
+        para1.Value = magazineDailyID;
+        list.Add(para1);
+         helper.ExecuteQuerry("pc_update_status_magazine", list);
+    }
 }
