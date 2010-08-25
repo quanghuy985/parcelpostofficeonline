@@ -38,9 +38,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
         lbAdvertising2.Text = dt.Rows[1].ItemArray[1].ToString();
         lbAdvertisingURL1.Text = dt.Rows[0].ItemArray[5].ToString();
         lbAdvertisingURL2.Text = dt.Rows[1].ItemArray[5].ToString();
-        //string advertisingImageURL1 = "~/images/" + dt.Rows[0].ItemArray[4].ToString();
-        //ImageAdvertising1.ImageUrl = advertisingImageURL1;
-        //ImageAdvertising2.ImageUrl = "~/images/" + dt.Rows[1].ItemArray[4].ToString();
+        string advertisingImageURL1 = "~/images/" + dt.Rows[0].ItemArray[4].ToString();
+        ImageAdvertising1.ImageUrl = advertisingImageURL1;
+        ImageAdvertising2.ImageUrl = "~/images/" + dt.Rows[1].ItemArray[4].ToString();
         lbContact1.Text = "8686868";
         lbContact2.Text = "8686868";
         
