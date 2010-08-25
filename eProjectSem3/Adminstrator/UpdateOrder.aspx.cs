@@ -17,6 +17,7 @@ public partial class Adminstrator_UpdateOrder : System.Web.UI.Page
     }
     public void bindGrid()
     {
+        lbEmpUserName.Text = Session["User"].ToString();
         DataTable dt = new DataTable();
         OrderManageBL order = new OrderManageBL();
         dt = order.viewOrderByID(Convert.ToInt32(Request.QueryString["orderDetailID"].ToString()));
@@ -39,6 +40,7 @@ public partial class Adminstrator_UpdateOrder : System.Web.UI.Page
         lbDateTreat.Text = dt.Rows[0].ItemArray[14].ToString();
         ddlStatus.SelectedIndex = Convert.ToInt32(dt.Rows[0].ItemArray[15].ToString());
         lbParcelPostPrice.Text = dt.Rows[0].ItemArray[18].ToString();
+        lbOrderID.Text = dt.Rows[0].ItemArray[19].ToString();
         if (Session["status"].ToString().Equals("0"))
         {
             
@@ -65,7 +67,7 @@ public partial class Adminstrator_UpdateOrder : System.Web.UI.Page
                 txtAdditionalFee.Enabled = false;
                 txtWeight.Enabled = false;
                 ddlStatus.Enabled = false;
-                btSubmit.Visible = false;
+                
             }
             else if (Session["status"].ToString().Equals("4"))
             {
@@ -73,30 +75,31 @@ public partial class Adminstrator_UpdateOrder : System.Web.UI.Page
                 txtAdditionalFee.Enabled = false;
                 txtWeight.Enabled = false;
                 ddlStatus.Enabled = false;
-                btSubmit.Visible = false;
+                
             }
     }
-    protected void btSubmit_Click(object sender, EventArgs e)
+    [System.Web.Services.WebMethod]
+    public static String btSubmitClick(string parcelWeight, string status, string addFee, string discountPrice, string orderDetailID, string orderID, string empUserName, string totalAmount)
     {
+        OrderManageBL order = new OrderManageBL();
+        bool result = order.UpdateOrderParcel(Convert.ToInt32(orderDetailID), Convert.ToDecimal(parcelWeight), Convert.ToDecimal(addFee), Convert.ToDecimal(discountPrice), Convert.ToDecimal(totalAmount), Convert.ToInt32(status), Convert.ToInt32(orderID), empUserName);
+        if (result == true)
+        {
+            return "Successful";
+        }
+        else
+        {
+            return "System is updating! Please try in the next time";
+        }
+    }
+    [System.Web.Services.WebMethod]
+    public static String txtWeightChanged(string parcelWeight, string parcelPostPrice, string addFee, string discountPrice)
+    {
+        int result = Convert.ToInt32(parcelWeight) * Convert.ToInt32(parcelPostPrice) + Convert.ToInt32(addFee) - Convert.ToInt32(discountPrice);
+        return result.ToString();
 
     }
-    protected void txtWeight_TextChanged(object sender, EventArgs e)
-    {
-        int result = Convert.ToInt32(txtWeight.Text) * Convert.ToInt32(lbParcelPostPrice.Text) + Convert.ToInt32(txtAdditionalFee.Text) - Convert.ToInt32(txtDiscount.Text);
-        lbTotalAmount.Text = result.ToString();
-        this.Page_Load(sender, e);
-
-    }
-    protected void txtAdditionalFee_TextChanged(object sender, EventArgs e)
-    {
-        int result = Convert.ToInt32(txtWeight.Text) * Convert.ToInt32(lbParcelPostPrice.Text) + Convert.ToInt32(txtAdditionalFee.Text) - Convert.ToInt32(txtDiscount.Text);
-        lbTotalAmount.Text = result.ToString();
-    }
-    protected void txtDiscount_TextChanged(object sender, EventArgs e)
-    {
-        int result = Convert.ToInt32(txtWeight.Text) * Convert.ToInt32(lbParcelPostPrice.Text) + Convert.ToInt32(txtAdditionalFee.Text) - Convert.ToInt32(txtDiscount.Text);
-        lbTotalAmount.Text = result.ToString();
-    }
+ 
     protected void btCancel_Click(object sender, EventArgs e)
     {
         Response.Redirect("OrderManageDetail.aspx");

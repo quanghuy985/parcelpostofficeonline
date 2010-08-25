@@ -5,17 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    </script><script src="../js/jquery-1.4.2.js" type="text/javascript"></script>
-	<script>
-	    $(document).ready(function() {
-
-
-	    $("#content").load("FeedBackManage.aspx");
-	            return false;
-	      
-
-	    });
-      </script>
+   
 </head>
 <body>
     <form id="form1" runat="server">

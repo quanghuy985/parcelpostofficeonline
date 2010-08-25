@@ -9,6 +9,11 @@ public partial class Bank : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-      //  Response.Redirect("FeedBackManage.aspx");
+        //  Response.Redirect("FeedBackManage.aspx");
+        //if (Request.QueryString["idchuyentrang"].ToString().Equals("1"))
+        //{
+        //    Response.Redirect("ServiceDetail.aspx");
+        //}
+        //Response.Redirect("");
     }
 }

@@ -54,10 +54,10 @@ public partial class Adminstrator_newmanager : System.Web.UI.Page
         }
         else
         {
-            String strUpload = Server.MapPath(@"images/" + FileUpload1.FileName);
+            String strUpload = Server.MapPath(@"~/images/" + FileUpload1.FileName);
             FileUpload1.SaveAs(strUpload);
         }
-        if (ctnstatus.Checked = true)
+        if (ctnstatus.Checked == true)
         {
             status1 = 1;
         }
@@ -78,7 +78,7 @@ public partial class Adminstrator_newmanager : System.Web.UI.Page
         {
             image = FileUpload1.FileName;
         }
-        if (ctnstatus.Checked = true)
+        if (ctnstatus.Checked == true)
         {
             status2 = 1;
         }
