@@ -31,7 +31,7 @@ public partial class Adminstrator_OrderManage : System.Web.UI.Page
             string empUserName = Session["User"].ToString();
             if (admin.isAdmin(empUserName))
             {
-               
+                Response.Redirect("revenue.aspx");
             }
             else
             {

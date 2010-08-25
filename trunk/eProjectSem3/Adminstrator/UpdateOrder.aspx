@@ -1,7 +1,78 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Adminstrator/MasterPage1.master"
-    CodeFile="UpdateOrder.aspx.cs" Inherits="Adminstrator_UpdateOrder" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UpdateOrder.aspx.cs" Inherits="Adminstrator_UpdateOrder" %>
 
-<asp:Content ID="cntContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="../js/jquery-1.4.2.js" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+        var $j = jQuery.noConflict();
+        $j(document).ready(function() {
+            $j("#txtWeight").blur(function() {
+
+                $j.ajax({
+                    type: "POST",
+                    url: "UpdateOrder.aspx/txtWeightChanged",
+                    data: "{type:'huyhcker','parcelWeight':'" + document.getElementById("txtWeight").value + "','parcelPostPrice':'" + $j("#lbParcelPostPrice").text() + "','addFee':'" + document.getElementById("txtAdditionalFee").value + "','discountPrice':'" + document.getElementById("txtDiscount").value + "'}",
+
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(message) {
+                    $j("#lbTotalAmount").text(message.d);
+                    }
+                });
+            });
+
+            $j("#txtAdditionalFee").change(function() {
+                $j.ajax({
+                    type: "POST",
+                    url: "UpdateOrder.aspx/txtWeightChanged",
+
+                    data: "{type:'huyhcker','parcelWeight':'" + document.getElementById("txtWeight").value + "','parcelPostPrice':'" + $j("#lbParcelPostPrice").text() + "','addFee':'" + document.getElementById("txtAdditionalFee").value + "','discountPrice':'" + document.getElementById("txtDiscount").value + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(message) {
+                    $j("#lbTotalAmount").text(message.d);
+                    }
+                });
+
+            });
+            $j("#txtDiscount").change(function() {
+                $j.ajax({
+                    type: "POST",
+                    url: "UpdateOrder.aspx/txtWeightChanged",
+
+                    data: "{type:'huyhcker','parcelWeight':'" + document.getElementById("txtWeight").value + "','parcelPostPrice':'" + $j("#lbParcelPostPrice").text() + "','addFee':'" + document.getElementById("txtAdditionalFee").value + "','discountPrice':'" + document.getElementById("txtDiscount").value + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(message) {
+                    $j("#lbTotalAmount").text(message.d);
+                    }
+                });
+            });
+
+            $j("#btSubmit").click(function() {
+                $j.ajax({
+                    type: "POST",
+                    url: "UpdateOrder.aspx/btSubmitClick",
+
+                    data: "{type:'huyhcker','parcelWeight':'" + document.getElementById("txtWeight").value + "','status':'" + $j("#<%=ddlStatus.ClientID%>").val() + "','addFee':'" + document.getElementById("txtAdditionalFee").value + "','discountPrice':'" + document.getElementById("txtDiscount").value + "','orderDetailID':'" + $j("#lbOrderDetailID").text() + "','orderID':'" + $j("#lbOrderID").text() + "','empUserName':'" + $j("#lbEmpUserName").text() + "','totalAmount':'" + $j("#lbTotalAmount").text() + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(message) {
+                        $j("#lbOutPut").text(message.d);
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
     <div>
         <table width="100%" style="font-family: Times New Roman; font-style: italic">
             <tr>
@@ -11,7 +82,21 @@
                 <td style="width: 500px">
                     <asp:Label ID="lbOrderDetailID" runat="server" Text=""></asp:Label>
                 </td>
-                <td style="width:30%">
+                <td style="width: 30%">
+                    WelCome :
+                    <asp:Label ID="lbEmpUserName" runat="server" Text=""></asp:Label>
+                    ! Have A Nice Day
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 150px">
+                    Order ID :
+                </td>
+                <td style="width: 500px">
+                    <asp:Label ID="lbOrderID" runat="server" Text=""></asp:Label>
+                </td>
+                <td style="width: 30%">
+                    &nbsp;
                 </td>
             </tr>
             <tr>
@@ -44,10 +129,10 @@
                 </td>
                 <td>
                     <asp:Label ID="lbParcelFromAddress" runat="server" Text=""></asp:Label>
-                &nbsp;, District :
+                    &nbsp;, District :
                     <asp:Label ID="lbParcelFromDistrict" runat="server" Text=""></asp:Label>
-                &nbsp;,&nbsp;City :
-                <asp:Label ID="lbParcelFromCity" runat="server" Text=""></asp:Label>
+                    &nbsp;,&nbsp;City :
+                    <asp:Label ID="lbParcelFromCity" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -56,26 +141,27 @@
                 </td>
                 <td>
                     <asp:Label ID="lbParcelToAddress" runat="server" Text=""></asp:Label>
-                &nbsp;, District :
+                    &nbsp;, District :
                     <asp:Label ID="lbParcelToDistrict" runat="server" Text=""></asp:Label>
-                &nbsp;,&nbsp;City :
+                    &nbsp;,&nbsp;City :
                     <asp:Label ID="lbParcelToCity" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Weight :</td>
+                    Weight :
+                </td>
                 <td>
-                    <asp:TextBox ID="txtWeight" runat="server" Width="161px" 
-                        ontextchanged="txtWeight_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtWeight" runat="server" Width="161px"></asp:TextBox>
                     <asp:Label ID="Label4" runat="server" ForeColor="#00CCFF" Text="KG"></asp:Label>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
-                        ErrorMessage="Weight must be number" ValidationExpression="^[0-9]*$" ControlToValidate="txtWeight">*</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Weight must be number"
+                        ValidationExpression="^[0-9]*$" ControlToValidate="txtWeight">*</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Post Price :</td>
+                    Post Price :
+                </td>
                 <td>
                     <asp:Label ID="lbParcelPostPrice" runat="server" Text=""></asp:Label>
                     <asp:Label ID="Label5" runat="server" ForeColor="#00CCFF" Text="USD/KG"></asp:Label>
@@ -83,38 +169,38 @@
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Additional Fee :</td>
+                    Additional Fee :
+                </td>
                 <td>
-                    <asp:TextBox ID="txtAdditionalFee" runat="server" Width="161px" 
-                        ontextchanged="txtAdditionalFee_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtAdditionalFee" runat="server" Width="161px"></asp:TextBox>
                     <asp:Label ID="Label3" runat="server" ForeColor="#00CCFF" Text="USD"></asp:Label>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
-                        ErrorMessage="Weight must be number" ValidationExpression="^[0-9]*$" 
-                        ControlToValidate="txtAdditionalFee">*</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Weight must be number"
+                        ValidationExpression="^[0-9]*$" ControlToValidate="txtAdditionalFee">*</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Discount Name :</td>
+                    Discount Name :
+                </td>
                 <td>
                     <asp:Label ID="lbDiscountName" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Discount Price:</td>
+                    Discount Price:
+                </td>
                 <td>
-                    <asp:TextBox ID="txtDiscount" runat="server" Width="161px" 
-                        ontextchanged="txtDiscount_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtDiscount" runat="server" Width="161px"></asp:TextBox>
                     <asp:Label ID="Label2" runat="server" ForeColor="#00CCFF" Text="USD"></asp:Label>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" 
-                        ErrorMessage="Weight must be number" ValidationExpression="^[0-9]*$" 
-                        ControlToValidate="txtDiscount">*</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Weight must be number"
+                        ValidationExpression="^[0-9]*$" ControlToValidate="txtDiscount">*</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Total Amount :</td>
+                    Total Amount :
+                </td>
                 <td>
                     <asp:Label ID="lbTotalAmount" runat="server" Text=""></asp:Label>
                     <asp:Label ID="Label1" runat="server" ForeColor="#00CCFF" Text="USD"></asp:Label>
@@ -122,21 +208,24 @@
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Date Order :</td>
+                    Date Order :
+                </td>
                 <td>
                     <asp:Label ID="lbDateOrder" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Date Treat :</td>
+                    Date Treat :
+                </td>
                 <td>
                     <asp:Label ID="lbDateTreat" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    Status :</td>
+                    Status :
+                </td>
                 <td>
                     <asp:DropDownList ID="ddlStatus" runat="server">
                         <asp:ListItem Value="0">Available</asp:ListItem>
@@ -149,22 +238,24 @@
             </tr>
             <tr>
                 <td style="width: 150px">
-                    &nbsp;</td>
+                    &nbsp;
+                </td>
                 <td>
-                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" 
-                        HeaderText="List Error :" />
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="List Error :" />
+                    <asp:Label ID="lbOutPut" runat="server" ForeColor="#0099CC"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td style="width: 150px">
-                    &nbsp;</td>
+                    &nbsp;
+                </td>
                 <td>
-                    <asp:Button ID="btSubmit" runat="server" Text="Submit" 
-                        onclick="btSubmit_Click" />
-                    <asp:Button ID="btCancel" runat="server" Text="Cancel" 
-                        onclick="btCancel_Click" />
+                    <input type="button" id="btSubmit" value="Submit" />
+                    <asp:Button ID="btCancel" runat="server" Text="Cancel" OnClick="btCancel_Click" />
                 </td>
             </tr>
-            </table>
+        </table>
     </div>
-</asp:Content>
+    </form>
+</body>
+</html>
