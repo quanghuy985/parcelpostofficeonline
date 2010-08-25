@@ -18,7 +18,7 @@ public partial class NewsDetail : System.Web.UI.Page
     {
         
         NewsBL news = new NewsBL();
-        dt = news.viewNewsDetail(Convert.ToInt32(Request.QueryString["id"].ToString()));
+        dt = news.viewNewsDetail(Convert.ToInt32(Request.QueryString["newsID"].ToString()));
         rptNewsDetail.DataSource = dt;
         rptNewsDetail.DataBind();
         bindGrid();
