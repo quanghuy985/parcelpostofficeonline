@@ -3,23 +3,7 @@
 <%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<head id="Head1" runat="server">
-    <title>Untitled Page</title>
-    <style type="text/css">
-        .style1
-        {
-            width: 155px;
-        }
-        .style2
-        {
-            width: 253px;
-        }
-        .style3
-        {
-            width: 191px;
-        }
-    </style>
-</head>
+
    <table align="center" style="width: 100%; height: 334px;">
             <tr>
                 <td align="center">
@@ -32,11 +16,12 @@
                         EmptyDataText="There are no data records to display."
                         Width="621px" CellPadding="4" ForeColor="#333333" 
                         GridLines="None" onrowcommand="GridView1_RowCommand" 
-                        PageSize="3" onselectedindexchanged="GridView1_SelectedIndexChanged">
+                        PageSize="3" onselectedindexchanged="GridView1_SelectedIndexChanged" 
+                        onrowdeleting="GridView1_RowDeleting">
                         <RowStyle BackColor="#EFF3FB" />
                         <Columns>
                             <asp:CommandField SelectText="Update" ShowSelectButton="True" />
-                            <asp:CommandField ShowDeleteButton="True" />
+                            <asp:CommandField ShowDeleteButton="True"  />
                             <asp:BoundField DataField="newsID" HeaderText="newsID" ReadOnly="True" 
                                 SortExpression="newsID" />
                             <asp:BoundField DataField="newsTitle" HeaderText="newsTitle" 
