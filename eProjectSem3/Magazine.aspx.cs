@@ -36,6 +36,7 @@ public partial class Magazine : System.Web.UI.Page
             mge.ServiceID = Convert.ToInt32(dt.Rows[0].ItemArray[1].ToString());
             mge.MagazineName = dt.Rows[0].ItemArray[2].ToString();
             mge.MonthMagazineDaily = 1;
+            mge.MagazinePrice = Convert.ToDecimal(dt.Rows[0].ItemArray[5].ToString());
         }
         if (Session["ShoppingCart"] != null)
         {

@@ -62,7 +62,12 @@ public class MagazineEN
         get { return monthMagazineDaily; }
         set { monthMagazineDaily = value; }
     }
-
+    private decimal magazinePrice;
+    public decimal MagazinePrice
+    {
+        get { return magazinePrice; }
+        set { magazinePrice = value; }
+    }
 	public MagazineEN()
 	{
 		

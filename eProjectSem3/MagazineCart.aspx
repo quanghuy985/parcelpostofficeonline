@@ -32,7 +32,7 @@
                         Magazine Nmae
                     </th>
                     <th style="color: Black">
-                        Service
+                        Price
                     </th>
                     <th style="color: Black; width: 128px;">
                         Thang
@@ -51,6 +51,7 @@
                     <%# DataBinder.Eval(Container.DataItem, "magazineName")%>
                 </td>
                 <td style="color: Black">
+                 <%# DataBinder.Eval(Container.DataItem, "magazinePrice")%>
                 </td>
                 <td style="color: Black; width: 128px;">
                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "MonthMagazineDaily", "{0: ###,###}") %>'
