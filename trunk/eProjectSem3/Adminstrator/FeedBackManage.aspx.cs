@@ -25,7 +25,7 @@ public partial class Adminstrator_FeedBackManage : System.Web.UI.Page
         }
         else
         {
-            lbUserName.Text = Session["User"].ToString();
+           // lbUserName.Text = Session["User"].ToString();
         }
         if (!IsPostBack)
         {

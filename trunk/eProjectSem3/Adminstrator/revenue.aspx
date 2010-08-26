@@ -22,7 +22,8 @@
                     Total Order Avalible</td>
                 <td class="style2">
                     <asp:LinkButton ID="lblorderavailable" runat="server" 
-                        oncommand="lblorderavailable_Command" onclick="lblorderavailable_Click">Order available</asp:LinkButton>
+                        oncommand="lblorderavailable_Command" onclick="lblorderavailable_Click">Order 
+                    available</asp:LinkButton>
                 </td>
             
             </tr>
@@ -30,7 +31,8 @@
                 <td class="style1">
                     Total Order Finnish</td>
                 <td class="style2">
-                    <asp:LinkButton ID="lblorderfinsh" runat="server" onclick="lblorderfinsh_Click">Order finnish</asp:LinkButton>
+                    <asp:LinkButton ID="lblorderfinsh" runat="server" onclick="lblorderfinsh_Click">Order 
+                    finnish</asp:LinkButton>
                 </td>
               
             </tr>
@@ -40,7 +42,7 @@
                 <td class="style2">
                     <asp:LinkButton ID="lblrevence" runat="server" onclick="lblrevence_Click" 
                         oncommand="lblrevence_Command">Revence</asp:LinkButton>
-                </td>
+                    &nbsp;$</td>
                 <td>
                     &nbsp;</td>
             </tr>
