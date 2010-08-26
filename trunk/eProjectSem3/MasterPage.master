@@ -24,7 +24,8 @@
 		<div id="Home-Template">
 		<div id="Header">
 				<div class="logo-container">
-							<img src="images/postoffice/widget/header/logo.gif" width="78" height="59" alt="Post Office &reg;" />
+							<img src="images/postoffice/widget/header/logo.gif" width="78" 
+                                alt="Post Office &reg;" />
 				</div>
 				<div class="header-right">
 	<div class="top-links">
@@ -42,9 +43,13 @@
 <div class="account-section">
 	<div class="Float-Right">
 				<ul>
-					<li>Your account</li>
-					<li><a href="link/registration@pageId=rego_po">Register</a></li>
-					<li><a href="portal/campaign/content1@catId=19100174&mediaId=103700773">Sign in</a></li>
+					<li>Hello,<asp:Label ID="lbluser" runat="server" Text="Guest"></asp:Label>
+                                    </li>
+					                                 </li>
+					<li><a href="AddCustomer.aspx">Register</a></li>
+					<li><a href="Login.aspx">Sign in</a></li>
+					<li>
+                        <asp:LinkButton OnCommand="log_out" ID="LinkButton1" runat="server">Log Out</asp:LinkButton>  </li>
 				</ul>
 <div class="search-box">
 	<input name="_dyncharset" type="hidden" value="ISO-8859-1">
@@ -67,16 +72,16 @@
 <div class="navigation-tabs">
     <ul id="category">
                 <li id="tab1">
-                            <div class="menuHeader"><a href="Default2.aspx">Home</a></div>
+                            <div ><a href="Default2.aspx">Home</a></div>
             </li>
                 <li id="tab2">
-                            <div class="menuHeader"><a href="Magazine.aspx">Magazine</a></div>
+                            <div ><a href="Magazine.aspx">Magazine</a></div>
             </li>
                 <li id="tab3">
-                            <div class="menuHeader"><a href="FeedBack.aspx">FeedBack</a></div>
+                            <div ><a href="FeedBack.aspx">FeedBack</a></div>
             </li>
                 <li id="tab4">
-                            <div class="menuHeader"><a href="Login.aspx">Login</a></div>
+                            <div ><a href="Login.aspx">Login</a></div>
             </li>
                 <li id="tab5">
                             <div class="menuHeader"><a href="ParcelPostOfficeServiceDetail.aspx">ServiceDetail</a></div>

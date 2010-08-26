@@ -11,11 +11,18 @@ public partial class Adminstrator_MasterPage : System.Web.UI.MasterPage
     {
         if (Session["User"] == null)
         {
-            
+            LinkButton1.Visible = false;
         }
         else
         {
             lbUser.Text = Session["User"].ToString();
+            LinkButton1.Visible = true;
         }
+    }
+
+    protected void Log_out(object sender, CommandEventArgs e)
+    {
+        Session.Abandon();
+        Response.Redirect("Login.aspx");
     }
 }

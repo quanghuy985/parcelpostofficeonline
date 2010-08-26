@@ -25,7 +25,7 @@ public partial class eProjectSem3_eProjectSem3_Login : System.Web.UI.Page
         DataTable dtTableUser = new DataTable();
           if (dtTableName.Rows.Count == 0)
         {
-            lbError.Text = "Sai tên đăng nhập! Vui lòng đăng nhập lại hoặc đăng ký tài khoản này";
+            lbError.Text = "Wrong username! Please login again !";
             
         }
         else
@@ -34,13 +34,13 @@ public partial class eProjectSem3_eProjectSem3_Login : System.Web.UI.Page
             dtTableUser = cus.CheckCustomerLogin(txtUserName.Text, txtPassword.Text);
             if (dtTableUser.Rows.Count == 0)
             {
-                lbError.Text = "Sai mật khẩu! Hãy ấn vào quên mật khẩu để lấy lại pass";
+                lbError.Text = "Wrong password !";
             }
             else
             {
                 if (Convert.ToInt32(dtTableName.Rows[0].ItemArray[6]) == 0)
                 {
-                    lbError.Text = "Tài khoản của bạn chưa kích hoạt ! Vui lòng kiểm tra lại email or liên hệ người quản trị";
+                    lbError.Text = "Your account is not activated!";
                 }
                 else
                 {

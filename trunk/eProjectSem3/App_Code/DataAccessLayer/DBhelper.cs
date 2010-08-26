@@ -45,6 +45,29 @@ public class DBhelper
             }
         }
     }
+    public int ExecuteNonQuery(string sql, CommandType type, List<SqlParameter> list)
+    {
+        int k = 0;
+        SqlCommand cmd = new SqlCommand();
+        cmd.CommandText = sql;
+        cmd.CommandType = type;
+        cmd.Connection = this.getConnect();
+        foreach (SqlParameter p in list)
+        {
+            cmd.Parameters.Add(p);
+        }
+        try
+        {
+            k = cmd.ExecuteNonQuery();
+        }
+        catch (SqlException ex)
+        {
+            con.Close();
+            throw ex;
+        }
+
+        return k;
+    }
     public DataTable ExecuteQuerry(String SPName, List<SqlParameter> paramList)
     {
         SqlCommand cmd = new SqlCommand();
