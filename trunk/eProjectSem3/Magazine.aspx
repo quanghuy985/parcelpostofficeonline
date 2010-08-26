@@ -22,6 +22,13 @@
                                         <h3>
                                             <%# DataBinder.Eval(Container.DataItem, "magazineName")%></h3>
                                     </td>
+                                    
+                                </tr>
+                                <tr>
+                                <td>
+                                        <h3>
+                                           Price: <%# DataBinder.Eval(Container.DataItem, "magazinePrice")%>$</h3>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>

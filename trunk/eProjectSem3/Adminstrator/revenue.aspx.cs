@@ -26,6 +26,7 @@ public partial class Adminstrator_revenue : System.Web.UI.Page
         lblparceldenny.Text = re.get_total_parcel_by_id(4);
         lblr_sending.Text = re.get_total_parcel_by_id(2);
         lblrevence.Text = re.get_total_revence();
+        lblmaga_revence.Text = re.get_total_revence_maga();
         resetpanel();
     }
     public void resetpanel()

@@ -75,6 +75,12 @@ public class revenceBL
         dta = db.ExecuteQuerry("pc_get_total_revenece", null);
         return dta.Rows[0].ItemArray[0].ToString();
     }
+    
+        public String get_total_revence_maga()
+    {
+        dta = db.ExecuteQuerry("pc_get_total_revence_magazine", null);
+        return dta.Rows[0].ItemArray[0].ToString();
+    }
     /// <summary>
     /// /////////////////////////////////////////////////////////////
     /// </summary>

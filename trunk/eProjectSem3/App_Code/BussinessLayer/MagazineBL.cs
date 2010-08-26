@@ -64,16 +64,19 @@ public class MagazineBL
             SqlParameter para3 = new SqlParameter("@magazineDailyID", SqlDbType.Int);
             SqlParameter para4 = new SqlParameter("@monthMagazineDaily", SqlDbType.Int);
             SqlParameter para5 = new SqlParameter("@addressMagazineDaily", SqlDbType.NVarChar);
+            SqlParameter para6 = new SqlParameter("@totalamount", SqlDbType.Decimal);            
             para1.Value = _orderid;
             para2.Value = servicedetailID;
             para3.Value = mge[i].MagazineDailyID;
             para4.Value = mge[i].MonthMagazineDaily;
             para5.Value = adress;
+            para6.Value = mge[i].MagazinePrice;
             list.Add(para1);
             list.Add(para2);
             list.Add(para3);
             list.Add(para4);
             list.Add(para5);
+            list.Add(para6);
             helper.ExecuteQuerry("insert_Order_detail", list);
         }
 

@@ -8,7 +8,7 @@
         EnableScriptLocalization="true" ID="ScriptManager1" />
     <asp:Panel ID="Panel1" runat="server" GroupingText="All Order" 
     Width="933px">
-        <table style="width:28%;">
+        <table style="width:78%;">
             <tr>
                 <td class="style1">
                     Total Order</td>
@@ -25,7 +25,7 @@
                     <asp:LinkButton ID="lblorderavailable" runat="server" 
                         oncommand="lblorderavailable_Command" onclick="lblorderavailable_Click">Order 
                     available</asp:LinkButton>
-                </td>
+                    &nbsp;</td>
             
             </tr>
             <tr>
@@ -49,9 +49,9 @@
             </tr>
         </table>
     </asp:Panel>
-    <br />
+   
     <asp:Panel ID="paneltotalorder" runat="server" GroupingText="Total Order" 
-        Visible="False" Width="658px" Height="235px">
+        Visible="False" Width="897px" Height="235px">
         Start Date 
         <table style="width:92%;">
             <tr>
@@ -79,7 +79,7 @@
         <asp:GridView ID="GridView4" runat="server" Width="90%">
         </asp:GridView>
     </asp:Panel>
-    <br />
+
     <asp:Panel ID="panelorderavailable" runat="server" 
         GroupingText="Total Order Available" Visible="False">
         <br />
@@ -110,7 +110,7 @@
         <br />
         
     </asp:Panel>
-    <br />
+    
     <asp:Panel ID="panelorderfinish" runat="server" 
         GroupingText="Total Order Finsh" Visible="False">
         <br />
@@ -199,10 +199,10 @@
             </tr>
         </table>
     </asp:Panel>
-            <br />
+            
     <asp:Panel ID="panel_total_parcel" runat="server" 
         GroupingText="Total parcel" Visible="False">
-        <br />
+       
         <table style="width:100%;">
             <tr>
                 <td align="center">
@@ -226,11 +226,10 @@
         <br />
         <asp:GridView ID="GridView_total_parcel" runat="server" Width="767px">
         </asp:GridView>
-        <br />
+     
         
     </asp:Panel>
-            <br />
-            <br />
+            
             <asp:Panel ID="panel_total_pảcel_available" runat="server" 
                 GroupingText="Total parcel Available" Visible="False">
                 <br />
@@ -259,7 +258,7 @@
                 </asp:GridView>
                 <br />
             </asp:Panel>
-            <br />
+           
             <asp:Panel ID="panel_total_parcel_confirm" runat="server" 
                 GroupingText="Total parcel Confirm" Visible="False">
                 <br />
@@ -289,10 +288,10 @@
                 </asp:GridView>
                 <br />
             </asp:Panel>
-            <br />
+           
             <asp:Panel ID="panel_total_parcel_sending" runat="server" 
                 GroupingText="Total parcel Confirm" Visible="False">
-                <br />
+               
                 <table style="width:100%;">
                     <tr>
                         <td align="center">
@@ -316,9 +315,9 @@
                 <br />
                 <asp:GridView ID="GridView_total_parcel_sending" runat="server" Width="767px">
                 </asp:GridView>
-                <br />
+                
             </asp:Panel>
-            <br />
+          
             <asp:Panel ID="panel_total_parcel_delivery" runat="server" 
                 GroupingText="Total parcel Delivery" Visible="False">
                 <br />
@@ -348,10 +347,9 @@
                 </asp:GridView>
                 <br />
             </asp:Panel>
-            <br />
+            
             <asp:Panel ID="panel_total_parcel_denny" runat="server" 
-                GroupingText="Total parcel Deny" Visible="False">
-                <br />
+                GroupingText="Total parcel Deny" Visible="False">               
                 <table style="width:100%;">
                     <tr>
                         <td align="center">
@@ -376,18 +374,27 @@
                 <asp:GridView ID="GridView_deny" runat="server" Width="767px">
                 </asp:GridView>
                 <br />
-            </asp:Panel>
-            <br />
-            <br />
-    <br />
-    <asp:Panel ID="Panel4" runat="server" GroupingText="Magazine Order">
+            </asp:Panel>            
+    
+    <asp:Panel ID="Panel4" runat="server" GroupingText="Magazine Order" Height="44px">
         <table style="width:100%;">
+         <tr>
+                <td>
+                    Total order Magazine :
+                    <asp:LinkButton ID="lblmagazin" runat="server" >magazine</asp:LinkButton>
+                </td>                
+            </tr>
             <tr>
                 <td>
-                    Total Revence Magazine</td>                
+                    Total Revence Magazine :
+                    <asp:LinkButton ID="lblmaga_revence" runat="server" >Parcel</asp:LinkButton>
+                    &nbsp;$</td>                
             </tr>
             
         </table>
     </asp:Panel>
+    <br />
+    <br />
+    
 
 </asp:Content>
