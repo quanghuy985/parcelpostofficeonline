@@ -72,7 +72,7 @@
         Style="width: 94px" />
     &nbsp;<br />
     <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
-    Text="Check Out" style="width: 94px" /> &nbsp;<asp:Label ID="Label5" runat="server"
+    &nbsp;<asp:Label ID="Label5" runat="server"
         Text="Label"></asp:Label>
     <br />
     <asp:Panel ID="Panel1" runat="server" Height="166px" Visible="False" Width="355px">

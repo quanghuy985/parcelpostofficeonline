@@ -6,8 +6,9 @@
   
             <ajaxToolkit:ToolkitScriptManager runat="Server" EnableScriptGlobalization="true"
         EnableScriptLocalization="true" ID="ScriptManager1" />
-    <asp:Panel ID="Panel1" runat="server" GroupingText="All Order">
-        <table style="width:100%;">
+    <asp:Panel ID="Panel1" runat="server" GroupingText="All Order" 
+    Width="933px">
+        <table style="width:28%;">
             <tr>
                 <td class="style1">
                     Total Order</td>
@@ -50,9 +51,9 @@
     </asp:Panel>
     <br />
     <asp:Panel ID="paneltotalorder" runat="server" GroupingText="Total Order" 
-        Visible="False">
+        Visible="False" Width="658px" Height="235px">
         Start Date 
-        <table style="width:100%;">
+        <table style="width:92%;">
             <tr>
                 <td align="center">
                     Start Date: 
@@ -75,7 +76,7 @@
         <asp:Label ID="lbl_eror_order" runat="server" ForeColor="Red"></asp:Label>
         
         <br />
-        <asp:GridView ID="GridView4" runat="server" Width="796px">
+        <asp:GridView ID="GridView4" runat="server" Width="90%">
         </asp:GridView>
     </asp:Panel>
     <br />
@@ -139,8 +140,6 @@
         <br />
         
     </asp:Panel>
-    <asp:Panel ID="Panel3" runat="server">
-    </asp:Panel>
   
     <asp:Panel ID="Panel2" runat="server" GroupingText="Parcel Order" 
         ToolTip="Parcel Order">
@@ -151,8 +150,6 @@
                 <td>
                     <asp:LinkButton ID="lblparcel" runat="server" onclick="lblparcel_Click">Parcel</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="style3">
@@ -161,8 +158,6 @@
                     <asp:LinkButton ID="lblparcelavailable" runat="server" 
                         onclick="lblparcelavailable_Click">availabl</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="style3">
@@ -171,8 +166,6 @@
                     <asp:LinkButton ID="lblparcelneedconfirm" runat="server" 
                         onclick="lblparcelneedconfirm_Click">confirm</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="style3">
@@ -180,8 +173,6 @@
                 <td>
                     <asp:LinkButton ID="lblr_sending" runat="server" onclick="lblr_sending_Click">sending</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="style3">
@@ -190,8 +181,6 @@
                     <asp:LinkButton ID="lblparceldelivery" runat="server" 
                         onclick="lblparceldelivery_Click">delivery</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="style3">
@@ -200,8 +189,6 @@
                     <asp:LinkButton ID="lblparceldenny" runat="server" 
                         onclick="lblparceldenny_Click">Deny</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="style3">
@@ -209,8 +196,6 @@
                 <td>
                     <asp:LinkButton ID="lblrevence5" runat="server" onclick="lblrevence5_Click">Revence</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
         </table>
     </asp:Panel>

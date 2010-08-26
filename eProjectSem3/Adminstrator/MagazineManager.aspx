@@ -7,12 +7,12 @@
         AutoGenerateColumns="False" DataKeyNames="magazineDailyID" 
         DataSourceID="SqlDataSource1" 
         EmptyDataText="There are no data records to display." PageSize="5" 
-               BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+               BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" 
                CellPadding="3" Height="293px" Width="449px" 
                onrowcommand="GridView1_RowCommand" 
-               onselectedindexchanged="GridView1_SelectedIndexChanged">
-           <FooterStyle BackColor="White" ForeColor="#000066" />
-           <RowStyle ForeColor="#000066" />
+               onselectedindexchanged="GridView1_SelectedIndexChanged" CellSpacing="2">
+           <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+           <RowStyle ForeColor="#8C4510" BackColor="#FFF7E7" />
         <Columns>
             <asp:CommandField SelectText="Update" ShowDeleteButton="True" 
                 ShowSelectButton="True" />
@@ -34,9 +34,9 @@
             <asp:BoundField DataField="magazineStatus" SortExpression="magazineStatus" />
             
         </Columns>
-           <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-           <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-           <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+           <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+           <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+           <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:callConnection %>" 
@@ -71,7 +71,7 @@
 <tr>
 <td>
     <asp:Button ID="btn_addnew" runat="server" Text="Add new magazine" 
-        ForeColor="Lime" onclick="btn_addnew_Click" />
+        onclick="btn_addnew_Click" />
 </td>
 </tr>
 <tr>
@@ -83,7 +83,7 @@
                     Add Magazine Daily</td>
             </tr>
             <tr>
-                <td class="style1" style="color: #00FF00">
+                <td class="style1">
                     MagaZine Name</td>
                 <td>
                     <asp:TextBox ID="txtmagaName" runat="server" Width="211px"></asp:TextBox>
@@ -92,7 +92,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style2" style="color: #00FF00">
+                <td class="style2">
                     MagaZine Description</td>
                 <td class="style3">
                     <asp:TextBox ID="txtMagaDescrip" runat="server" Height="135px" TextMode="MultiLine" 
@@ -102,7 +102,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style1" style="color: #00FF00">
+                <td class="style1">
                     MagaZine Imgae</td>
                 <td>
                     
@@ -112,7 +112,7 @@
                      Click button Browse if you want select new Image</td>
             </tr>
              <tr>
-            <td style="color: #00FF00">
+            <td>
                 Status
             </td>
             <td>
@@ -122,9 +122,9 @@
             <tr>
                 <td class="style4" align="center" colspan="2">
                     <asp:Button ID="btn_addnew_" runat="server" onclick="btnSumit_Click" 
-                        Text="Add new" style="height: 26px" ForeColor="#66FF33" />
+                        Text="Add new" style="height: 26px" />
                         <asp:Button ID="btn_update" runat="server" onclick="btn_update_Click" 
-                        Text="Update New" style="height: 26px" ForeColor="#66FF33" />
+                        Text="Update New" style="height: 26px" />
                                             <br />
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     <asp:Label ID="lblid" runat="server"></asp:Label>

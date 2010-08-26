@@ -123,10 +123,7 @@
             width: 822px;
             height: 180px;
         }
-        .style2
-        {
-        }
-        
+                
     </style>
       <style type="text/css">
        
@@ -134,21 +131,6 @@
        {
        	display:none;
        } 
-            
-          .style3
-          {
-              width: 4px;
-          }
-            
-          .style4
-          {
-              width: 4px;
-              height: 23px;
-          }
-          .style5
-          {
-              height: 23px;
-          }
             
           </style>
     <!--[if IE]>
@@ -173,13 +155,15 @@
                 </ul>
             </div>
         </div>
+                <form runat="server">
         <div id="top-panel">
             <div id="panel">
                 <table>
                     <tr>
                         <td>
                             Welcome :
-                            <asp:Label ID="lbUser" runat="server" Text=""></asp:Label>! Have A Nice Day...
+                            <asp:Label ID="lbUser" runat="server" Text=""></asp:Label>! Have A Nice Day...&nbsp;
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnCommand="Log_out">Log Out</asp:LinkButton>
                         </td>
                         <td>
                         </td>
@@ -191,12 +175,11 @@
         </div>
         <div id="wrapper">
             <div id="content">
-                <form runat="server">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
-                </form>
             </div>
         </div>
+                </form>
         <div id="footer">
             <div id="credits">
                 Template by <a href="http://www.bloganje.com">Bloganje</a>

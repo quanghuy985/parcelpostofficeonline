@@ -63,10 +63,12 @@ public partial class Magazine : System.Web.UI.Page
 
     }
     public void viewDetails(object sender, CommandEventArgs e)
-    { }
+    {
+        Response.Redirect("MagazineDetail.aspx?magaid="+e.CommandArgument.ToString());
+    }
 
     protected void rpt_magazine_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
-
+        
     }
 }

@@ -27,6 +27,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
         ImageDiscount2.ImageUrl = discountImageURL2;
         lbPrice1.Text = dt.Rows[0].ItemArray[5].ToString() +"$";
         lbPrice2.Text = dt.Rows[1].ItemArray[5].ToString()+"$";
+        if (Session["User"] == null)
+        {
+            LinkButton1.Visible = false;
+        }
+        else
+        {
+            lbluser.Text = Session["User"].ToString();
+            LinkButton1.Visible = true;
+        }
     }
     public void bindGridAdvertising()
     {
@@ -62,5 +71,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         Session["discountID"] = lbDiscountID2.Text;
         Response.Redirect("ParcelPostOfficeServiceDetail.aspx");
+    }
+    protected void log_out(object sender, CommandEventArgs e)
+    {
+        Session.Abandon();
+        Response.Redirect("Login.aspx");
     }
 }

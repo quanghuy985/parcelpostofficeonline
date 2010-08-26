@@ -218,7 +218,7 @@ clear:both;
 		Tables
 *********************/
 table{
-	margin:5px 5px 5px 65px;
+	margin:5px 5px 5px 1px;
 	border-collapse: collapse;
 	table-layout:automatic;
 	width:87%;
