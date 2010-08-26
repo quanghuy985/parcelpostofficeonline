@@ -32,9 +32,12 @@ public partial class Adminstrator_newmanager : System.Web.UI.Page
     {
         Panel1.Visible = true;
         btnaddnew.Visible = false;
+        btn_addnew.Enabled = false;
+        btnupdate.Visible=true;
         GridView _gridView = (GridView)sender;
         int _selectedIndex = int.Parse(e.CommandArgument.ToString());
         id = Convert.ToInt32(_gridView.Rows[_selectedIndex].Cells[2].Text);
+        Label1.Text = id.ToString();
         dta = news.view_new_byid(id);
         txttitle.Text = dta.Rows[0].ItemArray[1].ToString();
         txtbrief.Text = dta.Rows[0].ItemArray[2].ToString();
@@ -86,13 +89,17 @@ public partial class Adminstrator_newmanager : System.Web.UI.Page
         {
             status2 = 0;
         }
-        news.update_news(id, txttitle.Text, txtbrief.Text, FCKeditor1.Value, image, status2);
+        news.update_news(Convert.ToInt32(Label1.Text), txttitle.Text, txtbrief.Text, FCKeditor1.Value, image, status2);
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
 
     }
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        Response.Write("return confirm('Bạn thực sự muốn xóa?')");
+    }
+    protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
     {
         Response.Write("return confirm('Bạn thực sự muốn xóa?')");
     }
