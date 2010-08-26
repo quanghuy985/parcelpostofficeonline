@@ -12,7 +12,145 @@
         var StyleFile = "theme" + document.cookie.charAt(6) + ".css";
         document.writeln('<link rel="stylesheet" type="text/css" href="css/' + StyleFile + '">');
     </script>
+<style type="text/css" media="all">
+		@import url(css/style.css);
+		
+	</style>	
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery_ui.js" type="text/javascript"></script>
+	<script src="js/wysiwyg.js" type="text/javascript"></script>
+	<script src="js/functions.js" type="text/javascript"></script>
+    <script src="../js/jquery-1.4.2.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        var $j = jQuery.noConflict();
 
+        function clickhere(id, nguoinhan) {
+
+            document.getElementById("TextArea1").value = "";
+            $j("#checkReturn").text("");
+                $j("#Panel1").slideDown("slow");
+                $j("#idnguoinhan").text(id);
+                $j("#nguoinhan").text(nguoinhan);
+           
+                return false;
+            }       
+ </script>
+  <script language="javascript" type="text/javascript">
+      var $j = jQuery.noConflict();
+      $j(document).ready(function() {
+          $j("#Button3").click(function() {
+              $j("#Panel1").hide();
+          });
+      });
+ </script>
+ <script language="javascript" type"text/javascript">
+        var $j = jQuery.noConflict();
+        $j(document).ready(function() {
+
+            $j("#Button2").click(function() {
+                $j.ajax({
+                    type: "POST",
+
+                    url: "FeedBackManage.aspx/sendmail",
+                    data: "{type:'chanvl','id':'" + $j("#idnguoinhan").text() + "','email':'" + $j("#nguoinhan").text() + "','body':'" + $j("#TextArea1").val() + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(message) {
+                        $j("#Panel1").hide();
+                        $j("#checkReturn").text("Đã gửi thành công !");
+                    },
+                    error: function(errormessage) {
+                        //Hiển thị lỗi nếu xảy ra
+                        $j("#checkReturn").text(errormessage.responseText);
+                    }
+                });
+            });
+        });
+        </script>
+        <script type="text/javascript">
+            var $j = jQuery.noConflict();
+            $j(document).ready(function() {
+
+            $j("#.delbutton").click(function() {
+
+                    //Get the Id of the record to delete
+            var record_id = $j(this).attr("id");
+            var record_email = $j(this).attr("title")
+                    //Get the GridView Row reference
+                    var tr_id = $j(this).parents("#.record");
+                          
+                                // Change the back color of the Row before deleting
+                                tr_id.css("background-color", "lightgreen");
+                                            document.getElementById("TextArea1").value = "";
+                                            $j("#checkReturn").text("");
+                                                $j("#Panel1").slideDown("slow");
+                                                $j("#idnguoinhan").text(record_id);
+                                                $j("#nguoinhan").text(record_email);
+                                // Do some animation effect
+//                                tr_id.fadeOut(1, function() {
+
+//                                    //Remove GridView row
+//                                    tr_id.remove();
+//                                });
+                            
+                       
+                    return false;
+                });
+            });
+            
+</script>
+ <script type="text/javascript">
+     var $j = jQuery.noConflict();
+     $j(document).ready(function() {
+
+     $j("btDelete").click(function() {
+
+ 
+             var agree = confirm("Thông tin hợp lệ. Bạn có muốn tiếp tục đăng ký không?");
+             if (agree)
+                 return true;
+             else
+                 return false;
+         
+
+         });
+     });
+            
+</script>
+    <style type="text/css">
+        #TextArea1
+        {
+            width: 822px;
+            height: 180px;
+        }
+        .style2
+        {
+        }
+        
+    </style>
+      <style type="text/css">
+       
+       #Panel1
+       {
+       	display:none;
+       } 
+            
+          .style3
+          {
+              width: 4px;
+          }
+            
+          .style4
+          {
+              width: 4px;
+              height: 23px;
+          }
+          .style5
+          {
+              height: 23px;
+          }
+            
+          </style>
     <!--[if IE]>
 <link rel="stylesheet" type="text/css" href="css/ie-sucks.css" />
 <![endif]-->
