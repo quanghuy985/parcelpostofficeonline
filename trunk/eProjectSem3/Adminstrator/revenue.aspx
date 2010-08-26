@@ -15,8 +15,7 @@
                     <asp:LinkButton ID="lbltatalorder" runat="server" 
                         oncommand="lbltatalorder_Command" onclick="lbltatalorder_Click">Total Order</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
+             
             </tr>
             <tr>
                 <td class="style1">
@@ -25,8 +24,7 @@
                     <asp:LinkButton ID="lblorderavailable" runat="server" 
                         oncommand="lblorderavailable_Command" onclick="lblorderavailable_Click">Order available</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
+            
             </tr>
             <tr>
                 <td class="style1">
@@ -34,8 +32,7 @@
                 <td class="style2">
                     <asp:LinkButton ID="lblorderfinsh" runat="server" onclick="lblorderfinsh_Click">Order finnish</asp:LinkButton>
                 </td>
-                <td>
-                    &nbsp;</td>
+              
             </tr>
             <tr>
                 <td class="style1">
@@ -400,28 +397,9 @@
         <table style="width:100%;">
             <tr>
                 <td>
-                    Total Revence Magazine</td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
+                    Total Revence Magazine</td>                
             </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
+            
         </table>
     </asp:Panel>
 
