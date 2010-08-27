@@ -61,8 +61,13 @@
         }
     </style>
 
+<<<<<<< .mine
+    <script src="js/jquery-1.4.2.js" type="text/javascript"></script>
+    
+=======
 
     <script src="js/jquery-1.4.2.js" type="text/javascript"></script>
+>>>>>>> .r77
     <script language="javascript" type="text/javascript">
         var $j = jQuery.noConflict();
 
@@ -114,7 +119,8 @@
                                 New password :
                             </td>
                             <td class="style33">
-                                <asp:TextBox ID="txtNewPass" runat="server" Height="22px" Width="100%"></asp:TextBox>
+                                <asp:TextBox ID="txtNewPass" runat="server" Height="22px" Width="100%" 
+                                    TextMode="Password"></asp:TextBox>
                             </td>
                             <td>
                                 &nbsp;</td>
@@ -124,7 +130,8 @@
                                 Confirm new password :
                             </td>
                             <td class="style33">
-                                <asp:TextBox ID="txtComPass" Height="22px" Width="100%" runat="server" ValidationGroup="123456abc"></asp:TextBox>
+                                <asp:TextBox ID="txtComPass" Height="22px" Width="100%" runat="server" 
+                                    ValidationGroup="123456abc" TextMode="Password"></asp:TextBox>
                             </td>
                             <td>
                                 &nbsp;</td>
@@ -167,15 +174,11 @@
                                     <div id="contentcolumn" style="background: #e7e6e0">
                                     </div>
                                     <div id="leftcolumn">
-                                        <div id="ctl00_MenuControl_PanelLogout">
-                                            <div style="text-align: center;">
-                                                <asp:Label ID="lbUserName" runat="server" Text="Label"></asp:Label>
-                                                <b>&nbsp;</b>(<a href="https://ebank.vtc.vn/home/ebank.account.logout.html" class="link_1"><b>Logout</a>)</div>
-                                        </div>
+                                        <b>
                                         <div class="boxshop">
                                             <div class="arrowlistmenu">
                                                 <div class="headermenu" style="background: #e7e6e0">
-                                                    Tài khoản</div>
+                                                    Account</div>
                                                 <ul>
                                                     <li>
                                                         <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Infomation</asp:LinkButton>
@@ -389,23 +392,24 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:Panel ID="Panel5" runat="server" GroupingText="Transaction History" Height="406px">
+                <asp:Panel ID="Panel5" runat="server" GroupingText="Transaction History" 
+                    Height="428px">
                     <table style="width: 100%;">
                         <tr>
                             <td align="center" class="style36">
-                                Available
+                                &nbsp;<asp:LinkButton ID="LinkButton5" runat="server" onclick="LinkButton5_Click">Available</asp:LinkButton>
                             </td>
                             <td align="center" colspan="2" class="style36">
-                                Pending
+                                &nbsp;<asp:LinkButton ID="LinkButton6" runat="server" onclick="LinkButton6_Click">Pending</asp:LinkButton>
                             </td>
                             <td align="center" class="style36" colspan="2">
-                                Sending
+                                &nbsp;<asp:LinkButton ID="LinkButton7" runat="server" onclick="LinkButton7_Click">Sending</asp:LinkButton>
                             </td>
                             <td align="center" colspan="2" class="style36">
-                                Delivery
+                                &nbsp;<asp:LinkButton ID="LinkButton8" runat="server" onclick="LinkButton8_Click">Delivery</asp:LinkButton>
                             </td>
                             <td align="center" class="style36">
-                                Deny
+                                <asp:LinkButton ID="LinkButton9" runat="server" onclick="LinkButton9_Click">Deny</asp:LinkButton>
                             </td>
                         </tr>
                         <tr>
@@ -467,7 +471,7 @@
                                                     <%# DataBinder.Eval(Container.DataItem, "Date")%>
                                                 </td>
                                                 <td align="center" style="width: 25%">
-                                                   <input id="Button1" class="Button1"  type="button" value="Detail"  onclick="clickhere('<%# DataBinder.Eval(Container.DataItem, "parcelFromCity")%>','<%# DataBinder.Eval(Container.DataItem, "parcelFromDistrict")%>','<%# DataBinder.Eval(Container.DataItem, "parcelFromAddress")%>','<%# DataBinder.Eval(Container.DataItem, "parcelToCity")%>','<%# DataBinder.Eval(Container.DataItem, "parcelToDistrict")%>','<%# DataBinder.Eval(Container.DataItem, "parcelToAddress")%>','<%# DataBinder.Eval(Container.DataItem, "parcelWeight")%>'+' Kg','<%# DataBinder.Eval(Container.DataItem, "totalAmount")%>'+' USD','<%# DataBinder.Eval(Container.DataItem, "Date")%>')"  />
+                                                   <a href="#" onclick="clickhere('<%# DataBinder.Eval(Container.DataItem, "parcelFromCity")%>','<%# DataBinder.Eval(Container.DataItem, "parcelFromDistrict")%>','<%# DataBinder.Eval(Container.DataItem, "parcelFromAddress")%>','<%# DataBinder.Eval(Container.DataItem, "parcelToCity")%>','<%# DataBinder.Eval(Container.DataItem, "parcelToDistrict")%>','<%# DataBinder.Eval(Container.DataItem, "parcelToAddress")%>','<%# DataBinder.Eval(Container.DataItem, "parcelWeight")%>' +' Kg','<%# DataBinder.Eval(Container.DataItem, "totalAmount")%>'+' USD','<%# DataBinder.Eval(Container.DataItem, "Date")%>')">Detail...</a>
                                                 </td>
                                             </tr>
                                         </ItemTemplate>
