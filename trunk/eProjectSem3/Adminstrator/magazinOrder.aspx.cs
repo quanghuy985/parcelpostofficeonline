@@ -15,7 +15,23 @@ public partial class Adminstrator_magazinOrder : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        AdminBL admin = new AdminBL();
+        if (Session["User"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
+        else
+        {
+            string empUserName = Session["User"].ToString();
+            if (admin.isAdmin(empUserName))
+            {
 
+            }
+            else
+            {
+                Response.Redirect("Message.aspx?content=You don't have permission to use this function");
+            }
+        }
     }
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {

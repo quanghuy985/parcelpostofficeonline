@@ -21,7 +21,7 @@ public partial class Adminstrator_FeedBackManage : System.Web.UI.Page
     {
         if (Session.Count == 0)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Home.aspx");
         }
         else
         {
@@ -29,6 +29,23 @@ public partial class Adminstrator_FeedBackManage : System.Web.UI.Page
         }
         if (!IsPostBack)
         {
+            AdminBL admin = new AdminBL();
+            if (Session["User"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                string empUserName = Session["User"].ToString();
+                if (admin.isAdmin(empUserName))
+                {
+
+                }
+                else
+                {
+                    Response.Redirect("Message.aspx?content=You don't have permission to use this function");
+                }
+            }
             bind();
         }
     }

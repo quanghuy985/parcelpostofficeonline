@@ -14,12 +14,13 @@
                     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
                         AutoGenerateColumns="False" DataKeyNames="newsID" DataSourceID="SqlDataSource1" 
                         EmptyDataText="There are no data records to display."
-                        Width="621px" CellPadding="3" onrowcommand="GridView1_RowCommand" 
-                        PageSize="3" onselectedindexchanged="GridView1_SelectedIndexChanged" 
-                        onrowdeleting="GridView1_RowDeleting" BackColor="#DEBA84" 
-                        BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2" 
-                        onrowdeleted="GridView1_RowDeleted">
-                        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                        Width="621px" CellPadding="4" onrowcommand="GridView1_RowCommand" 
+                        PageSize="5" onselectedindexchanged="GridView1_SelectedIndexChanged" 
+                        onrowdeleting="GridView1_RowDeleting" BackColor="White" 
+                        BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" 
+                        onrowdeleted="GridView1_RowDeleted" AllowSorting="True">
+                        <PagerSettings NextPageText="&gt;&gt;" />
+                        <RowStyle BackColor="White" ForeColor="#330099" />
                         <Columns>
                             <asp:CommandField SelectText="Update" ShowSelectButton="True" />
                             <asp:CommandField ShowDeleteButton="True"  />
@@ -36,10 +37,10 @@
                             <asp:BoundField DataField="newsStatus" SortExpression="newsStatus" />
                             <asp:CommandField />
                         </Columns>
-                        <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                        <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                        <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+                        <PagerStyle ForeColor="#330099" HorizontalAlign="Center" BackColor="#FFFFCC" />
+                        <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+                        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                         ConnectionString="<%$ ConnectionStrings:callConnection %>" 

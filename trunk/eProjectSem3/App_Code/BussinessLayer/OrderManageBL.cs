@@ -67,7 +67,7 @@ public class OrderManageBL
     {
         try
         {
-            
+            DateTime dateOrder = DateTime.Today;
             List<SqlParameter> list = new List<SqlParameter>();
             SqlParameter paraOrderDetailID = new SqlParameter("@orderDetailID", SqlDbType.Int);
             paraOrderDetailID.Value = orderDetailID;
@@ -84,6 +84,9 @@ public class OrderManageBL
             SqlParameter paraParcelTotalAmount = new SqlParameter("@parcelTotalAmount", SqlDbType.Decimal);
             paraParcelTotalAmount.Value = parcelTotalAmount;
             list.Add(paraParcelTotalAmount);
+            SqlParameter paraDateTreat = new SqlParameter("@dateTreat", SqlDbType.DateTime);
+            paraDateTreat.Value = dateOrder;
+            list.Add(paraDateTreat);
             SqlParameter paraStatus = new SqlParameter("@orderDetailStatus", SqlDbType.Int);
             paraStatus.Value = Status;
             list.Add(paraStatus);

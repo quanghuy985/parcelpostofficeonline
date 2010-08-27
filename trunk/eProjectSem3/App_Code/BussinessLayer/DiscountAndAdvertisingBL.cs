@@ -32,4 +32,69 @@ public class DiscountAndAdvertisingBL
         list.Add(paraDiscountID);
         return helper.ExecuteQuerry("getDiscountByID", list);
     }
+    public bool UpdateDiscountByID(int discountID, string discountName, string discountBrief, string discountContent, string discountImage, decimal discountPrice, int discountStatus)
+    {
+        try
+        {
+            List<SqlParameter> list = new List<SqlParameter>();
+            SqlParameter paraDiscountID = new SqlParameter("@discountID", SqlDbType.Int);
+            paraDiscountID.Value = discountID;
+            list.Add(paraDiscountID);
+            SqlParameter paraDiscountName = new SqlParameter("@discountName", SqlDbType.NVarChar);
+            paraDiscountName.Value = discountName;
+            list.Add(paraDiscountName);
+            SqlParameter paraDiscountBrief = new SqlParameter("@discountBrief", SqlDbType.NVarChar);
+            paraDiscountBrief.Value = discountBrief;
+            list.Add(paraDiscountBrief);
+            SqlParameter paraDiscountContent = new SqlParameter("@discountContent", SqlDbType.NVarChar);
+            paraDiscountContent.Value = discountContent;
+            list.Add(paraDiscountContent);
+            SqlParameter paraDiscountImage = new SqlParameter("@discountImage", SqlDbType.NVarChar);
+            paraDiscountImage.Value = discountImage;
+            list.Add(paraDiscountImage);
+            SqlParameter paraDiscountPrice = new SqlParameter("@discountPrice", SqlDbType.Decimal);
+            paraDiscountPrice.Value = discountPrice;
+            list.Add(paraDiscountPrice);
+            SqlParameter paraStatus = new SqlParameter("@discountStatus", SqlDbType.Int);
+            paraStatus.Value = discountStatus;
+            list.Add(paraStatus);
+            helper.ExecuteQuerry("UpdateDiscount", list);
+            return true;
+        }
+        catch (SqlException)
+        {
+            return false;
+        }
+    }
+    public bool InsertDiscount(string discountName, string discountBrief, string discountContent, string discountImage, decimal discountPrice, int discountStatus)
+    {
+        try
+        {
+            List<SqlParameter> list = new List<SqlParameter>();
+            SqlParameter paraDiscountName = new SqlParameter("@discountName", SqlDbType.NVarChar);
+            paraDiscountName.Value = discountName;
+            list.Add(paraDiscountName);
+            SqlParameter paraDiscountBrief = new SqlParameter("@discountBrief", SqlDbType.NVarChar);
+            paraDiscountBrief.Value = discountBrief;
+            list.Add(paraDiscountBrief);
+            SqlParameter paraDiscountContent = new SqlParameter("@discountContent", SqlDbType.NVarChar);
+            paraDiscountContent.Value = discountContent;
+            list.Add(paraDiscountContent);
+            SqlParameter paraDiscountImage = new SqlParameter("@discountImage", SqlDbType.NVarChar);
+            paraDiscountImage.Value = discountImage;
+            list.Add(paraDiscountImage);
+            SqlParameter paraDiscountPrice = new SqlParameter("@discountPrice", SqlDbType.Decimal);
+            paraDiscountPrice.Value = discountPrice;
+            list.Add(paraDiscountPrice);
+            SqlParameter paraDiscountStatus = new SqlParameter("@discountStatus", SqlDbType.NVarChar);
+            paraDiscountStatus.Value = discountStatus;
+            list.Add(paraDiscountStatus);
+            helper.ExecuteQuerry("InsertDiscount", list);
+            return true;
+        }
+        catch (SqlException)
+        {
+            return false;
+        }
+    }
 }
