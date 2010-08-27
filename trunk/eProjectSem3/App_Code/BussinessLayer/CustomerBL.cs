@@ -117,4 +117,22 @@ public class CustomerBL
         list.Add(p);
         return helper.ExecuteNonQuery("pc_UpdateAccount", CommandType.StoredProcedure, list);
     }
+    public DataTable searchOrder(String username, int status, DateTime form, DateTime to)
+    {
+        List<SqlParameter> list = new List<SqlParameter>();
+        SqlParameter p = new SqlParameter();
+        p = new SqlParameter("@cusUserName", SqlDbType.NVarChar);
+        p.Value = username;
+        list.Add(p);
+        p = new SqlParameter("@orderDetailStatus", SqlDbType.Int);
+        p.Value = status;
+        list.Add(p);
+        p = new SqlParameter("@fromdate", SqlDbType.DateTime);
+        p.Value = form;
+        list.Add(p);
+        p = new SqlParameter("@todate", SqlDbType.DateTime);
+        p.Value = to;
+        list.Add(p);
+        return helper.ExecuteQuerry("pc_SreachOrderCusByDate", list);
+    }
 }
