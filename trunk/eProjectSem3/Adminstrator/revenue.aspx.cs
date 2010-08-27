@@ -28,6 +28,7 @@ public partial class Adminstrator_revenue : System.Web.UI.Page
         lblrevence.Text = re.get_total_revence();
         lblmaga_revence.Text = re.get_total_revence_maga();
         resetpanel();
+
     }
     public void resetpanel()
     {

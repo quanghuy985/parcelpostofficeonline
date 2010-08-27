@@ -396,5 +396,31 @@
     <br />
     <br />
     
-
+<asp:Panel ID="panel3" runat="server" 
+                GroupingText="Total Magazine Order" Visible="False">               
+                <table style="width:100%;">
+                    <tr>
+                        <td align="center">
+                            Start Date:
+                            <asp:TextBox ID="txt_s_date_magazine" runat="server"></asp:TextBox>
+                            <ajaxToolkit:CalendarExtender ID="CalendarExtender19" runat="server" 
+                                TargetControlID="txt_s_date_parcel_deny">
+                            </ajaxToolkit:CalendarExtender>
+                        </td>
+                        <td align="center">
+                            End Date:<asp:TextBox ID="txt_e_date_magazine" runat="server"></asp:TextBox>
+                            <ajaxToolkit:CalendarExtender ID="CalendarExtender20" runat="server" 
+                                TargetControlID="txt_e_date_deny">
+                            </ajaxToolkit:CalendarExtender>
+                            <asp:Button ID="Button1" runat="server" 
+                                 Text="Fill" onclick="btn_parcel_deny_Click" />
+                        </td>
+                    </tr>
+                </table>
+                <asp:Label ID="lbl_err_magazine" runat="server" ForeColor="Red"></asp:Label>
+                <br />
+                <asp:GridView ID="GridView_magazine" runat="server" Width="767px">
+                </asp:GridView>
+                <br />
+            </asp:Panel>
 </asp:Content>
