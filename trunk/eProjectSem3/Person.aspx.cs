@@ -11,6 +11,7 @@ public partial class Person : System.Web.UI.Page
 {
     CustomerBL CuBL = new CustomerBL();
     DataTable dtt = new DataTable();
+    int i = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -104,6 +105,27 @@ public partial class Person : System.Web.UI.Page
                 else
                 {
                     lbErrorMess.Visible = false;
+                    
+                   dtt= CuBL.searchOrder(Session["User"].ToString(), i,Convert.ToDateTime(txtToDate.Text),Convert.ToDateTime(txtFromDate.Text));
+                  
+                   rptPending.DataSource = dtt;
+                   
+                   rptPending.DataBind();
+                   if (rptAvailable.Visible == true)
+                   {
+                       rptAvailable.Visible = true;
+                       rptPending.Visible = false;
+                       rptAvailable.DataSource = dtt;
+                       rptAvailable.DataBind();
+                   }
+                   if (rptPending.Visible == true)
+                   {
+                       rptAvailable.Visible = false;
+                       rptPending.Visible = true; 
+                       rptPending.DataSource = dtt;
+
+                       rptPending.DataBind();
+                   }
                 }
             }
         }
@@ -175,7 +197,7 @@ public partial class Person : System.Web.UI.Page
     {
         hideallpanel();
         Panel5.Visible = true;
-        bindPending();
+        bindAvailable(0);
         
     }
     protected void Button7_Click(object sender, EventArgs e)
@@ -183,4 +205,40 @@ public partial class Person : System.Web.UI.Page
         
         Label5.Text = Label4.Text;
     }
+    protected void LinkButton5_Click(object sender, EventArgs e)
+    {
+        rptPending.Visible = false;
+        rptAvailable.Visible = true;
+        i = 0;
+        bindAvailable(0);
+    }
+    protected void LinkButton7_Click(object sender, EventArgs e)
+    {
+        rptPending.Visible = false;
+        rptAvailable.Visible = true;
+        i = 2;
+        bindAvailable(2);
+    }
+    protected void LinkButton8_Click(object sender, EventArgs e)
+    {
+        rptPending.Visible = false;
+        rptAvailable.Visible = true;
+        i = 3;
+        bindAvailable(3);
+    }
+    protected void LinkButton9_Click(object sender, EventArgs e)
+    {
+        rptPending.Visible = false;
+        rptAvailable.Visible = true;
+        i = 4;
+        bindAvailable(4);
+    }
+    protected void LinkButton6_Click(object sender, EventArgs e)
+    {
+        rptPending.Visible = true;
+        rptAvailable.Visible = false;
+        i = 1;
+        bindPending();
+    }
+   
 }
