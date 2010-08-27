@@ -16,18 +16,35 @@ public partial class Adminstrator_revenue : System.Web.UI.Page
     revenceBL re = new revenceBL();
     protected void Page_Load(object sender, EventArgs e)
     {
-        lbltatalorder.Text = re.get_total_order().ToString();
-        lblorderavailable.Text = re.get_total_order_by_id(0).ToString();
-        lblorderfinsh.Text = re.get_total_order_by_id(3).ToString();
-        lblparcel.Text = re.get_total_parcel();
-        lblparcelavailable.Text = re.get_total_parcel_by_id(0);
-        lblparceldelivery.Text = re.get_total_parcel_by_id(3);
-        lblparcelneedconfirm.Text = re.get_total_parcel_by_id(1);
-        lblparceldenny.Text = re.get_total_parcel_by_id(4);
-        lblr_sending.Text = re.get_total_parcel_by_id(2);
-        lblrevence.Text = re.get_total_revence();
-        lblmaga_revence.Text = re.get_total_revence_maga();
-        resetpanel();
+        AdminBL admin = new AdminBL();
+        if (Session["User"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
+        else
+        {
+            string empUserName = Session["User"].ToString();
+            if (admin.isAdmin(empUserName))
+            {
+                lbltatalorder.Text = re.get_total_order().ToString();
+                lblorderavailable.Text = re.get_total_order_by_id(0).ToString();
+                lblorderfinsh.Text = re.get_total_order_by_id(3).ToString();
+                lblparcel.Text = re.get_total_parcel();
+                lblparcelavailable.Text = re.get_total_parcel_by_id(0);
+                lblparceldelivery.Text = re.get_total_parcel_by_id(3);
+                lblparcelneedconfirm.Text = re.get_total_parcel_by_id(1);
+                lblparceldenny.Text = re.get_total_parcel_by_id(4);
+                lblr_sending.Text = re.get_total_parcel_by_id(2);
+                lblrevence.Text = re.get_total_revence();
+                lblmaga_revence.Text = re.get_total_revence_maga();
+                resetpanel();
+            }
+            else
+            {
+                Response.Redirect("Message.aspx?content=You don't have permission to use this function");
+            }
+        }
+       
 
     }
     public void resetpanel()

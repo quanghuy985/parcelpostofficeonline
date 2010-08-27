@@ -61,7 +61,8 @@
         }
     </style>
 
-    <script src="Adminstrator/js/jquery-1.4.2.js" type="text/javascript"></script>
+
+    <script src="js/jquery-1.4.2.js" type="text/javascript"></script>
     <script language="javascript" type="text/javascript">
         var $j = jQuery.noConflict();
 
